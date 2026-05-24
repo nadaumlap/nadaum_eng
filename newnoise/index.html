@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Reason You Can't Focus — Your Noise Pollution Level | Nadaum Design Lab</title>
+<meta name="description" content="See the social-structural noise that blurs your desires. A 5-minute assessment.">
+<meta property="og:title" content="The Real Reason You Can't Focus — Your Noise Pollution Level">
+<meta property="og:description" content="Your desires don't blur because your willpower is weak. A 5-minute assessment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nadaumlap.github.io/nadaum_eng/newnoise/">
+<meta property="og:image" content="https://nadaumlap.github.io/nadaum_eng/newnoise/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#F8F9FB !important;color:#1E2761 !important;color-scheme:light only}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter',system-ui,sans-serif;background:#F8F9FB !important;color:#1E2761 !important;min-height:100vh;line-height:1.55;letter-spacing:-0.01em}
+.page{max-width:540px;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+
+/* LOGO — same format as 5 Energy Patterns */
+.logo-bar{display:flex;align-items:center;gap:12px;margin-bottom:2.75rem}
+.logo-need{font-size:22px;font-weight:800;letter-spacing:3px;line-height:1}
+.logo-need .n{color:#2979C8}.logo-need .e1{color:#3DAA6B}.logo-need .e2{color:#C9983A}.logo-need .d{color:#8B5CF6}
+.logo-sep{width:1px;height:26px;background:#D1D5DB}
+.logo-right{display:flex;flex-direction:column;gap:2px}
+.logo-scan{font-size:11px;font-weight:600;color:#718096;letter-spacing:1.5px}
+.logo-org{font-size:13px;color:#2F2F2F;font-weight:500}
+.logo-bar-right{margin-left:auto;font-size:13px;font-weight:600;color:#2F2F2F}
+.logo-bar-right .lcur{color:#1E2761}.logo-bar-right .ltot{color:#9CA3AF;font-weight:500}
+
+.screen{display:none}.screen.active{display:block}
+
+/* INTRO */
+.badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:4px 12px;font-size:11px;color:#718096;margin-bottom:.9rem}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:#C9983A}
+.intro-h{font-size:24px;font-weight:800;color:#1E2761;line-height:1.3;margin-bottom:.5rem}
+.intro-desc{font-size:13px;color:#718096;line-height:1.65;margin-bottom:1rem}
+.meta-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:1rem}
+.meta-card{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:.75rem .9rem}
+.meta-lbl{font-size:10px;color:#718096;margin-bottom:3px}
+.meta-val{font-size:13px;font-weight:600;color:#1E2761}
+.intro-box{background:#fff;border-left:3px solid #C9983A;border-radius:0 10px 10px 0;padding:.9rem 1.1rem;font-size:13px;color:#4A5568;line-height:1.7;margin-bottom:1.25rem}
+.intro-box strong{color:#1E2761}
+
+/* Scope card (intro) */
+.scope-card{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1rem 1.15rem;margin-bottom:1.25rem;font-size:12.5px;color:#4A5568;line-height:1.7}
+.scope-tag{display:inline-block;font-size:10px;letter-spacing:1.5px;font-weight:700;color:#C9983A;background:#FFFBEB;padding:3px 9px;border-radius:8px;border:1px solid #FDE68A;margin-bottom:8px}
+.scope-card strong{color:#1E2761;font-weight:700}
+.scope-list{list-style:none;padding:0;margin:8px 0 0 0}
+.scope-list li{padding:3px 0 3px 18px;position:relative;font-size:12px;color:#4A5568}
+.scope-list li::before{content:'·';position:absolute;left:6px;top:-2px;font-weight:800;color:#C9983A;font-size:18px;line-height:1}
+.scope-card .scope-note{margin-top:10px;padding-top:10px;border-top:1px solid #F0F1F5;font-size:11.5px;color:#718096}
+
+.btn-start{width:100%;padding:14px;background:#1E2761;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .15s;font-family:inherit}
+.btn-start:hover{opacity:.88}
+
+/* BRANCH */
+.branch-h{font-size:22px;font-weight:700;color:#1E2761;line-height:1.4;margin-bottom:.5rem;text-align:center}
+.branch-d{font-size:13px;color:#718096;text-align:center;margin-bottom:2rem;line-height:1.6}
+.branch-options{display:flex;flex-direction:column;gap:10px}
+.branch-opt{padding:1.1rem 1.25rem;background:#fff;border:1.5px solid #E2E8F0;border-radius:12px;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit}
+.branch-opt:hover{border-color:#C9983A;background:#FFFBEB}
+.branch-opt-t{font-size:15px;font-weight:600;color:#1E2761;margin-bottom:4px}
+.branch-opt-d{font-size:12px;color:#718096}
+
+/* QUESTION */
+.prog-wrap{margin-bottom:1.75rem}
+.prog-top{display:flex;justify-content:space-between;margin-bottom:8px}
+.prog-section{font-size:12px;color:#718096}
+.prog-count{font-size:12px;font-weight:600;color:#2F2F2F}
+.prog-bar{height:5px;background:#E2E8F0;border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;transition:width .35s ease}
+.section-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:.75rem;border:1px solid}
+.pill-N{background:#EFF6FF;color:#1D4ED8;border-color:#BFDBFE}
+.pill-E1{background:#F0FDF4;color:#166534;border-color:#BBF7D0}
+.pill-E2{background:#FFFBEB;color:#92400E;border-color:#FDE68A}
+.q-text{font-size:18px;font-weight:700;color:#1E2761 !important;line-height:1.55;margin-bottom:.5rem;word-break:keep-all}
+.q-hint{font-size:13px;color:#718096;font-style:italic;margin-bottom:2rem}
+.scale-wrap{margin-bottom:2.5rem}
+.scale-labels{display:flex;justify-content:space-between;margin-bottom:.75rem}
+.scale-labels span{font-size:11px;color:#718096}
+.scale-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.scale-btn{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;padding:12px 6px;border-radius:10px;border:1px solid #E2E8F0;background:#fff;transition:all .15s;user-select:none;font-family:inherit}
+.scale-btn:hover{border-color:#9CA3AF;background:#F9FAFB}
+.scale-num{font-size:17px;font-weight:600;color:#2F2F2F}
+.dots{display:flex;gap:3px}
+.dot{width:5px;height:5px;border-radius:50%;background:#D1D5DB}
+.scale-btn.active-N{border-color:#2979C8!important;background:#EFF6FF!important}
+.scale-btn.active-N .dot{background:#2979C8}.scale-btn.active-N .scale-num{color:#2979C8}
+.scale-btn.active-E1{border-color:#3DAA6B!important;background:#F0FDF4!important}
+.scale-btn.active-E1 .dot{background:#3DAA6B}.scale-btn.active-E1 .scale-num{color:#3DAA6B}
+.scale-btn.active-E2{border-color:#C9983A!important;background:#FFFBEB!important}
+.scale-btn.active-E2 .dot{background:#C9983A}.scale-btn.active-E2 .scale-num{color:#C9983A}
+
+/* SLIDER */
+.slider-wrap{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.5rem 1.25rem;margin-bottom:1.5rem}
+.slider-display{text-align:center;padding:.5rem 0 1.5rem}
+.slider-value{font-size:48px;font-weight:800;color:#1E2761;line-height:1;letter-spacing:-1px}
+.slider-unit{font-size:13px;color:#718096;margin-top:6px;letter-spacing:1px}
+.slider-input{-webkit-appearance:none;appearance:none;width:100%;height:6px;background:#E2E8F0;border-radius:3px;outline:none;margin-bottom:10px}
+.slider-input::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:#C9983A;cursor:pointer;box-shadow:0 2px 8px rgba(201,152,58,.4)}
+.slider-input::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#C9983A;cursor:pointer;border:none;box-shadow:0 2px 8px rgba(201,152,58,.4)}
+.slider-marks{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:#9CA3AF}
+
+.nav-row{display:flex;gap:10px}
+.btn-prev{flex:1;padding:13px;background:#fff;border:1px solid #D1D5DB;border-radius:10px;font-size:14px;color:#718096;cursor:pointer;font-family:inherit}
+.btn-prev:hover{background:#F9FAFB}
+.btn-prev:disabled{opacity:.4;cursor:not-allowed}
+.btn-next{flex:2;padding:13px;border:none;border-radius:10px;font-size:14px;font-weight:600;color:#fff;cursor:pointer;transition:opacity .15s;font-family:inherit;background:#1E2761}
+.btn-next:disabled{opacity:.3;cursor:not-allowed}
+.btn-next:not(:disabled):hover{opacity:.88}
+.btn-N{background:#2979C8}.btn-E1{background:#3DAA6B}.btn-E2{background:#C9983A}
+
+/* LOADING */
+.loading{text-align:center;padding:5rem 1rem}
+.loading-logo{font-size:32px;font-weight:800;letter-spacing:3px;line-height:1;margin-bottom:1.5rem}
+.loading-logo .n{color:#2979C8}.loading-logo .e1{color:#3DAA6B}.loading-logo .e2{color:#C9983A}.loading-logo .d{color:#8B5CF6}
+.loading-text{font-size:14px;color:#718096}
+
+/* RESULT */
+.res-header{text-align:center;padding:1.5rem 0 1.75rem}
+.res-tag{display:inline-block;font-size:11px;letter-spacing:3px;font-weight:600;color:#718096;margin-bottom:.6rem}
+.res-title{font-size:24px;font-weight:700;color:#1E2761;line-height:1.4;margin-bottom:.5rem;word-break:keep-all}
+.res-sub{font-size:14px;color:#718096;line-height:1.6;word-break:keep-all}
+
+.score-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:2rem 1.5rem 1.5rem;text-align:center;margin-bottom:1.5rem}
+.score-ring-wrap{display:flex;justify-content:center;margin-bottom:1rem}
+.score-ring{position:relative;width:200px;height:200px}
+.score-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.score-ring .ring-bg{fill:none;stroke:#F0F1F5;stroke-width:14}
+.score-ring .ring-fg{fill:none;stroke-width:14;stroke-linecap:round;transition:stroke-dasharray 1s cubic-bezier(0.4,0,0.2,1)}
+.score-ring-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score-ring-num{font-size:64px;font-weight:800;color:#1E2761;line-height:1;letter-spacing:-2px}
+.score-ring-max{font-size:13px;color:#9CA3AF;margin-top:4px;letter-spacing:1px}
+.score-label{font-size:13px;color:#718096;margin-top:4px}
+
+/* 3-noise summary card (mid/high result) */
+.noise-summary-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.noise-summary-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:#1E2761;background:#F0F1F5;padding:3px 10px;border-radius:20px;margin-bottom:14px}
+.noise-summary-title{font-size:14px;font-weight:700;color:#1E2761;margin-bottom:14px;line-height:1.5;word-break:keep-all}
+.noise-item{padding:10px 0;border-bottom:1px solid #F0F1F5}
+.noise-item:last-child{border-bottom:none;padding-bottom:0}
+.noise-item:first-of-type{padding-top:0}
+.noise-item-name{font-size:13.5px;font-weight:700;color:#1E2761;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.noise-item-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:#C9983A;color:#fff;border-radius:50%;font-size:10px;font-weight:800}
+.noise-item-desc{font-size:12.5px;color:#4A5568;line-height:1.65;padding-left:24px;word-break:keep-all}
+
+.axes-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.25rem 1.4rem;margin-bottom:1.5rem}
+.axes-tit{font-size:11px;letter-spacing:2px;color:#9CA3AF;font-weight:600;margin-bottom:1rem}
+.axis-row{margin-bottom:1rem}
+.axis-row:last-child{margin-bottom:0}
+.axis-rh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.axis-name{font-size:13px;font-weight:600;color:#2F2F2F}
+.axis-score{font-size:13px;font-weight:700;color:#9CA3AF}
+.axis-bar{height:8px;background:#F0F1F5;border-radius:4px;overflow:hidden}
+.axis-bar-fill{height:100%;border-radius:4px;transition:width 1s cubic-bezier(0.4,0,0.2,1);background:#9CA3AF}
+.axis-bar-fill.primary{background:#C9983A}
+
+/* Strongest noise */
+.primary-card{background:#fff;border:1px solid #E2E8F0;border-left:4px solid #C9983A;border-radius:12px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.primary-tag{font-size:11px;letter-spacing:2px;color:#C9983A;font-weight:700;margin-bottom:8px}
+.primary-name{font-size:22px;font-weight:700;color:#1E2761;margin-bottom:6px;letter-spacing:-.3px}
+/* One-line noise definition (label aux) */
+.primary-define{font-size:12.5px;color:#9CA3AF;font-style:italic;margin-bottom:12px;line-height:1.55;word-break:keep-all}
+.primary-desc{font-size:14px;color:#4A5568;line-height:1.75;word-break:keep-all}
+
+/* Diagnosed desires */
+.need-card{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.need-tag{display:inline-block;font-size:11px;letter-spacing:2px;color:#1D4ED8;font-weight:700;margin-bottom:10px;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #BFDBFE}
+.need-tit{font-size:17px;font-weight:700;color:#1E3A8A;margin-bottom:12px;line-height:1.5;word-break:keep-all}
+.need-body{font-size:14px;color:#1E40AF;line-height:1.85;word-break:keep-all}
+.need-body p+p{margin-top:14px}
+.need-body strong{color:#1E3A8A;font-weight:700}
+
+/* Self-reflection */
+.reflect-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.reflect-tag{font-size:11px;letter-spacing:2px;color:#718096;font-weight:700;margin-bottom:8px}
+.reflect-tit{font-size:17px;font-weight:700;color:#1E2761;margin-bottom:1.25rem;line-height:1.5;word-break:keep-all}
+.reflect-q{padding:1rem 1.1rem;background:#F8F9FB;border-radius:10px;margin-bottom:10px;border:1px solid #E2E8F0}
+.reflect-q-num{font-size:11px;font-weight:700;color:#C9983A;letter-spacing:1px;margin-bottom:6px}
+.reflect-q-text{font-size:14px;color:#2F2F2F;line-height:1.7;word-break:keep-all;font-weight:500}
+
+/* Small practice */
+.action-card{background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.action-tag{display:inline-block;font-size:11px;letter-spacing:2px;color:#92400E;font-weight:700;margin-bottom:10px;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #FDE68A}
+.action-tit{font-size:18px;font-weight:700;color:#78350F;margin-bottom:12px;line-height:1.5;word-break:keep-all}
+.action-list{list-style:none;padding:0;margin:0 0 12px 0}
+.action-list li{font-size:14px;color:#78350F;line-height:1.7;padding-left:24px;position:relative;margin-bottom:10px;word-break:keep-all}
+.action-list li:last-child{margin-bottom:0}
+.action-list li::before{content:'';position:absolute;left:0;top:9px;width:14px;height:14px;border:2px solid #C9983A;border-radius:4px;background:#fff}
+.action-quote{font-size:13px;color:#92400E;font-style:italic;padding-top:14px;border-top:1px solid #FDE68A;line-height:1.6;word-break:keep-all;margin-top:12px}
+
+/* Video */
+.video-card{display:block;background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1.5rem;text-decoration:none;color:inherit;transition:all .15s}
+.video-card:hover{border-color:#C9983A;background:#FFFBEB}
+.video-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.video-icon{width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.video-icon svg{width:20px;height:20px;fill:#DC2626}
+.video-label{flex:1}
+.video-platform{font-size:10px;letter-spacing:2px;color:#9CA3AF;font-weight:700;margin-bottom:2px}
+.video-tit{font-size:14px;font-weight:700;color:#1E2761}
+.video-arrow{color:#C9983A;font-size:18px}
+.video-desc{font-size:13px;color:#718096;line-height:1.6;word-break:keep-all}
+
+/* Next assessment (psychological noise Part 2) card */
+.next-noise-card{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid #DDD6FE;border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.next-noise-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:#6D28D9;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #DDD6FE;margin-bottom:10px}
+.next-noise-h{font-size:16px;font-weight:700;color:#4C1D95;margin-bottom:8px;line-height:1.5;word-break:keep-all}
+.next-noise-d{font-size:13px;color:#5B21B6;line-height:1.75;word-break:keep-all;margin-bottom:10px}
+.next-noise-d strong{color:#4C1D95;font-weight:700}
+.next-noise-meta{font-size:11.5px;color:#7C3AED;font-style:italic;padding-top:10px;border-top:1px solid #DDD6FE}
+
+/* Share */
+.share-wrap{margin:1.5rem 0}
+.share-tit{font-size:12px;letter-spacing:2px;color:#9CA3AF;font-weight:600;text-align:center;margin-bottom:14px}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.share-btn{padding:12px 14px;background:#fff;border:1px solid #E2E8F0;border-radius:10px;color:#2F2F2F;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;align-items:center;gap:5px}
+.share-btn:hover{border-color:#C9983A;background:#FFFBEB}
+.share-btn-icon{width:20px;height:20px;color:#718096}
+.share-btn-sub{font-size:10px;color:#9CA3AF;font-weight:500}
+.share-btn-full{grid-column:span 2;flex-direction:row;justify-content:center;gap:8px}
+.share-btn-result{background:#FFFBEB!important;border-color:#FDE68A!important}
+.share-btn-result:hover{background:#FEF3C7!important;border-color:#C9983A!important}
+.share-btn-result span:nth-of-type(1){color:#92400E;font-weight:700}
+.share-btn-result span:nth-of-type(2){color:#B45309}
+.share-btn-link{background:#EFF6FF!important;border-color:#BFDBFE!important}
+.share-btn-link:hover{background:#DBEAFE!important;border-color:#2979C8!important}
+.share-btn-link span:nth-of-type(1){color:#1E3A8A;font-weight:700}
+.share-btn-link span:nth-of-type(2){color:#1D4ED8}
+
+.btn-restart{width:100%;padding:12px;background:#fff;border:1px solid #D1D5DB;border-radius:10px;font-size:13px;color:#718096;cursor:pointer;font-family:inherit;margin-top:1rem}
+.btn-restart:hover{background:#F9FAFB}
+
+/* Warning card */
+.warning-card{background:#FEF2F2;border:1px solid #FECACA;border-radius:12px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.warning-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:2px;color:#B91C1C;font-weight:700;margin-bottom:10px;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #FECACA}
+.warning-tag.icon-warn::before{content:'⚠';font-size:11px}
+.warning-tag.icon-affirm::before{content:'✓';font-size:11px}
+.warning-body{font-size:14px;color:#7F1D1D;line-height:1.85;word-break:keep-all}
+.warning-body strong{color:#991B1B;font-weight:700}
+.warning-cite{font-size:11px;color:#9F7C7C;margin-top:10px;font-style:italic}
+
+/* Small practice card — with N.E.E.D stage badge */
+.action-need-step{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #FDE68A;border-radius:8px;padding:8px 12px;margin-bottom:14px;font-size:11px;color:#92400E}
+.action-need-step-num{font-weight:800;color:#C9983A;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.action-need-step-arrow{color:#C9983A}
+.action-need-step-name{font-weight:700}
+
+/* 5 Energy Patterns link card */
+.next-diagnosis-card{background:linear-gradient(135deg,#F0FDF4 0%,#DCFCE7 100%);border:1px solid #BBF7D0;border-radius:14px;padding:1.5rem 1.5rem;margin-bottom:1.5rem;text-align:left;text-decoration:none;color:inherit;display:block;transition:all .15s;position:relative;overflow:hidden}
+.next-diagnosis-card:hover{border-color:#3DAA6B;transform:translateY(-1px);box-shadow:0 4px 12px rgba(61,170,107,.12)}
+.next-diagnosis-tag{display:inline-block;font-size:10px;letter-spacing:2.5px;color:#166534;font-weight:700;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #BBF7D0;margin-bottom:12px}
+.next-diagnosis-h{font-size:18px;font-weight:700;color:#14532D;margin-bottom:10px;line-height:1.5;word-break:keep-all}
+.next-diagnosis-d{font-size:13px;color:#166534;line-height:1.75;margin-bottom:14px;word-break:keep-all}
+.next-diagnosis-types{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.next-diagnosis-type{background:#fff;border:1px solid #BBF7D0;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;color:#166534}
+.next-diagnosis-cta{display:inline-flex;align-items:center;gap:8px;background:#3DAA6B;color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:700;border:none;font-family:inherit;cursor:pointer;transition:opacity .15s}
+.next-diagnosis-cta:hover{opacity:.9}
+
+/* Social-structural context card */
+.context-card{background:linear-gradient(135deg,#FFF8F1 0%,#FFEFD5 100%);border:1px solid #FCD9A8;border-radius:14px;padding:1.5rem 1.5rem;margin-bottom:1.5rem}
+.context-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:#9A4F00;background:#fff;padding:3px 10px;border-radius:20px;border:1px solid #FCD9A8;margin-bottom:14px}
+.context-headline{font-size:17px;font-weight:800;color:#7C2D12;line-height:1.5;margin-bottom:14px;word-break:keep-all;letter-spacing:-.3px}
+.context-body{font-size:13.5px;color:#7C2D12;line-height:1.85;word-break:keep-all}
+.context-body p+p{margin-top:14px}
+.context-body strong{color:#5C1E0B;font-weight:700}
+.context-cite{font-size:11px;color:#9C5226;margin-top:14px;padding-top:12px;border-top:1px solid #FCD9A8;font-style:italic;line-height:1.55}
+
+/* Social-structural vs psychological comparison table */
+.diff-table-wrap{margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0}
+.diff-row{display:grid;grid-template-columns:1fr 1fr;background:#fff}
+.diff-row:not(:last-child){border-bottom:1px solid #F0F1F5}
+.diff-header{background:#F8F9FB;font-weight:700;color:#1E2761;font-size:13px;text-align:center;padding:11px 8px;line-height:1.4}
+.diff-header .diff-sub-label{display:block;font-size:10px;color:#718096;font-weight:500;margin-top:3px}
+.diff-header .diff-sub-label-psy{color:#8B5CF6}
+.diff-col{padding:12px 11px;font-size:12.5px;line-height:1.6;color:#4A5568;word-break:keep-all}
+.diff-col.col-soc{border-right:1px solid #F0F1F5}
+.diff-col.col-psy{background:#FAF5FF}
+.diff-badge{display:inline-block;font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:5px;margin-bottom:5px;letter-spacing:.3px}
+.diff-badge.badge-soc{background:#E2E8F0;color:#4A5568}
+.diff-badge.badge-psy{background:#DDD6FE;color:#5B21B6}
+
+/* Action card — emphasis on 24 hours */
+.action-tit-wrap{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px}
+.action-tit-icon{font-size:20px;flex-shrink:0;line-height:1.2;margin-top:1px}
+.action-tit-text{flex:1}
+.action-highlight{background:#FEF3C7;padding:0 4px;box-shadow:inset 0 -7px 0 rgba(201,152,58,.25)}
+.action-sub{font-size:12.5px;color:#92400E;margin-bottom:14px;line-height:1.65;font-weight:500;word-break:keep-all}
+.action-sub strong{color:#78350F;font-weight:700}
+
+/* Everyday scene card */
+.scene-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.5rem}
+.scene-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;color:#1E2761;background:#F0F1F5;padding:3px 10px;border-radius:20px;margin-bottom:14px}
+.scene-tit{font-size:16px;font-weight:700;color:#1E2761;line-height:1.5;margin-bottom:1rem;word-break:keep-all}
+.scene-item{padding:1rem 0;border-bottom:1px solid #F0F1F5}
+.scene-item:last-child{border-bottom:none;padding-bottom:0}
+.scene-item:first-of-type{padding-top:0}
+.scene-when{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#1E2761;margin-bottom:8px}
+.scene-when-emoji{font-size:18px}
+.scene-desc{font-size:13.5px;color:#4A5568;line-height:1.7;margin-bottom:10px;padding-left:26px;word-break:keep-all}
+.scene-accept{display:flex;gap:8px;padding:10px 12px 10px 14px;background:#F0FDF4;border-radius:10px;border-left:3px solid #3DAA6B;margin-left:26px}
+.scene-accept-icon{flex-shrink:0;font-size:14px;line-height:1.5}
+.scene-accept-text{font-size:12.5px;color:#166534;line-height:1.65;word-break:keep-all}
+.scene-accept-text strong{color:#14532D;font-weight:700}
+
+/* Mixed-stage guide card */
+.guide-card{display:none;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.5rem;overflow:hidden}
+.guide-card.show{display:block}
+.guide-tag{display:inline-block;font-size:11px;letter-spacing:2px;color:#92400E;font-weight:700;background:#FFFBEB;padding:3px 10px;border-radius:20px;border:1px solid #FDE68A;margin-bottom:14px}
+.guide-section{padding:1.1rem 0;border-bottom:1px solid #F0F1F5}
+.guide-section:last-child{border-bottom:none;padding-bottom:0}
+.guide-section:first-of-type{padding-top:0}
+.guide-section-h{font-size:15px;font-weight:700;line-height:1.5;margin-bottom:12px;display:flex;align-items:center;gap:8px;word-break:keep-all}
+.guide-section-h.healthy{color:#166534}
+.guide-section-h.healthy::before{content:'';width:18px;height:18px;border-radius:50%;background:#3DAA6B;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:11px;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.guide-section-h.caution{color:#B45309}
+.guide-section-h.caution::before{content:'';width:18px;height:18px;border-radius:50%;background:#C9983A;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.guide-list{list-style:none;padding:0;margin:0}
+.guide-list li{font-size:14px;line-height:1.7;padding:8px 0 8px 22px;position:relative;word-break:keep-all}
+.guide-list.healthy li{color:#166534}
+.guide-list.healthy li::before{content:'·';position:absolute;left:8px;top:8px;color:#3DAA6B;font-weight:800;font-size:18px;line-height:1}
+.guide-list.caution li{color:#92400E}
+.guide-list.caution li::before{content:'·';position:absolute;left:8px;top:8px;color:#C9983A;font-weight:800;font-size:18px;line-height:1}
+
+/* Toast */
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1E2761;color:#fff;padding:12px 22px;border-radius:24px;font-size:13px;font-weight:500;box-shadow:0 6px 20px rgba(30,39,97,.3);opacity:0;pointer-events:none;transition:opacity .25s;z-index:1000;white-space:nowrap;max-width:90vw}
+.toast.show{opacity:1}
+
+/* Footer */
+.footer-mark{text-align:center;padding:2rem 0 1rem;border-top:1px solid #E2E8F0;margin-top:1.5rem}
+.footer-mark .mini-logo{font-size:16px;font-weight:800;letter-spacing:3px;margin-bottom:8px}
+.footer-mark .mini-logo .n{color:#2979C8}.footer-mark .mini-logo .e1{color:#3DAA6B}.footer-mark .mini-logo .e2{color:#C9983A}.footer-mark .mini-logo .d{color:#8B5CF6}
+.footer-mark-t{font-size:10px;letter-spacing:2px;color:#9CA3AF;font-weight:600;margin-bottom:3px}
+.footer-mark-s{font-size:11px;color:#9CA3AF}
+
+/* Modal */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(30,39,97,.5);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1rem}
+.modal-bg.show{display:flex}
+.modal{background:#fff;border-radius:16px;padding:2rem 1.5rem;max-width:380px;width:100%;text-align:center}
+.modal-icon{font-size:32px;margin-bottom:12px}
+.modal-tit{font-size:18px;font-weight:700;color:#1E2761;margin-bottom:8px}
+.modal-desc{font-size:13px;color:#718096;line-height:1.6;margin-bottom:1.25rem}
+.modal-prog{font-weight:700;color:#C9983A}
+.modal-btns{display:flex;flex-direction:column;gap:8px}
+.modal-btn-pri{padding:12px;background:#1E2761;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.modal-btn-sec{padding:12px;background:#fff;color:#718096;border:1px solid #D1D5DB;border-radius:10px;font-size:13px;cursor:pointer;font-family:inherit}
+
+@media (max-width:380px){
+  .scale-num{font-size:15px}
+  .scale-btn{padding:10px 4px}
+  .q-text{font-size:17px}
+  .res-title{font-size:21px}
+  .score-ring{width:170px;height:170px}
+  .score-ring-num{font-size:54px}
+  .primary-name{font-size:19px}
+  .slider-value{font-size:42px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo-bar">
+    <span class="logo-need"><span class="n">N.</span><span class="e1">E.</span><span class="e2">E.</span><span class="d">D</span></span>
+    <span class="logo-sep"></span>
+    <div class="logo-right">
+      <span class="logo-scan">NEED SCAN · Nadaum Design Lab</span>
+      <span class="logo-org">Design Your Authentic Self</span>
+    </div>
+    <div class="logo-bar-right" id="topCounter" style="display:none">
+      <span class="lcur" id="topCur">1</span><span class="ltot" id="topTot"> / 18</span>
+    </div>
+  </div>
+
+  <div class="screen active" id="screen-intro">
+    <div class="badge"><span class="badge-dot"></span><span>ELIMINATE NOISE</span></div>
+    <h1 class="intro-h">What's Your Noise Pollution Level?</h1>
+    <p class="intro-desc">See where the noise blurring your desires is coming from.<br/><span style="font-size:11px;color:#9CA3AF">Social-Structural Noise Exposure Index</span></p>
+    
+    <button class="btn-start" id="startBtn">Start Assessment</button>
+    <div class="detail-toggle" onclick="toggleDetail()" id="detailToggle" style="text-align:center;padding:12px;color:#718096;font-size:13px;cursor:pointer;margin-top:8px">Curious how it's structured? ▾</div>
+    <div id="detailSection" style="display:none;margin-top:8px;padding-top:8px;border-top:1px solid #E2E8F0">
+    <div class="meta-row">
+      <div class="meta-card"><div class="meta-lbl">Questions</div><div class="meta-val">18 items</div></div>
+      <div class="meta-card"><div class="meta-lbl">Time</div><div class="meta-val">About 5 min</div></div>
+    </div>
+    <div class="scope-card">
+      <span class="scope-tag">📍 What this assessment covers</span>
+      <div>The noise that blurs your desires comes in <strong>two layers</strong>. This assessment focuses on <strong>① social-structural noise</strong>.</div>
+      <ul class="scope-list">
+        <li><strong>Social monitoring pressure</strong> — noise that makes you read others' reactions first</li>
+        <li><strong>Comparison pressure</strong> — noise that makes comparison kick in before your own desire</li>
+        <li><strong>Comparison exposure</strong> — noise from what social media algorithms keep showing you</li>
+      </ul>
+      <div class="scope-note"><strong style="color:#1E2761">② Psychological noise</strong> (inner patterns formed during upbringing — perfectionism, dependence on pride, emotion avoidance, etc.) will be released as a <strong style="color:#1E2761">separate assessment</strong> soon.</div>
+    </div>
+    <div class="intro-box">
+      This assessment is built on <strong>Heo &amp; Park (2013)</strong> Nunchi Scale, <strong>Festinger (1954)</strong> Social Comparison Theory, and <strong>Charry &amp; Tessitore (2021)</strong> research on social media conformity effects.
+    </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-branch">
+    <div style="text-align:center;font-size:36px;margin:1rem 0 .5rem">📱</div>
+    <h2 class="branch-h">Before we start,<br/>just one quick question</h2>
+    <p class="branch-d">We'll tailor the questions<br/>based on your social media use</p>
+    <div class="branch-options">
+      <button class="branch-opt" data-branch="sns">
+        <div class="branch-opt-t">I use social media</div>
+        <div class="branch-opt-d">Instagram, Facebook, Twitter (X), TikTok, etc.</div>
+      </button>
+      <button class="branch-opt" data-branch="kakao">
+        <div class="branch-opt-t">I only use messaging apps (no social media)</div>
+        <div class="branch-opt-d">Messenger profiles, group chats, status updates, etc.</div>
+      </button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-question">
+    <div class="prog-wrap">
+      <div class="prog-top">
+        <span class="prog-section" id="progSection">Social Monitoring Pressure · 1/6</span>
+        <span class="prog-count" id="progCount">1 / 18</span>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%;background:#2979C8"></div></div>
+    </div>
+    <div class="section-pill" id="secPill">Social Monitoring Pressure</div>
+    <h2 class="q-text" id="qText"></h2>
+    <div class="scale-wrap" style="margin-top:1.5rem">
+      <div class="scale-labels">
+        <span>Strongly disagree</span>
+        <span>Strongly agree</span>
+      </div>
+      <div class="scale-row" id="scaleRow"></div>
+    </div>
+    <div class="nav-row">
+      <button class="btn-prev" id="prevBtn">← Previous</button>
+      <button class="btn-next" id="nextBtn" disabled>Next →</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-slider">
+    <div class="prog-wrap">
+      <div class="prog-top">
+        <span class="prog-section">Comparison Exposure · 1/6</span>
+        <span class="prog-count">13 / 18</span>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" style="width:67%;background:#C9983A"></div></div>
+    </div>
+    <div class="section-pill pill-E2">Comparison Exposure</div>
+    <h2 class="q-text" id="sliderQText">How much social media do you watch on an average day?</h2>
+    <p class="q-hint" style="display:block">A rough average is fine.</p>
+    <div class="slider-wrap">
+      <div class="slider-display">
+        <div class="slider-value" id="sliderValue">30</div>
+        <div class="slider-unit">min / day</div>
+      </div>
+      <input type="range" class="slider-input" id="sliderInput" min="0" max="240" step="10" value="30" />
+      <div class="slider-marks">
+        <span>0 min</span><span>1 hr</span><span>2 hr</span><span>3 hr</span><span>4 hr+</span>
+      </div>
+    </div>
+    <div class="nav-row">
+      <button class="btn-prev" id="sliderPrevBtn">← Previous</button>
+      <button class="btn-next btn-E2" id="sliderNextBtn">Next →</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-loading">
+    <div class="loading">
+      <div class="loading-logo"><span class="n">N.</span><span class="e1">E.</span><span class="e2">E.</span><span class="d">D.</span></div>
+      <p class="loading-text">Calculating your noise pollution level...</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-result">
+    <div class="res-header">
+      <div class="res-tag">Your Noise Pollution Level</div>
+      <h2 class="res-title" id="resTitle"></h2>
+      <p class="res-sub" id="resSub"></p>
+    </div>
+
+    <div class="score-card">
+      <div class="score-ring-wrap">
+        <div class="score-ring">
+          <svg viewBox="0 0 240 240">
+            <circle class="ring-bg" cx="120" cy="120" r="105"/>
+            <circle class="ring-fg" id="ringFg" cx="120" cy="120" r="105"/>
+          </svg>
+          <div class="score-ring-content">
+            <div class="score-ring-num" id="scoreNum">0</div>
+            <div class="score-ring-max">/ 100</div>
+          </div>
+        </div>
+      </div>
+      <div class="score-label" id="scoreLabel"></div>
+    </div>
+
+    <!-- 3-noise summary card (mid/high stages only) -->
+    <div class="noise-summary-card" id="noiseSummaryCard" style="display:none">
+      <span class="noise-summary-tag">📌 The three social-structural noises N.E.E.D diagnoses</span>
+      <div class="noise-summary-title">Before reading your result, let's revisit the three noises</div>
+      <div class="noise-item">
+        <div class="noise-item-name"><span class="noise-item-num">1</span><span>Social Monitoring Pressure</span></div>
+        <div class="noise-item-desc">Noise that filters out your desires before you can even express them, because you're scanning others' reactions first</div>
+      </div>
+      <div class="noise-item">
+        <div class="noise-item-name"><span class="noise-item-num">2</span><span>Comparison Pressure</span></div>
+        <div class="noise-item-desc">Noise that lets comparison with others kick in first, leaving no room for your own standards to grow</div>
+      </div>
+      <div class="noise-item">
+        <div class="noise-item-name"><span class="noise-item-num">3</span><span id="noise3Name">Comparison Exposure</span></div>
+        <div class="noise-item-desc" id="noise3Desc">Noise that tricks you into mistaking what social media algorithms keep showing you for your own desires</div>
+      </div>
+    </div>
+
+    <div class="axes-card">
+      <div class="axes-tit">Noise Source Analysis</div>
+      <div class="axis-row">
+        <div class="axis-rh"><span class="axis-name">Social Monitoring Pressure</span><span class="axis-score" id="ax1Score">0</span></div>
+        <div class="axis-bar"><div class="axis-bar-fill" id="ax1Bar"></div></div>
+      </div>
+      <div class="axis-row">
+        <div class="axis-rh"><span class="axis-name">Comparison Pressure</span><span class="axis-score" id="ax2Score">0</span></div>
+        <div class="axis-bar"><div class="axis-bar-fill" id="ax2Bar"></div></div>
+      </div>
+      <div class="axis-row">
+        <div class="axis-rh"><span class="axis-name" id="ax3Label">Social Media Algorithm Exposure</span><span class="axis-score" id="ax3Score">0</span></div>
+        <div class="axis-bar"><div class="axis-bar-fill" id="ax3Bar"></div></div>
+      </div>
+    </div>
+
+    <div class="primary-card">
+      <div class="primary-tag">Your strongest single noise</div>
+      <div class="primary-name" id="primaryName"></div>
+      <div class="primary-define" id="primaryDefine"></div>
+      <div class="primary-desc" id="primaryDesc"></div>
+    </div>
+
+    <!-- Social-structural context card (mid/high stages only) -->
+    <div class="context-card" id="contextCard" style="display:none">
+      <span class="context-tag">📚 Why this noise emerged in modern society</span>
+      <div class="context-headline" id="contextHeadline"></div>
+      <div class="context-body" id="contextBody"></div>
+      <div class="context-cite" id="contextCite"></div>
+    </div>
+
+    <!-- Everyday scene card -->
+    <div class="scene-card" id="sceneCard">
+      <span class="scene-tag">🎬 How your noise plays out in daily life</span>
+      <h3 class="scene-tit" id="sceneTit"></h3>
+      <div id="sceneItems"></div>
+    </div>
+
+    <!-- Warning card -->
+    <div class="warning-card">
+      <span class="warning-tag icon-warn">If this continues</span>
+      <div class="warning-body" id="warningBody"></div>
+      <div class="warning-cite" id="warningCite"></div>
+    </div>
+
+    <div class="need-card">
+      <span class="need-tag">NEED SCAN · Desires Diagnosed</span>
+      <h3 class="need-tit" id="needTit"></h3>
+      <div class="need-body" id="needBody"></div>
+    </div>
+
+    <div class="reflect-card">
+      <div class="reflect-tag">Pause and ask yourself</div>
+      <h3 class="reflect-tit" id="reflectTit"></h3>
+      <div id="reflectQuestions"></div>
+    </div>
+
+    <!-- Guide card for mixed stage -->
+    <div class="guide-card" id="guideCard">
+      <span class="guide-tag">▸ Worth knowing at this stage</span>
+      <div class="guide-section">
+        <h4 class="guide-section-h healthy" id="guideHealthyTitle"></h4>
+        <ul class="guide-list healthy" id="guideHealthyList"></ul>
+      </div>
+      <div class="guide-section">
+        <h4 class="guide-section-h caution" id="guideCautionTitle"></h4>
+        <ul class="guide-list caution" id="guideCautionList"></ul>
+      </div>
+    </div>
+
+    <div class="action-card">
+      <span class="action-tag">▸ A small practice to start today</span>
+      <div class="action-need-step">
+        <span class="action-need-step-num">N.E.E.D Stage 2</span>
+        <span class="action-need-step-arrow">→</span>
+        <span class="action-need-step-name">Eliminate Noise · First step of the noise map</span>
+      </div>
+      <div class="action-tit-wrap">
+        <span class="action-tit-icon" id="actionTitIcon">⏳</span>
+        <h3 class="action-tit action-tit-text" id="actionTit"></h3>
+      </div>
+      <p class="action-sub" id="actionSub"></p>
+      <ul class="action-list" id="actionList"></ul>
+      <p class="action-quote" id="actionQuote"></p>
+    </div>
+
+    <!-- Video card container -->
+    <div id="videoCardsContainer"></div>
+
+    <!-- Next noise (psychological) info + comparison table -->
+    <div class="next-noise-card">
+      <span class="next-noise-tag">💡 This result covers only social-structural noise</span>
+      <div class="next-noise-h">Does the result feel like it doesn't fully explain your noise?</div>
+      <div class="next-noise-d">That's an accurate instinct. <strong>Psychological noise formed during your upbringing</strong> — perfectionism, dependence on pride, emotion avoidance, and so on — is a separate dimension from social-structural noise.</div>
+
+      <!-- Comparison: social-structural vs psychological noise -->
+      <div class="diff-table-wrap">
+        <div class="diff-row">
+          <div class="diff-col diff-header">Part 1 · Social-Structural Noise<span class="diff-sub-label">Current assessment (from outside the mind)</span></div>
+          <div class="diff-col diff-header">Part 2 · Psychological Noise<span class="diff-sub-label diff-sub-label-psy">Coming soon (from inside the mind)</span></div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-col col-soc"><span class="diff-badge badge-soc">Source</span><br/>Compressed modernization, competitive structures, social media algorithms</div>
+          <div class="diff-col col-psy"><span class="diff-badge badge-psy">Source</span><br/>Upbringing experiences, family dynamics, repeated feedback</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-col col-soc"><span class="diff-badge badge-soc">Typical symptoms</span><br/>Reading the room, upward comparison, unconscious feed scrolling</div>
+          <div class="diff-col col-psy"><span class="diff-badge badge-psy">Typical symptoms</span><br/>Perfectionism, dependence on approval, emotion avoidance, self-criticism</div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-col col-soc"><span class="diff-badge badge-soc">Approach</span><br/>Awareness and insight, redesigning the environment</div>
+          <div class="diff-col col-psy"><span class="diff-badge badge-psy">Approach</span><br/>Reflection and acceptance, self-understanding</div>
+        </div>
+      </div>
+
+      <div class="next-noise-meta" style="margin-top:14px">📌 The Psychological Noise Assessment (Part 2) will be released as a separate assessment soon.</div>
+    </div>
+
+    <!-- 5 Energy Patterns assessment link card -->
+    <a class="next-diagnosis-card" href="https://nadaumlap.github.io/nadaum_eng/5characters/" target="_blank" rel="noopener noreferrer">
+      <span class="next-diagnosis-tag">NEED SCAN · Next Step</span>
+      <h3 class="next-diagnosis-h">When the noise clears, what's left?</h3>
+      <p class="next-diagnosis-d">
+        When the noise clears, your energy starts flowing naturally — no forcing required. There's a unique energy pattern hidden inside you.
+      </p>
+      <div class="next-diagnosis-types">
+        <span class="next-diagnosis-type">🔥 Achiever</span>
+        <span class="next-diagnosis-type">🤝 Connector</span>
+        <span class="next-diagnosis-type">⚓ Anchor</span>
+        <span class="next-diagnosis-type">🔧 Specialist</span>
+        <span class="next-diagnosis-type">🧭 Explorer</span>
+      </div>
+      <p class="next-diagnosis-d" style="margin-bottom:14px">
+        What's the <strong style="color:#14532D">real energy pattern</strong> that's been hidden behind the noise?
+      </p>
+      <span class="next-diagnosis-cta">Take the 5 Energy Patterns Assessment →</span>
+    </a>
+
+    <div class="share-wrap">
+      <div class="share-tit">Share your result</div>
+      <div class="share-grid">
+        <button class="share-btn" id="dlSquareBtn">
+          <svg class="share-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          <span>Save Square Card</span>
+          <span class="share-btn-sub">Feed · Messenger</span>
+        </button>
+        <button class="share-btn" id="dlStoryBtn">
+          <svg class="share-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/></svg>
+          <span>Save Story Card</span>
+          <span class="share-btn-sub">Instagram Story</span>
+        </button>
+        <button class="share-btn share-btn-full share-btn-result" id="shareResultBtn">
+          <svg class="share-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="11.49"/></svg>
+          <span>🎴 Share My Result</span>
+          <span class="share-btn-sub">Card image + result message together</span>
+        </button>
+        <button class="share-btn share-btn-full share-btn-link" id="shareLinkBtn">
+          <svg class="share-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>🔗 Share Assessment Link</span>
+          <span class="share-btn-sub">Recommend this assessment to a friend</span>
+        </button>
+      </div>
+    </div>
+
+    <button class="btn-restart" id="restartBtn">Start Over</button>
+
+    <div class="footer-mark">
+      <div class="mini-logo"><span class="n">N.</span><span class="e1">E.</span><span class="e2">E.</span><span class="d">D.</span></div>
+      <div class="footer-mark-t">Nadaum Design Lab · NEED SCAN</div>
+      <div class="footer-mark-s">Design Your Authentic Self</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<div class="modal-bg" id="resumeModal">
+  <div class="modal">
+    <div class="modal-icon">↻</div>
+    <div class="modal-tit">Continue where you left off?</div>
+    <div class="modal-desc">Your previous progress is saved.<br/>You answered up to <span class="modal-prog" id="resumeProg">0 / 18</span>.</div>
+    <div class="modal-btns">
+      <button class="modal-btn-pri" id="resumeYes">Continue</button>
+      <button class="modal-btn-sec" id="resumeNo">Start over</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="restartModal">
+  <div class="modal">
+    <div class="modal-icon">↻</div>
+    <div class="modal-tit">Start over from the beginning?</div>
+    <div class="modal-desc">Your current result will not be saved.<br/>The assessment will restart.</div>
+    <div class="modal-btns">
+      <button class="modal-btn-pri" id="restartYes">Start over</button>
+      <button class="modal-btn-sec" id="restartNo">Cancel</button>
+    </div>
+  </div>
+</div>
+<script>
+'use strict';
+
+function toggleDetail(){
+  var sec=document.getElementById('detailSection');
+  var btn=document.getElementById('detailToggle');
+  if(sec.style.display==='block'){
+    sec.style.display='none';
+    btn.textContent='Curious how it\'s structured? ▾';
+  } else {
+    sec.style.display='block';
+    btn.textContent='Collapse ▴';
+  }
+}
+
+
+const YT_PLAYLIST = 'https://youtube.com/playlist?list=PLwcKc-MRqyaXck4nny4-oqBt-jax5DQ6-&si=5dm-VXr0mAqKnum8';
+const YT_PLAYLIST_ROUTINE = 'https://youtube.com/playlist?list=PLwcKc-MRqyaUNxl7pW7l3FAIUASGxz6sP&si=EzzZ4xZRrFWj7P92';
+
+const QUESTIONS = [
+  { axis:1, text:'At a gathering, I tend to read the mood before sharing my opinion.' },
+  { axis:1, text:'Before speaking, I consider first whether my answer will be "acceptable here."' },
+  { axis:1, text:'Before saying what I genuinely want, I imagine how it will be received.' },
+  { axis:1, text:'My behavior is often shaped by the facial expressions and reactions of people around me.' },
+  { axis:1, text:'When I sense the mood differs from my view, I naturally suppress my opinion.' },
+  { axis:1, text:'I mentally review "is this okay to say" several times before speaking.' },
+  { axis:2, text:'I catch myself copying peers — their lifestyles, hobbies, tastes.' },
+  { axis:2, text:'The pressure of "I should at least keep up with others" runs in the background.' },
+  { axis:2, text:'When I judge whether I\'m living well, comparison with others factors in.' },
+  { axis:2, text:'My mood shifts when I hear that a peer is doing better than me.' },
+  { axis:2, text:'I sometimes consider "what others want" before what I want.' },
+  { axis:2, text:'Even when I achieve something, I often feel "this isn\'t enough."' },
+  { axis:3, text:'I catch myself unconsciously opening social media or messaging apps during idle moments.' },
+  { axis:3, text:'The lifestyle I see online has somehow become what I want for myself.' },
+  { axis:3, text:'The last thing I look at before sleep is, more often than not, my phone screen.' },
+  { axis:3, text:'I sometimes lose track of time scrolling Shorts, Reels, or YouTube.' }
+];
+
+const Q13_TEXT = {
+  sns: 'How much social media do you watch on an average day?',
+  kakao: 'How much time do you spend on messaging app profiles, group chats, and status updates per day?'
+};
+
+const Q17 = {
+  sns: 'The number of "likes" or comments affects how I judge the value of my content.',
+  kakao: 'I get caught up in reactions to my profile picture likes or photos I post in group chats.'
+};
+
+const RESULT_MESSAGES = {
+  high: {
+    color: '#E07A6E', segmentLabel: 'Noise is flooding in',
+    headline: 'External noise is filling your mind',
+    subline: 'Your desires aren\'t blurring because your willpower is weak'
+  },
+  mid: {
+    color: '#C9983A', segmentLabel: 'You\'re sometimes shaken by noise',
+    headline: 'External noise still rattles you sometimes',
+    subline: 'You have moments of clarity and moments of blur, mixed together'
+  },
+  low: {
+    color: '#3DAA6B', segmentLabel: 'You\'re filtering noise well',
+    headline: 'External noise is being filtered out well',
+    subline: 'Your desires are coming through relatively clearly'
+  }
+};
+
+// Per-noise base info + one-line definition
+const NOISE_BASE = {
+  1: {
+    name: 'Social Monitoring Pressure',
+    define: 'Noise that filters out your desires before you can express them, because you\'re scanning others\' reactions first',
+    surfaceNeed: 'I want to be safely accepted',
+    coreNeed: 'I want to be recognized as I am'
+  },
+  2: {
+    name: 'Comparison Pressure',
+    define: 'Noise that lets comparison with others kick in first, leaving no room for your own standards to grow',
+    surfaceNeed: 'I want to live properly',
+    coreNeed: 'I want to define my own life with my own hands'
+  },
+  3: {
+    name: 'Comparison Exposure',
+    define: 'Noise that tricks you into mistaking what social media algorithms keep showing you for your own desires',
+    defineKakao: 'Noise that makes repeated exposure to messaging app profiles and group chats feel like your own desire',
+    surfaceNeed: 'I want to feel connected to the world',
+    coreNeed: 'I want to spend my time on my own terms'
+  }
+};
+
+// ============================================================
+// Social-structural context cards (per noise)
+// — Uses only validated academic citations (aligned with Phase A v2.1)
+// ============================================================
+const CONTEXT_DETAIL = {
+  1: {
+    headline: 'Your social-reading skill isn\'t a weakness — it\'s a highly developed survival skill',
+    body: [
+      'Nunchi — the art of reading the room — is an <strong>essential social skill</strong> that developed for survival in everyday interaction in collectivist cultures. From childhood we\'ve learned to read the moods of elders, teachers, and meeting rooms — in societies where failing to read the room makes you "rude."',
+      'So if you often watch others\' reactions closely, it\'s <strong>not because you\'re unusually timid or weak</strong>. The relationship-centered structure of these societies simply taught you to behave that way. Reading others\' signals before your own feelings is actually an excellent shield that protected you. Please give yourself credit for it.'
+    ],
+    cite: '— Choi (2000) Korean Psychology / Heo & Park (2013) Nunchi Scale interpretation'
+  },
+  2: {
+    headline: 'Your standards waver because society relentlessly injected "correct answers"',
+    body: [
+      'Everyday decisions for young people in modern East Asian societies — education, career, marriage, consumption — almost always start from a single benchmark: the average standard of one\'s peer group, the pressure of <strong>"I should at least keep up with others."</strong> This isn\'t because your judgment is weak.',
+      'In the tight, competitive social structure produced by <strong>compressed modernity (Chang, 2010)</strong>, invisible social standards automatically set your goals before you can find your own. You weren\'t even given the time to discover what you actually want. Constant comparison isn\'t your personality flaw — it\'s the <strong>result of a social form</strong>.'
+    ],
+    cite: '— Chang (2010) Compressed Modernity / Schwartz (2012) Paradox of Choice interpretation'
+  },
+  3: {
+    headline: 'It\'s not that your willpower is lacking. The rules of the game are rigged',
+    body: [
+      'Social media algorithms create a digital environment that mediates comparison exposure <strong>24/7, continuously and amplified</strong>. They endlessly show you curated peak moments from other people\'s lives, exploiting the human instinct for social comparison.',
+      'When you unconsciously open the app, it\'s not a lack of self-control. It\'s the result of <strong>billions of dollars poured into sophisticated behavioral design</strong> built to capture your attention. In an environment intentionally engineered to never let you rest, surviving by willpower alone was nearly impossible from the start.'
+    ],
+    cite: '— Festinger (1954) Social Comparison Theory / Charry & Tessitore (2021) Social Media Conformity RCT interpretation'
+  }
+};
+
+// ============================================================
+// Everyday scene cards (per noise × per branch)
+// 3 scenes + acceptance line per noise
+// ============================================================
+const SCENE_DETAIL = {
+  1: {
+    title: 'Your Social Monitoring Pressure shows up in moments like these',
+    items: [
+      {
+        when: 'In meetings and gatherings',
+        whenEmoji: '💼',
+        desc: 'When my opinion differs from others, I mentally review "is this okay to say?" dozens of times and end up suppressing what I wanted to say.',
+        accept: 'You have an <strong>excellent sense</strong> for reading mood and context. It\'s a real social asset. The only thing is to keep this sense from exhausting you — start by practicing turning it off in your safest relationships.'
+      },
+      {
+        when: 'When sending messages',
+        whenEmoji: '💬',
+        desc: 'I reread messages several times before sending. "Is this tone okay?" "Will this upset them?" — and I keep worrying even after sending.',
+        accept: 'This thoughtfulness comes from <strong>genuinely valuing relationships</strong>. But not every message needs that level of vetting. Try sending just one message a day to someone you\'re comfortable with — "exactly as it came to mind."'
+      },
+      {
+        when: 'When asked for opinions',
+        whenEmoji: '🗣️',
+        desc: '"How does everyone else feel?" comes out before "I think…". I can only safely share my opinion after the mood is already set.',
+        accept: 'This is a <strong>survival skill developed in collectivist cultures</strong>. There\'s nothing wrong with it. But to keep your own thought from disappearing when "everyone else" isn\'t around, practice writing down what you really think — on paper, when alone.'
+      }
+    ]
+  },
+  2: {
+    title: 'Your Comparison Pressure shows up in moments like these',
+    items: [
+      {
+        when: 'Right after an achievement',
+        whenEmoji: '🏆',
+        desc: 'Even after accomplishing something, I think "everyone else does at least this much" and can\'t fully enjoy the satisfaction. Brief joy, then the next comparison begins.',
+        accept: 'Your achievements aren\'t lacking. <strong>The scoring rubric was simply outside of you</strong>. Society continually shows you an ever-raising average as the "right answer," nullifying your satisfaction. Now it\'s time to take that rubric back from others\' hands into your own.'
+      },
+      {
+        when: 'At reunions or hearing news on social media',
+        whenEmoji: '📰',
+        desc: 'When I hear that someone is doing better than me, I keep my composure in the moment, but my mind churns long after I get home. "What have I been doing with my life?"',
+        accept: 'This emotional turbulence is the <strong>natural human instinct for social comparison</strong> (Festinger, 1954). Nothing to be ashamed of. But after the turbulence settles, asking yourself one more question — "What was I actually envious of?" — becomes a path to discovering your own desires.'
+      },
+      {
+        when: 'When making a decision',
+        whenEmoji: '🤔',
+        desc: 'When deciding what to buy or where to go, I check "what others are doing" and "what the reviews say" before checking my own feelings. So even after deciding, I\'m left wondering "is this really what I wanted?"',
+        accept: 'This is the <strong>natural workings of cognition trying to reduce decision burden</strong> (Schwartz, 2012). The more information, the more we lean on external standards. But practicing even one small decision "without checking reviews first" will grow your own standards.'
+      }
+    ]
+  },
+  3: {
+    title: 'Your Comparison Exposure shows up in moments like these',
+    items: [
+      {
+        when: 'Morning — right after waking up',
+        whenEmoji: '🌅',
+        desc: 'I reach to turn off the alarm and end up watching Instagram or Shorts for 30 minutes. Before figuring out what I\'ll do today, I\'m looking at "how others are living."',
+        accept: 'It\'s not your fault. <strong>Algorithms reverse-engineer your brain</strong> and are designed never to let you rest (Charry & Tessitore, 2021). Don\'t blame yourself. Change starts with something as simple as moving your alarm from the bedside to the living room.'
+      },
+      {
+        when: 'Daytime — brief idle moments',
+        whenEmoji: '☕️',
+        desc: '5 minutes after lunch, 3 minutes before a meeting, in the bathroom. My hand goes to my phone unconsciously and I scroll the feed. After watching, I don\'t remember what I saw.',
+        accept: 'This is the result of <strong>billions of dollars poured into behavioral design</strong>. It\'s not a domain you can defeat with willpower. Prepare something else to reach for — a short book, a notepad, a 1-minute stretch — and your hand will naturally start to go there instead.'
+      },
+      {
+        when: 'Night — in bed before sleep',
+        whenEmoji: '🌙',
+        desc: 'I lie down to sleep, plan to watch for 30 seconds, and 1 hour disappears. The algorithm autoplays the next video, and suddenly it\'s the middle of the night.',
+        accept: 'One very small environmental design is enough. <strong>Keep your phone outside the bed for 1 hour before sleep</strong> — this single change starts reclaiming your stolen time and real desires. The answer isn\'t willpower; it\'s distance.'
+      }
+    ]
+  }
+};
+
+// Kakao variant — Comparison Exposure (axis 3) everyday scenes
+const SCENE_DETAIL_KAKAO_3 = {
+  title: 'Your messaging-app online exposure shows up in moments like these',
+  items: [
+    {
+      when: 'Morning — right after waking up',
+      whenEmoji: '🌅',
+      desc: 'I reach to turn off the alarm and end up checking group chat notifications and friends\' profile pictures one by one. Before anything else, I\'m seeing who went where, who posted what.',
+      accept: 'It\'s not your fault. <strong>Notifications and profile updates are designed to directly stimulate your brain\'s social comparison instincts</strong>. Don\'t blame yourself. A small environmental change like muting group chat notifications is enough to start a shift.'
+    },
+    {
+      when: 'Daytime — brief idle moments',
+      whenEmoji: '☕️',
+      desc: '5 minutes after lunch, 3 minutes before a meeting. I unconsciously scroll my contact list and skim through group chat conversations.',
+      accept: 'This is the <strong>natural human instinct for social comparison</strong> (Festinger, 1954), now transferred to digital. Prepare something else to reach for in idle moments — a notepad, a short book, a 1-minute stretch — and your hand will naturally go there.'
+    },
+    {
+      when: 'Night — in bed before sleep',
+      whenEmoji: '🌙',
+      desc: 'I reread group chat conversations from the beginning and stare at friends\' profile pictures and status messages for a long time. Hours disappear without me noticing.',
+      accept: 'One very small environmental design is enough. <strong>Keep your phone outside the bed for 1 hour before sleep</strong> — this single change starts reclaiming your stolen time. The answer isn\'t willpower; it\'s distance.'
+    }
+  ]
+};
+
+// Result detail messages (9 combinations)
+const RESULT_DETAIL = {
+  // Low (healthy)
+  'low-1': {
+    desc: 'You stay in harmony with the people around you while protecting your own heart well. You may still read others\' reactions, but it hasn\'t grown into a weight that presses you down.',
+    affirmTitle: 'What you\'re building well',
+    affirmBody: [
+      'You\'re finding a healthy balance between the natural desire to be <strong>"safely accepted"</strong> and the deeper desire to <strong>"exist as yourself."</strong>',
+      'Most people can\'t find this balance and lean to one side. You\'re in the rare position of being thoughtful without losing yourself. This place doesn\'t maintain itself without effort — it\'s the result of work you\'ve done, conscious or not.'
+    ],
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'You hold both the warm desire to be <strong>"safely accepted"</strong> and the deeper desire to be <strong>"recognized as you are."</strong>',
+      'You\'ve already built a small balance so that these two desires don\'t pull against each other but face the same direction. Now it\'s time to make that balance more vivid.'
+    ],
+    reflectTitle: 'Questions for taking the next step',
+    reflectQuestions: [
+      { num:'01', text:'In this season free of noise, where is your heart actually flowing?' },
+      { num:'02', text:'When recently did you fall into flow most naturally? What was the activity?' },
+      { num:'03', text:'If there\'s one thing you genuinely want to prioritize, what is it?' }
+    ]
+  },
+  'low-2': {
+    desc: 'You\'ve kept your own standards intact without being swept into the whirlpool of comparison. In an era where social media and peer pressure are everyday air, this is no small feat.',
+    affirmTitle: 'What you\'re building well',
+    affirmBody: [
+      'You measure the desire to <strong>"live well"</strong> by <strong>your own yardstick</strong>, not someone else\'s standards.',
+      'The comparison instinct is a natural human function — impossible to erase entirely. But you\'ve built a balance that isn\'t swayed by it. Now it\'s time to use this steadiness as a foundation for drawing a clearer direction.'
+    ],
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you, the desire to <strong>"live well"</strong> and the deeper desire to <strong>"define your own life with your own hands"</strong> are both breathing.',
+      'The second desire guiding the first is the secret to your steady center. Now it\'s time to move this center toward a clearer direction.'
+    ],
+    reflectTitle: 'Questions for taking the next step',
+    reflectQuestions: [
+      { num:'01', text:'With less comparison noise right now, what\'s the one direction you actually want to head toward?' },
+      { num:'02', text:'If you have your own standard for "this is enough," what does it look like?' },
+      { num:'03', text:'When do you feel most like yourself? What are you usually doing?' }
+    ]
+  },
+  'low-3': {
+    desc: 'You\'re protecting your time and mind well even inside the digital environment. In an era where algorithms keep waving at you, this is far from common.',
+    affirmTitle: 'What you\'re building well',
+    affirmBody: [
+      'You\'re meeting the desire to <strong>"feel connected to the world"</strong> while also protecting the recovery-desire to <strong>"spend my time my own way."</strong>',
+      'In a time when most people surrender their time and desires to the algorithm, you\'re among the rare ones consciously designing your environment. Now it\'s time to spend this recovered time on a clearer direction.'
+    ],
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you are both the natural desire to <strong>"feel connected to the world"</strong> and the recovery-desire to <strong>"spend my time on my own terms."</strong>',
+      'You\'ve already designed your environment so the two don\'t intrude on each other. Now it\'s time to imagine where to let this recovered time flow.'
+    ],
+    reflectTitle: 'Questions for taking the next step',
+    reflectQuestions: [
+      { num:'01', text:'When you\'re not looking at a screen, where does your mind go?' },
+      { num:'02', text:'Has there been any activity recently where you lost track of time in absorption?' },
+      { num:'03', text:'What\'s a scene you truly want to see, a person you truly want to meet?' }
+    ]
+  },
+
+  // Mid (mixed)
+  'mid-1': {
+    desc: 'Your noise is in a phase where <strong>"steady moments" and "shaken moments"</strong> alternate. In some settings you protect your heart clearly; in others, reading the room kicks in first. Both patterns coexist.',
+    warningBody: 'You don\'t need to erase your sense for reading others (the impulse to scan reactions first). What matters is <strong>noticing the pattern</strong> — when does the reading-mode turn on, and when does your true voice turn on? Without awareness, there\'s no change.',
+    warningCite: 'Heo & Park, Korean Nunchi Scale (2013) interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'You hold both the warm desire to be <strong>"safely accepted"</strong> and the deeper desire to be <strong>"recognized as you are."</strong>',
+      'Right now you\'re swaying between these two. In some places the first desire is stronger; in others, the second. Noticing this pattern is the beginning of mapping your noise.'
+    ],
+    reflectTitle: 'Questions for noticing the pattern within',
+    reflectQuestions: [
+      { num:'01', text:'Where do you find yourself reading the room more often? Where do you feel freer?' },
+      { num:'02', text:'Has there been a moment when you spoke honestly without reading the room, and it was unexpectedly well received?' },
+      { num:'03', text:'In a moment you stopped yourself with "should I really say this?" — what was the thing you actually wanted to say?' },
+      { num:'04', text:'If there are people or settings where this automatic reading kicks in, what about those relationships makes it so?' }
+    ],
+    midGuide: {
+      healthyTitle: 'How to use this skill in healthy balance',
+      healthyItems: [
+        'Reading the room is a real social skill. Don\'t try to eliminate it — treat it as something you can "turn on and off."',
+        'Pick 1-2 safe relationships and practice consciously turning the reading-mode OFF there.',
+        'Build the habit of asking, after reading the room, "but is this really my own choice?" one more time.'
+      ],
+      cautionTitle: 'Still okay for now, but watch for these signals',
+      cautionItems: [
+        'When "is this okay to do?" comes up even when you\'re alone',
+        'When it takes a long time to say what you truly feel, even in front of comfortable people',
+        'When "I don\'t know what I actually want" becomes a frequent feeling'
+      ]
+    }
+  },
+  'mid-2': {
+    desc: 'Your noise is in a phase where <strong>"living by my own standard" and "checking against others\' standards"</strong> alternate. Some decisions you make by your own measure; others you double-check by comparison. Both patterns coexist.',
+    warningBody: 'Comparison (the impulse for others-comparison to kick in first) is a natural human function — impossible to fully erase. What matters is <strong>noticing the pattern</strong> — when does comparison kick in, and how does it change your choices?',
+    warningCite: 'Festinger, A Theory of Social Comparison (1954) interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you, the genuine desire to <strong>"live well"</strong> and the deeper desire to <strong>"define your own life with your own hands"</strong> are both alive.',
+      'Right now you\'re swaying between these two. Some decisions follow your own standard; others follow comparison. Noticing this pattern starts to reveal where external standards take over.'
+    ],
+    reflectTitle: 'Questions for noticing the pattern within',
+    reflectQuestions: [
+      { num:'01', text:'In which areas does comparison happen more often? (appearance, work, relationships, possessions, how you spend time, etc.)' },
+      { num:'02', text:'If you made a recent decision without comparing, how did you feel in that moment?' },
+      { num:'03', text:'Beyond "as much as others," if you have your own standard for "this is enough for me," what does it look like?' },
+      { num:'04', text:'Is there a season or trigger when comparison gets strongest? (year-end, holidays, reunions, etc.)' }
+    ],
+    midGuide: {
+      healthyTitle: 'Healthy comparison for an independent self',
+      healthyItems: [
+        'Switch "comparison" to "reference." Look at others\' lives, but practice selecting only what fits your own standards.',
+        'Mute one channel, account, or relationship that amplifies comparison for a week, and observe how your mind changes.',
+        'Shift to time comparison ("Have I moved one step further than yesterday?") — comparing the past you to the present you.'
+      ],
+      cautionTitle: 'Still okay for now, but watch for these signals',
+      cautionItems: [
+        'When "others are doing better" arises first, even after an achievement',
+        'When the basis of your decisions runs more often on "because others do" than on "because I want to"',
+        'When you can\'t easily recall your own joys or satisfactions'
+      ]
+    }
+  },
+  'mid-3': {
+    desc: 'Your noise is in a phase where <strong>"intentional use" and "unconscious use"</strong> alternate. Some times you open the screen for a clear purpose; other times your hand drifts wherever the algorithm pulls. Both patterns coexist.',
+    warningBody: 'Digital environments (algorithm-curated social media and messaging app content) are designed to resist willpower. What matters is <strong>noticing the pattern</strong> — at what times, in what emotional states, does unconscious use begin?',
+    warningCite: 'Charry & Tessitore, Social Media Conformity (2021) interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you are both the natural desire to <strong>"feel connected to the world"</strong> and the recovery-desire to <strong>"spend my time on my own terms."</strong>',
+      'Right now you\'re swaying between these two. Some times you use the screen intentionally; other times unconsciously. Noticing this boundary is where environmental design begins.'
+    ],
+    reflectTitle: 'Questions for noticing your usage pattern',
+    reflectQuestions: [
+      { num:'01', text:'In what emotional state do you unconsciously turn the screen on? (tired, lonely, bored, etc.)' },
+      { num:'02', text:'How do you usually feel after you turn the screen off?' },
+      { num:'03', text:'If there\'s one thing you truly want to do during screen-free time, what is it?' },
+      { num:'04', text:'When in your day can you go the longest without a screen?' }
+    ],
+    midGuide: {
+      healthyTitle: 'Healthy social media and digital use',
+      healthyItems: [
+        'Separate "intentional use" from "unconscious use." Before opening an app, pause 3 seconds and ask: "What do I actually want to see right now?"',
+        'Use by purpose, not by time. "Check this one thing" is more restorative than "browse for 30 minutes."',
+        '1 hour before sleep and 30 minutes after waking — try spending just these two slots screen-free.'
+      ],
+      cautionTitle: 'Still okay for now, but watch for these signals',
+      cautionItems: [
+        'When emptiness gets stronger, not weaker, after the screen goes off',
+        'When a lifestyle you saw on social media has somehow become your goal or desire',
+        'When "I don\'t know what to do" arises often in screen-free time'
+      ]
+    }
+  },
+
+  // High (severe)
+  'high-1': {
+    desc: 'You\'re running a pattern where almost every expression of yourself is preceded by scanning others\' reactions. Your thoughtfulness has grown into a weight that presses you down.',
+    warningBody: 'When this Social Monitoring Pressure (noise that makes you scan reactions first) persists, your ability to distinguish what truly arises from within (<strong>internally generated motivation</strong>) from what was shaped by others\' expectations (<strong>externally induced motivation</strong>) starts to blur. Over time, even the question "what do I actually want?" begins to feel foreign.',
+    warningCite: 'Ryan & Deci, Self-Determination Theory (2017) interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you is the warm desire to be <strong>"safely accepted"</strong>, and beneath it, deeper down, breathes the essential desire to be <strong>"recognized as you are."</strong>',
+      'Your room-reading skill developed as a shield to protect the first desire. But when this shield grows too thick, it blocks even the chance to show your real self. True recognition only comes when the true self is shown.',
+      'Without removing your thoughtfulness, it\'s time to start practicing how to lift the weight pressing you down.'
+    ],
+    reflectTitle: 'Questions for finding the real you within',
+    reflectQuestions: [
+      { num:'01', text:'Today, was there a thing you swallowed because of "should I really say this?" What was it?' },
+      { num:'02', text:'If no one\'s gaze had to be considered, what\'s the one thing you\'d most want to do right now?' },
+      { num:'03', text:'Has there been a moment when you spoke honestly without reading the room, and it was unexpectedly well received?' }
+    ]
+  },
+  'high-2': {
+    desc: 'You\'re running a pattern where, almost always, you measure yourself through others\' positions. Your life\'s standards are steadily leaking outside of you.',
+    warningBody: 'When Comparison Pressure (noise that lets comparison kick in first, leaving no room for your own standards to grow) becomes the everyday, the desires that arise from within you (<strong>internally generated motivation</strong>) get tangled with desires shaped by comparison (<strong>externally induced motivation</strong>). Choices made because you truly wanted them get confused with choices made to not fall behind. And no matter what you achieve, an unfillable emptiness follows.',
+    warningCite: 'Festinger (1954) + SDT interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you is the genuine desire to <strong>"live well"</strong>, and beneath it, deeper down, sits the essential desire to <strong>"define your own life with your own hands."</strong>',
+      'Comparison is the wrong solution for the first desire. When you score your life by someone else\'s rubric, even living well doesn\'t make it "your" life. Even a perfect score is just answering someone else\'s test paper.',
+      'Whether you\'re truly living well — no one else can grade that. It\'s a domain only you can know.'
+    ],
+    reflectTitle: 'Questions about the standards of your life',
+    reflectQuestions: [
+      { num:'01', text:'If the "as much as others" standard disappeared, what would let you feel you\'re living well?' },
+      { num:'02', text:'In a quiet moment when comparison settled down, was there time that flowed unexpectedly with satisfaction?' },
+      { num:'03', text:'If you have your own standard for "this is enough," what is it?' }
+    ]
+  },
+  'high-3': {
+    desc: 'You\'re almost continuously exposed to algorithm-curated content. That exposure has begun to shape what "you want." This isn\'t a willpower problem — it\'s an environmental design problem.',
+    warningBody: 'When Comparison Exposure (noise that tricks you into mistaking what social media algorithms keep showing you for your own desires) becomes frequent, the boundary between your real desires (<strong>internally generated motivation</strong>) and desires planted by repeated algorithmic exposure (<strong>externally induced motivation</strong>) collapses. What\'s scarier is that, at some point, you can no longer tell yourself whether "I want this because I want it, or because I kept seeing it and started wanting it."',
+    warningCite: 'Charry & Tessitore (2021) + SDT interpretation',
+    needFoundTitle: 'Desires alive in you right now',
+    needFoundBody: [
+      'Inside you is the natural desire to <strong>"feel connected to the world"</strong>, and beneath it, deeper down, the recovery-desire to <strong>"spend my time on my own terms."</strong>',
+      'Infinite scrolling isn\'t real connection with the world — it\'s closer to a consumptive performance of empty hearts. The problem is, the more you do it, the more external noise takes over your mind instead of your inner voice or desires.',
+      'If your mind is being stirred up, it\'s not your fault. Algorithms are designed never to let you rest. The environment has to change before the mind can recover.'
+    ],
+    reflectTitle: 'Questions for noticing your usage pattern',
+    reflectQuestions: [
+      { num:'01', text:'When you last opened your phone today — did you truly want to look at it, or did your hand just go?' },
+      { num:'02', text:'During screen-free time, what feeling usually comes up? Anxious, or calm?' },
+      { num:'03', text:'If there\'s a time in the day you could call "this hour belongs to me," when would it be?' }
+    ]
+  }
+};
+
+const ACTION_DETAIL = {
+  'low': {
+    needStepBadge: { num: 'N.E.E.D Stage 3·4', name: 'Energy Flow + Daily Drive · Next step' },
+    titIcon: '✨',
+    title: 'With noise filtered, time to flow toward your priorities',
+    titHighlight: null,
+    sub: 'Right now, with noise well-filtered, is the best starting point. Pick the <strong>one that draws you most naturally</strong> below and start this week.',
+    items: [
+      'Once a day, write a single line: "What do I actually want right now?"',
+      'If you find a time of day or environment where you fall into flow easily, pin it to your schedule',
+      'On the weekend, recall "the moment this week I felt most like myself"'
+    ],
+    quote: 'Where noise has lifted, it\'s time to make space for your real desires to flow'
+  },
+  'mid': {
+    needStepBadge: { num: 'N.E.E.D Stage 2', name: 'Eliminate Noise · Map your noise' },
+    titIcon: '⏳',
+    title: 'What to start',
+    titHighlight: 'Within the next 24 hours',
+    sub: 'Now — right after reading the result, while your motivation is highest — is the best starting point. Pick the <strong>single easiest one</strong> below and start today.',
+    items: [
+      'Once a day, notice a moment when noise kicked in and write one line about it',
+      'For a week, observe the times, places, and relationships where noise feels weakest',
+      'On the weekend, read back through your notes and find the pattern of where noise is strongest'
+    ],
+    quote: 'Once you can see noise, the freedom from being swayed by it follows'
+  },
+  'high': {
+    needStepBadge: { num: 'N.E.E.D Stage 2', name: 'Eliminate Noise · Emergency response' },
+    titIcon: '⏳',
+    title: 'The smallest first step to take',
+    titHighlight: 'Within the next 24 hours',
+    sub: 'No big resolutions needed. Pick the <strong>single easiest one</strong> below and start today. Change starts from the smallest action.',
+    items: [],
+    quote: 'The environment must change before the mind can recover'
+  }
+};
+
+const HIGH_ACTION_BY_AXIS = {
+  1: [
+    'Once a day, in a small setting, share your opinion "before reading the room"',
+    'Right after speaking, take one deep breath — "I am still myself"',
+    'In the evening, write one line about that moment — what you felt'
+  ],
+  2: [
+    'Mute or unfollow one channel where comparison happens most, for one week',
+    'Each evening, record "one thing I did well by my own standard today" (independent of others)',
+    'On day 7, compare your mind state before and after the mute — how it shifted'
+  ],
+  3: [
+    'For 1 hour before sleep, keep your phone outside the bed',
+    'Pause 3 seconds before opening an app — "What do I actually want right now?"',
+    'The moment you catch yourself in unconscious use, turn the screen off and take one breath'
+  ]
+};
+
+const SIGNATURE_QUOTE = {
+  'low-1': 'Your thoughtfulness and your steadiness — we\'re cheering for that balance',
+  'low-2': 'You\'re holding the place where your own standard stays unshaken — solidly kept',
+  'low-3': 'The ability to spend your time on your own terms — a rare asset in this era',
+  'mid-1': 'Where awareness begins, change grows',
+  'mid-2': 'When you notice the place of comparison, your own place starts to appear',
+  'mid-3': 'When you notice the environment, you can change the environment',
+  'high-1': 'True recognition can only be received as your true self',
+  'high-2': 'The standard of your life does not exist in someone else\'s life',
+  'high-3': 'Your time must be designed by you, not by an algorithm'
+};
+
+const STORAGE_KEY = 'noise_diagnosis_v3';
+let state = {
+  currentIdx: 0,
+  answers: new Array(18).fill(null),
+  branch: null,
+  snsMinutes: null,
+  startedAt: null
+};
+
+function saveState(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
+function loadState(){ try{ const r=localStorage.getItem(STORAGE_KEY); if(!r) return null; const p=JSON.parse(r); if(!p||!Array.isArray(p.answers)) return null; return p; }catch(e){ return null; } }
+function clearState(){ try{ localStorage.removeItem(STORAGE_KEY); }catch(e){} state={currentIdx:0,answers:new Array(18).fill(null),branch:null,snsMinutes:null,startedAt:null}; }
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+function getQuestionText(idx){
+  if (idx <= 11) return QUESTIONS[idx].text;
+  if (idx === 12) return null;
+  if (idx >= 13 && idx <= 15) return QUESTIONS[idx-1].text;
+  if (idx === 16) return state.branch==='sns'?Q17.sns:Q17.kakao;
+  if (idx === 17) return QUESTIONS[15].text;
+}
+
+function getSectionInfo(idx){
+  if (idx <= 5) return {section:'Social Monitoring Pressure', sectionNum:idx+1, sectionTotal:6, color:'#2979C8', cls:'pill-N', btnCls:'btn-N', activeCls:'active-N'};
+  if (idx <= 11) return {section:'Comparison Pressure', sectionNum:idx-5, sectionTotal:6, color:'#3DAA6B', cls:'pill-E1', btnCls:'btn-E1', activeCls:'active-E1'};
+  return {section:'Comparison Exposure', sectionNum:idx-11, sectionTotal:6, color:'#C9983A', cls:'pill-E2', btnCls:'btn-E2', activeCls:'active-E2'};
+}
+
+function updateProgress(){
+  const total=18;
+  const cur=state.currentIdx+1;
+  const pct=(state.currentIdx/total)*100;
+  const sec=getSectionInfo(state.currentIdx);
+  document.getElementById('progFill').style.width=pct+'%';
+  document.getElementById('progFill').style.background=sec.color;
+  document.getElementById('progSection').textContent=sec.section+' · '+sec.sectionNum+'/'+sec.sectionTotal;
+  document.getElementById('progCount').textContent=cur+' / '+total;
+  document.getElementById('topCounter').style.display='block';
+  document.getElementById('topCur').textContent=cur;
+  document.getElementById('topTot').textContent=' / '+total;
+}
+
+function renderQuestion(){
+  if (state.currentIdx === 12) {
+    document.getElementById('sliderQText').textContent = Q13_TEXT[state.branch];
+    const slider = document.getElementById('sliderInput');
+    const display = document.getElementById('sliderValue');
+    const initial = state.snsMinutes !== null ? state.snsMinutes : 30;
+    slider.value = initial;
+    display.textContent = initial;
+    showScreen('screen-slider');
+    updateProgress();
+    return;
+  }
+  
+  const sec = getSectionInfo(state.currentIdx);
+  const text = getQuestionText(state.currentIdx);
+  
+  const secPill = document.getElementById('secPill');
+  secPill.className = 'section-pill '+sec.cls;
+  secPill.textContent = sec.section;
+  
+  document.getElementById('qText').textContent = text;
+  
+  const scaleRow = document.getElementById('scaleRow');
+  scaleRow.innerHTML = '';
+  const currentAnswer = state.answers[state.currentIdx];
+  for (let i=1; i<=5; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'scale-btn'+(currentAnswer===i?' '+sec.activeCls:'');
+    let dotsHtml = '';
+    for (let j=0; j<i; j++) dotsHtml += '<span class="dot"></span>';
+    btn.innerHTML = '<span class="scale-num">'+i+'</span><span class="dots">'+dotsHtml+'</span>';
+    btn.addEventListener('click', ()=>selectAnswer(i, sec));
+    scaleRow.appendChild(btn);
+  }
+  
+  const nextBtn = document.getElementById('nextBtn');
+  nextBtn.className = 'btn-next '+sec.btnCls;
+  nextBtn.disabled = currentAnswer === null;
+  
+  document.getElementById('prevBtn').disabled = state.currentIdx === 0;
+  
+  showScreen('screen-question');
+  updateProgress();
+}
+
+function selectAnswer(value, sec){
+  state.answers[state.currentIdx] = value;
+  saveState();
+  document.querySelectorAll('.scale-btn').forEach(b=>{
+    b.classList.remove('active-N','active-E1','active-E2');
+  });
+  const btns = document.querySelectorAll('.scale-btn');
+  btns[value-1].classList.add(sec.activeCls);
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if (state.currentIdx < 17) {
+    state.currentIdx += 1;
+    saveState();
+    renderQuestion();
+  } else {
+    showLoadingThenResult();
+  }
+}
+
+function goPrev(){
+  if (state.currentIdx > 0) {
+    state.currentIdx -= 1;
+    saveState();
+    renderQuestion();
+  }
+}
+
+function answerSlider(){
+  const slider = document.getElementById('sliderInput');
+  const minutes = parseInt(slider.value, 10);
+  state.snsMinutes = minutes;
+  let scaled;
+  if (minutes <= 0) scaled = 1;
+  else if (minutes <= 30) scaled = 2;
+  else if (minutes <= 90) scaled = 3;
+  else if (minutes <= 180) scaled = 4;
+  else scaled = 5;
+  state.answers[12] = scaled;
+  saveState();
+  state.currentIdx += 1;
+  saveState();
+  renderQuestion();
+}
+
+function calculateResult(){
+  const a1 = state.answers.slice(0,6).reduce((a,b)=>a+(b||0), 0);
+  const a2 = state.answers.slice(6,12).reduce((a,b)=>a+(b||0), 0);
+  const a3 = state.answers.slice(12,18).reduce((a,b)=>a+(b||0), 0);
+  const total = a1+a2+a3;
+  const score = Math.round(((total-18)/72)*100);
+  let segment;
+  if (score >= 67) segment = 'high';
+  else if (score >= 34) segment = 'mid';
+  else segment = 'low';
+  const arr = [a1,a2,a3];
+  let maxIdx=0, maxVal=arr[0];
+  for (let i=1; i<3; i++) if (arr[i]>maxVal){maxVal=arr[i];maxIdx=i;}
+  if (arr[2]===maxVal) maxIdx=2;
+  else if (arr[1]===maxVal && maxIdx!==2) maxIdx=1;
+  return {axis1:a1, axis2:a2, axis3:a3, score, segment, primaryAxis:maxIdx+1};
+}
+
+function showLoadingThenResult(){
+  document.getElementById('topCounter').style.display='none';
+  showScreen('screen-loading');
+  setTimeout(()=>{ renderResult(); showScreen('screen-result'); }, 900);
+}
+
+function renderResult(){
+  const r = calculateResult();
+  const msg = RESULT_MESSAGES[r.segment];
+  const baseInfo = NOISE_BASE[r.primaryAxis];
+  const detailKey = r.segment + '-' + r.primaryAxis;
+  const detail = RESULT_DETAIL[detailKey];
+  const actionDetail = ACTION_DETAIL[r.segment];
+  const sigQuote = SIGNATURE_QUOTE[detailKey];
+  
+  document.getElementById('resTitle').textContent = msg.headline;
+  document.getElementById('resSub').textContent = msg.subline;
+  
+  document.getElementById('scoreNum').textContent = r.score;
+  document.getElementById('scoreLabel').textContent = msg.segmentLabel;
+  const ringFg = document.getElementById('ringFg');
+  const circ = 2*Math.PI*105;
+  ringFg.setAttribute('stroke', msg.color);
+  ringFg.setAttribute('stroke-dasharray', '0 '+circ);
+  setTimeout(()=>{ ringFg.setAttribute('stroke-dasharray', (r.score/100*circ)+' '+circ); }, 100);
+  
+  // 3-noise summary card — mid/high only
+  const summaryCard = document.getElementById('noiseSummaryCard');
+  if (r.segment === 'mid' || r.segment === 'high') {
+    summaryCard.style.display = 'block';
+    // Change axis-3 label/desc based on branch
+    if (state.branch === 'kakao') {
+      document.getElementById('noise3Name').textContent = 'Messaging App Exposure';
+      document.getElementById('noise3Desc').textContent = 'Noise that makes repeated exposure to messaging app profiles and group chats feel like your own desire';
+    } else {
+      document.getElementById('noise3Name').textContent = 'Comparison Exposure';
+      document.getElementById('noise3Desc').textContent = 'Noise that tricks you into mistaking what social media algorithms keep showing you for your own desires';
+    }
+  } else {
+    summaryCard.style.display = 'none';
+  }
+  
+  const ax3Label = state.branch==='sns'?'Social Media Algorithm Exposure':'Messaging App Exposure';
+  document.getElementById('ax3Label').textContent = ax3Label;
+  document.getElementById('ax1Score').textContent = r.axis1;
+  document.getElementById('ax2Score').textContent = r.axis2;
+  document.getElementById('ax3Score').textContent = r.axis3;
+  const bars = [document.getElementById('ax1Bar'), document.getElementById('ax2Bar'), document.getElementById('ax3Bar')];
+  bars.forEach(b=>{ b.classList.remove('primary'); b.style.width='0%'; });
+  bars[r.primaryAxis-1].classList.add('primary');
+  setTimeout(()=>{
+    bars[0].style.width = (r.axis1/30*100)+'%';
+    bars[1].style.width = (r.axis2/30*100)+'%';
+    bars[2].style.width = (r.axis3/30*100)+'%';
+  }, 300);
+  
+  const primaryName = (r.primaryAxis===3 && state.branch==='kakao')?'Messaging App Exposure':baseInfo.name;
+  const primaryDefine = (r.primaryAxis===3 && state.branch==='kakao')?baseInfo.defineKakao:baseInfo.define;
+  const primaryLabel = document.querySelector('.primary-tag');
+  if (r.segment === 'low') {
+    primaryLabel.textContent = 'The relatively larger area in your noise distribution';
+  } else {
+    primaryLabel.textContent = 'Your strongest single noise';
+  }
+  document.getElementById('primaryName').textContent = primaryName;
+  // Show one-line noise definition
+  document.getElementById('primaryDefine').textContent = '— ' + primaryDefine;
+  document.getElementById('primaryDesc').innerHTML = detail.desc;
+  
+  // Social-structural context — mid/high only
+  // (low stage is affirming tone, context card tone-mismatch)
+  const contextCard = document.getElementById('contextCard');
+  if (r.segment === 'mid' || r.segment === 'high') {
+    const ctx = CONTEXT_DETAIL[r.primaryAxis];
+    document.getElementById('contextHeadline').textContent = '"' + ctx.headline + '"';
+    document.getElementById('contextBody').innerHTML = ctx.body.map(p=>'<p>'+p+'</p>').join('');
+    document.getElementById('contextCite').textContent = ctx.cite;
+    contextCard.style.display = 'block';
+  } else {
+    contextCard.style.display = 'none';
+  }
+  
+  // Everyday scene — all stages
+  // (self-awareness valuable at all stages)
+  const sceneData = (r.primaryAxis === 3 && state.branch === 'kakao')
+    ? SCENE_DETAIL_KAKAO_3
+    : SCENE_DETAIL[r.primaryAxis];
+  document.getElementById('sceneTit').textContent = sceneData.title;
+  const sceneItemsEl = document.getElementById('sceneItems');
+  sceneItemsEl.innerHTML = '';
+  sceneData.items.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'scene-item';
+    div.innerHTML =
+      '<div class="scene-when"><span class="scene-when-emoji">' + item.whenEmoji + '</span><span>' + item.when + '</span></div>' +
+      '<div class="scene-desc">' + item.desc + '</div>' +
+      '<div class="scene-accept">' +
+        '<span class="scene-accept-icon">✨</span>' +
+        '<div class="scene-accept-text">' + item.accept + '</div>' +
+      '</div>';
+    sceneItemsEl.appendChild(div);
+  });
+  
+  // Warning / affirmation card
+  const warningCard = document.querySelector('.warning-card');
+  const warningTag = document.querySelector('.warning-tag');
+  if (r.segment === 'low') {
+    warningCard.style.background = '#F0FDF4';
+    warningCard.style.borderColor = '#BBF7D0';
+    warningTag.style.color = '#166534';
+    warningTag.style.borderColor = '#BBF7D0';
+    warningTag.className = 'warning-tag icon-affirm';
+    warningTag.textContent = 'What you\'re building well';
+    document.getElementById('warningBody').innerHTML = detail.affirmBody.map(p=>'<p>'+p+'</p>').join('');
+    document.getElementById('warningBody').style.color = '#14532D';
+    document.getElementById('warningCite').textContent = '';
+    document.getElementById('warningCite').style.display = 'none';
+  } else {
+    warningCard.style.background = '#FEF2F2';
+    warningCard.style.borderColor = '#FECACA';
+    warningTag.style.color = '#B91C1C';
+    warningTag.style.borderColor = '#FECACA';
+    warningTag.className = 'warning-tag icon-warn';
+    warningTag.textContent = 'If this continues';
+    document.getElementById('warningBody').innerHTML = detail.warningBody;
+    document.getElementById('warningBody').style.color = '#7F1D1D';
+    document.getElementById('warningCite').textContent = '— ' + detail.warningCite;
+    document.getElementById('warningCite').style.display = 'block';
+  }
+  
+  document.getElementById('needTit').textContent = detail.needFoundTitle;
+  document.getElementById('needBody').innerHTML = detail.needFoundBody.map(p=>'<p>'+p+'</p>').join('');
+  
+  document.getElementById('reflectTit').textContent = detail.reflectTitle;
+  const rqEl = document.getElementById('reflectQuestions');
+  rqEl.innerHTML = '';
+  detail.reflectQuestions.forEach(q=>{
+    const div = document.createElement('div');
+    div.className = 'reflect-q';
+    div.innerHTML = '<div class="reflect-q-num">Q.'+q.num+'</div><div class="reflect-q-text">'+q.text+'</div>';
+    rqEl.appendChild(div);
+  });
+  
+  const guideCard = document.getElementById('guideCard');
+  if (r.segment === 'mid' && detail.midGuide) {
+    document.getElementById('guideHealthyTitle').textContent = detail.midGuide.healthyTitle;
+    const ghl = document.getElementById('guideHealthyList');
+    ghl.innerHTML = '';
+    detail.midGuide.healthyItems.forEach(item=>{
+      const li = document.createElement('li');
+      li.textContent = item;
+      ghl.appendChild(li);
+    });
+    document.getElementById('guideCautionTitle').textContent = detail.midGuide.cautionTitle;
+    const gcl = document.getElementById('guideCautionList');
+    gcl.innerHTML = '';
+    detail.midGuide.cautionItems.forEach(item=>{
+      const li = document.createElement('li');
+      li.textContent = item;
+      gcl.appendChild(li);
+    });
+    guideCard.classList.add('show');
+  } else {
+    guideCard.classList.remove('show');
+  }
+  
+  const stepBadgeEl = document.querySelector('.action-need-step');
+  stepBadgeEl.innerHTML =
+    '<span class="action-need-step-num">' + actionDetail.needStepBadge.num + '</span>' +
+    '<span class="action-need-step-arrow">→</span>' +
+    '<span class="action-need-step-name">' + actionDetail.needStepBadge.name + '</span>';
+  
+  const actionCard = document.querySelector('.action-card');
+  const actionTag = document.querySelector('.action-tag');
+  const actionQuoteEl = document.getElementById('actionQuote');
+  const actionTitEl = document.getElementById('actionTit');
+  const actionTitIconEl = document.getElementById('actionTitIcon');
+  const actionSubEl = document.getElementById('actionSub');
+  const actionListEl = document.getElementById('actionList');
+  
+  if (r.segment === 'low') {
+    actionCard.style.background = '#F0FDF4';
+    actionCard.style.borderColor = '#BBF7D0';
+    actionTag.style.background = '#fff';
+    actionTag.style.color = '#166534';
+    actionTag.style.borderColor = '#BBF7D0';
+    actionTag.textContent = '▸ Next step, a small beginning';
+    actionTitEl.style.color = '#14532D';
+    if (actionSubEl) actionSubEl.style.color = '#166534';
+    actionQuoteEl.style.color = '#166534';
+    actionQuoteEl.style.borderTopColor = '#BBF7D0';
+  } else {
+    actionCard.style.background = '#FFFBEB';
+    actionCard.style.borderColor = '#FDE68A';
+    actionTag.style.background = '#fff';
+    actionTag.style.color = '#92400E';
+    actionTag.style.borderColor = '#FDE68A';
+    actionTag.textContent = '▸ A small practice to start today';
+    actionTitEl.style.color = '#78350F';
+    if (actionSubEl) actionSubEl.style.color = '#92400E';
+    actionQuoteEl.style.color = '#92400E';
+    actionQuoteEl.style.borderTopColor = '#FDE68A';
+  }
+  
+  // Title icon + 24hr emphasis
+  if (actionTitIconEl) {
+    actionTitIconEl.textContent = actionDetail.titIcon || '✨';
+  }
+  if (actionDetail.titHighlight) {
+    actionTitEl.innerHTML = '<span class="action-highlight">' + actionDetail.titHighlight + '</span> ' + actionDetail.title;
+  } else {
+    actionTitEl.textContent = actionDetail.title;
+  }
+  // Pressure-relief subcopy
+  if (actionSubEl) {
+    actionSubEl.innerHTML = actionDetail.sub || '';
+    actionSubEl.style.display = actionDetail.sub ? 'block' : 'none';
+  }
+  
+  let actionItems = actionDetail.items;
+  if (r.segment === 'high' && (!actionItems || actionItems.length === 0)) {
+    actionItems = HIGH_ACTION_BY_AXIS[r.primaryAxis];
+  }
+  
+  actionListEl.innerHTML = '';
+  actionItems.forEach(item=>{
+    const li = document.createElement('li');
+    li.textContent = item;
+    if (r.segment === 'low') li.style.color = '#166534';
+    actionListEl.appendChild(li);
+  });
+  
+  actionQuoteEl.textContent = '"' + (sigQuote || actionDetail.quote) + '"';
+  
+  // Video cards — stage-dependent
+  const videoContainer = document.getElementById('videoCardsContainer');
+  videoContainer.innerHTML = '';
+  
+  function makeVideoCard(href, platform, title, desc, primary) {
+    const accent = primary ? '#3DAA6B' : '#C9983A';
+    const bgHover = primary ? '#F0FDF4' : '#FFFBEB';
+    return '<a class="video-card" href="' + href + '" target="_blank" rel="noopener noreferrer" ' +
+      'onmouseover="this.style.borderColor=\'' + accent + '\';this.style.background=\'' + bgHover + '\'" ' +
+      'onmouseout="this.style.borderColor=\'#E2E8F0\';this.style.background=\'#fff\'">' +
+      '<div class="video-head">' +
+        '<div class="video-icon">' +
+          '<svg viewBox="0 0 24 24"><path d="M23 7s-.2-1.6-.8-2.3c-.7-.9-1.5-.9-1.9-1C17.5 3.5 12 3.5 12 3.5s-5.5 0-8.3.2c-.4.1-1.2.1-1.9 1C1.2 5.4 1 7 1 7S.8 8.9.8 10.8v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 8.1.2 0 0 5.5 0 8.3-.2.4-.1 1.2-.1 1.9-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.8v-1.8C23.2 8.9 23 7 23 7zM9.7 14.6V8.2l6.4 3.2-6.4 3.2z"/></svg>' +
+        '</div>' +
+        '<div class="video-label">' +
+          '<div class="video-platform">' + platform + '</div>' +
+          '<div class="video-tit">' + title + '</div>' +
+        '</div>' +
+        '<span class="video-arrow" style="color:' + accent + '">→</span>' +
+      '</div>' +
+      '<div class="video-desc">' + desc + '</div>' +
+    '</a>';
+  }
+  
+  if (r.segment === 'low') {
+    videoContainer.innerHTML =
+      makeVideoCard(YT_PLAYLIST_ROUTINE, 'YOUTUBE · Recommended', 'Daily Routine Design Series',
+        'Right now — with noise well-filtered — is<br/>the golden time to design your own routine', true) +
+      makeVideoCard(YT_PLAYLIST, 'YOUTUBE', 'Noise Elimination Series',
+        'If you want to understand noise more deeply,<br/>watch this series too', false);
+  } else if (r.segment === 'mid') {
+    videoContainer.innerHTML =
+      makeVideoCard(YT_PLAYLIST, 'YOUTUBE · Recommended', 'Noise Elimination Series',
+        'Methods for noticing and reducing noise patterns —<br/>the most helpful series for this stage', false) +
+      makeVideoCard(YT_PLAYLIST_ROUTINE, 'YOUTUBE', 'Daily Routine Design Series',
+        'During low-noise periods, it\'s good to start<br/>with small routines too', true);
+  } else {
+    videoContainer.innerHTML =
+      makeVideoCard(YT_PLAYLIST, 'YOUTUBE · Recommended', 'Noise Elimination Series',
+        'Concrete methods for changing the environment first —<br/>watch the N.E.E.D videos from Nadaum Design Lab', false);
+  }
+  
+  const nextDiagH = document.querySelector('.next-diagnosis-h');
+  if (nextDiagH) {
+    if (r.segment === 'low') {
+      nextDiagH.textContent = 'Noise is well-filtered. Now it\'s time to meet your real energy pattern';
+    } else {
+      nextDiagH.textContent = 'When the noise clears, what\'s left?';
+    }
+  }
+  
+  window._resultData = r;
+}
+
+// ============================================================
+// Result card SVG (light tone)
+// ============================================================
+function generateCardSVG(r, version){
+  const W = 1080;
+  const H = version==='square'?1080:1920;
+  const msg = RESULT_MESSAGES[r.segment];
+  const baseInfo = NOISE_BASE[r.primaryAxis];
+  const color = msg.color;
+  
+  const BG = '#F8F9FB';
+  const CARD = '#FFFFFF';
+  const NAVY = '#1E2761';
+  const TEXT = '#2F2F2F';
+  const SUB = '#718096';
+  const BORDER = '#E2E8F0';
+  const RING_BG = '#F0F1F5';
+  
+  const ax3Label = state.branch==='sns'?'Social Media Algorithm Exposure':'Messaging App Exposure';
+  const primaryName = (r.primaryAxis===3 && state.branch==='kakao')?'Messaging App Exposure':baseInfo.name;
+  
+  function needLogoSVG(x, y, fs){
+    const ls = fs*0.14;
+    return '<text x="'+x+'" y="'+y+'" font-family="-apple-system, BlinkMacSystemFont, \'Apple SD Gothic Neo\', \'SF Pro Text\', \'Inter\', sans-serif" font-weight="800" font-size="'+fs+'" letter-spacing="'+ls+'">'+
+      '<tspan fill="#2979C8">N.</tspan>'+
+      '<tspan fill="#3DAA6B">E.</tspan>'+
+      '<tspan fill="#C9983A">E.</tspan>'+
+      '<tspan fill="#8B5CF6">D.</tspan>'+
+      '</text>';
+  }
+  
+  function watermarkSVG(cx, y){
+    return '<text x="'+cx+'" y="'+y+'" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="600" font-size="18" letter-spacing="2" fill="'+SUB+'" text-anchor="middle">Nadaum Design Lab · NEED SCAN</text>'+
+           '<text x="'+cx+'" y="'+(y+26)+'" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="500" font-size="20" fill="#9CA3AF" text-anchor="middle">Design Your Authentic Self</text>';
+  }
+  
+  function gaugeBar(x, y, width, height, value, max, c, label, score, isPrimary){
+    const fillWidth = (value/max)*width;
+    const barColor = isPrimary?c:'#9CA3AF';
+    return '<g>'+
+      '<text x="'+x+'" y="'+(y-12)+'" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="600" font-size="20" fill="'+TEXT+'">'+label+'</text>'+
+      '<text x="'+(x+width)+'" y="'+(y-12)+'" font-family="-apple-system, sans-serif" font-weight="700" font-size="20" fill="'+(isPrimary?c:SUB)+'" text-anchor="end">'+score+'</text>'+
+      '<rect x="'+x+'" y="'+y+'" width="'+width+'" height="'+height+'" rx="'+(height/2)+'" fill="'+RING_BG+'" />'+
+      '<rect x="'+x+'" y="'+y+'" width="'+fillWidth+'" height="'+height+'" rx="'+(height/2)+'" fill="'+barColor+'" />'+
+    '</g>';
+  }
+  
+  function bigScoreSquare(cx, cy, sc, c){
+    const dasharray = (sc/100)*879.6;
+    return '<g>'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="140" fill="none" stroke="'+RING_BG+'" stroke-width="14" />'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="140" fill="none" stroke="'+c+'" stroke-width="14" stroke-dasharray="'+dasharray+' 879.6" stroke-linecap="round" transform="rotate(-90 '+cx+' '+cy+')" />'+
+      '<text x="'+cx+'" y="'+(cy-8)+'" font-family="-apple-system, sans-serif" font-weight="800" font-size="92" fill="'+NAVY+'" text-anchor="middle" letter-spacing="-2">'+sc+'</text>'+
+      '<text x="'+cx+'" y="'+(cy+38)+'" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="500" font-size="20" fill="#9CA3AF" text-anchor="middle" letter-spacing="2">/ 100</text>'+
+    '</g>';
+  }
+  
+  function bigScoreStory(cx, cy, sc, c){
+    const dasharray = (sc/100)*1256.6;
+    return '<g>'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="200" fill="none" stroke="'+RING_BG+'" stroke-width="20" />'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="200" fill="none" stroke="'+c+'" stroke-width="20" stroke-dasharray="'+dasharray+' 1256.6" stroke-linecap="round" transform="rotate(-90 '+cx+' '+cy+')" />'+
+      '<text x="'+cx+'" y="'+(cy-12)+'" font-family="-apple-system, sans-serif" font-weight="800" font-size="148" fill="'+NAVY+'" text-anchor="middle" letter-spacing="-3">'+sc+'</text>'+
+      '<text x="'+cx+'" y="'+(cy+50)+'" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="500" font-size="26" fill="#9CA3AF" text-anchor="middle" letter-spacing="3">/ 100</text>'+
+    '</g>';
+  }
+  
+  let svg = '<?xml version="1.0" encoding="UTF-8"?>';
+  svg += '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">';
+  svg += '<rect width="'+W+'" height="'+H+'" fill="'+BG+'" />';
+  
+  if (version === 'square') {
+    svg += '<rect x="60" y="60" width="960" height="960" rx="32" fill="'+CARD+'" stroke="'+BORDER+'" stroke-width="1" />';
+    svg += '<text x="'+(W/2)+'" y="155" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="600" font-size="18" fill="'+SUB+'" text-anchor="middle" letter-spacing="5">Your Noise Pollution Level</text>';
+    svg += needLogoSVG(W/2 - 105, 230, 50);
+    svg += bigScoreSquare(W/2, 420, r.score, color);
+    svg += '<text x="'+(W/2)+'" y="640" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="700" font-size="34" fill="'+NAVY+'" text-anchor="middle" letter-spacing="-0.5">'+msg.headline+'</text>';
+    svg += '<text x="'+(W/2)+'" y="685" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="400" font-size="20" fill="'+SUB+'" text-anchor="middle">'+msg.subline+'</text>';
+    svg += gaugeBar(140, 770, 800, 14, r.axis1, 30, color, 'Social Monitoring', r.axis1, r.primaryAxis===1);
+    svg += gaugeBar(140, 830, 800, 14, r.axis2, 30, color, 'Comparison Pressure', r.axis2, r.primaryAxis===2);
+    svg += gaugeBar(140, 890, 800, 14, r.axis3, 30, color, ax3Label, r.axis3, r.primaryAxis===3);
+    svg += watermarkSVG(W/2, 990);
+  } else {
+    svg += '<rect x="60" y="240" width="960" height="1440" rx="40" fill="'+CARD+'" stroke="'+BORDER+'" stroke-width="1" />';
+    svg += '<text x="'+(W/2)+'" y="350" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="600" font-size="20" fill="'+SUB+'" text-anchor="middle" letter-spacing="6">Your Noise Pollution Level</text>';
+    svg += needLogoSVG(W/2 - 130, 460, 60);
+    svg += bigScoreStory(W/2, 800, r.score, color);
+    svg += '<text x="'+(W/2)+'" y="1100" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="700" font-size="44" fill="'+NAVY+'" text-anchor="middle" letter-spacing="-0.5">'+msg.headline+'</text>';
+    svg += '<text x="'+(W/2)+'" y="1158" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="400" font-size="26" fill="'+SUB+'" text-anchor="middle">'+msg.subline+'</text>';
+    svg += gaugeBar(160, 1280, 760, 18, r.axis1, 30, color, 'Social Monitoring', r.axis1, r.primaryAxis===1);
+    svg += gaugeBar(160, 1360, 760, 18, r.axis2, 30, color, 'Comparison Pressure', r.axis2, r.primaryAxis===2);
+    svg += gaugeBar(160, 1440, 760, 18, r.axis3, 30, color, ax3Label, r.axis3, r.primaryAxis===3);
+    svg += '<text x="'+(W/2)+'" y="1560" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="500" font-size="20" fill="#9CA3AF" text-anchor="middle" letter-spacing="3">Your strongest single noise</text>';
+    svg += '<text x="'+(W/2)+'" y="1610" font-family="-apple-system, \'SF Pro Text\', \'Inter\', sans-serif" font-weight="700" font-size="38" fill="'+color+'" text-anchor="middle" letter-spacing="-0.3">'+primaryName+'</text>';
+    svg += watermarkSVG(W/2, 1800);
+  }
+  
+  svg += '</svg>';
+  return svg;
+}
+
+function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent); }
+function isAndroid(){ return /Android/i.test(navigator.userAgent); }
+function isMobile(){ return isIOS() || isAndroid(); }
+
+const DIAGNOSIS_URL = 'https://nadaumlap.github.io/nadaum_eng/newnoise/';
+
+function buildResultShareText(){
+  const r = window._resultData;
+  if (!r) return '';
+  const baseInfo = NOISE_BASE[r.primaryAxis];
+  const primaryName = (r.primaryAxis===3 && state.branch==='kakao')?'Messaging App Exposure':baseInfo.name;
+  const segmentCopy = {
+    high: 'My noise pollution score: '+r.score+'/100.\nMy blurred desires weren\'t a willpower problem.\nStrongest noise: '+primaryName+'.',
+    mid: 'My noise pollution score: '+r.score+'/100.\nA season of being shaken sometimes, steady at others.\nStrongest noise: '+primaryName+'.',
+    low: 'My noise pollution score: '+r.score+'/100.\nNoise is being filtered out well.\nNow it\'s time to meet my real energy pattern.'
+  };
+  return segmentCopy[r.segment] +
+    '\n\nTake the Noise Pollution Assessment 👇\n' + DIAGNOSIS_URL;
+}
+
+function buildLinkShareText(){
+  return '🔍 What\'s my noise pollution level?\n\n' +
+    'A 5-minute assessment to find out\nwhere the noise blurring your desires comes from.\n\n' +
+    'Click below to take the assessment 👇\n' +
+    DIAGNOSIS_URL;
+}
+
+async function svgToPngBlob(svgString, width, height){
+  const svgDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+  const img = new Image();
+  
+  await new Promise((resolve, reject) => {
+    img.onload = () => resolve();
+    img.onerror = (e) => reject(new Error('Image load failed'));
+    img.src = svgDataUrl;
+    setTimeout(() => reject(new Error('Image load timeout')), 8000);
+  });
+  
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) throw new Error('Canvas context creation failed');
+  
+  ctx.fillStyle = '#F8F9FB';
+  ctx.fillRect(0, 0, width, height);
+  ctx.drawImage(img, 0, 0, width, height);
+  
+  let pngBlob = await new Promise((resolve) => {
+    try {
+      canvas.toBlob((blob) => resolve(blob), 'image/png');
+    } catch(e) {
+      resolve(null);
+    }
+  });
+  
+  if (!pngBlob) {
+    try {
+      const dataUrl = canvas.toDataURL('image/png');
+      const arr = dataUrl.split(',');
+      const mime = arr[0].match(/:(.*?);/)[1];
+      const bstr = atob(arr[1]);
+      let n = bstr.length;
+      const u8arr = new Uint8Array(n);
+      while(n--) u8arr[n] = bstr.charCodeAt(n);
+      pngBlob = new Blob([u8arr], {type:mime});
+    } catch(e) {
+      throw new Error('PNG Blob creation failed');
+    }
+  }
+  
+  return pngBlob;
+}
+
+function downloadBlob(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function downloadCard(version){
+  const r = window._resultData;
+  if (!r) {
+    showToast('No result data');
+    return;
+  }
+  
+  showToast('Creating your card...');
+  
+  const W = 1080;
+  const H = version==='square'?1080:1920;
+  const filename = 'noise-pollution-'+r.score+'-'+(version==='square'?'card':'story')+'.png';
+  
+  let pngBlob;
+  try {
+    const svgString = generateCardSVG(r, version);
+    pngBlob = await svgToPngBlob(svgString, W, H);
+  } catch (err) {
+    console.error('PNG conversion failed:', err);
+    try {
+      const svgString = generateCardSVG(r, version);
+      const svgBlob = new Blob([svgString], {type:'image/svg+xml;charset=utf-8'});
+      downloadBlob(svgBlob, filename.replace('.png', '.svg'));
+      showToast('PNG conversion failed — saved as SVG');
+    } catch (e) {
+      showToast('Save failed');
+    }
+    return;
+  }
+  
+  if (isMobile() && navigator.canShare) {
+    try {
+      const file = new File([pngBlob], filename, {type:'image/png'});
+      if (navigator.canShare({files:[file]})) {
+        try {
+          await navigator.share({ files: [file] });
+          showToast(isIOS()?'Tap "Save Image" to save to Photos':'Saved successfully');
+          return;
+        } catch (shareErr) {
+          if (shareErr.name === 'AbortError') return;
+        }
+      }
+    } catch (e) {}
+  }
+  
+  downloadBlob(pngBlob, filename);
+  showToast('Saved to your downloads folder');
+}
+
+async function shareResult(){
+  const r = window._resultData;
+  if (!r) return;
+  
+  showToast('Creating your card...');
+  
+  const W = 1080, H = 1080;
+  const filename = 'noise-pollution-'+r.score+'.png';
+  const shareText = buildResultShareText();
+  
+  let pngBlob;
+  try {
+    const svgString = generateCardSVG(r, 'square');
+    pngBlob = await svgToPngBlob(svgString, W, H);
+  } catch (err) {
+    console.error('Card creation failed:', err);
+    await fallbackShareText(shareText, 'Result message copied. Please save the card separately.');
+    return;
+  }
+  
+  if (isMobile() && navigator.canShare) {
+    try {
+      const file = new File([pngBlob], filename, {type:'image/png'});
+      const shareData = { files: [file], text: shareText, title: 'My Noise Pollution Level' };
+      if (navigator.canShare(shareData)) {
+        try {
+          await navigator.share(shareData);
+          showToast('Shared');
+          return;
+        } catch (shareErr) {
+          if (shareErr.name === 'AbortError') return;
+        }
+      }
+      if (navigator.canShare({files:[file]})) {
+        try {
+          await navigator.share({ files: [file], title: 'My Noise Pollution Level' });
+          await copyToClipboard(shareText);
+          showToast('Card shared. Message copied to clipboard.');
+          return;
+        } catch (shareErr) {
+          if (shareErr.name === 'AbortError') return;
+        }
+      }
+    } catch (e) {
+      console.error('Web Share failed:', e);
+    }
+  }
+  
+  downloadBlob(pngBlob, filename);
+  await copyToClipboard(shareText);
+  showToast('Card downloaded. Message copied to clipboard.');
+}
+
+async function shareDiagnosisLink(){
+  const shareText = buildLinkShareText();
+  
+  if (isMobile() && navigator.share) {
+    try {
+      await navigator.share({
+        title: 'What\'s my noise pollution level?',
+        text: shareText,
+        url: DIAGNOSIS_URL
+      });
+      showToast('Shared');
+      return;
+    } catch (shareErr) {
+      if (shareErr.name === 'AbortError') return;
+    }
+  }
+  
+  await fallbackShareText(shareText, 'Assessment link copied. Paste it to your friend!');
+}
+
+async function copyToClipboard(text){
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch(e) {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch(err) {
+      return false;
+    }
+  }
+}
+
+async function fallbackShareText(text, successMsg){
+  const ok = await copyToClipboard(text);
+  if (ok) showToast(successMsg);
+  else showToast('Copy failed. Please select the text manually.');
+}
+
+function showToast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'), 2200);
+}
+
+document.getElementById('startBtn').addEventListener('click', ()=>{
+  state.startedAt = Date.now();
+  saveState();
+  showScreen('screen-branch');
+});
+
+document.querySelectorAll('.branch-opt').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    state.branch = btn.dataset.branch;
+    state.currentIdx = 0;
+    saveState();
+    renderQuestion();
+  });
+});
+
+document.getElementById('prevBtn').addEventListener('click', goPrev);
+document.getElementById('nextBtn').addEventListener('click', goNext);
+document.getElementById('sliderPrevBtn').addEventListener('click', goPrev);
+document.getElementById('sliderNextBtn').addEventListener('click', answerSlider);
+document.getElementById('sliderInput').addEventListener('input', e=>{
+  document.getElementById('sliderValue').textContent = e.target.value;
+});
+
+document.getElementById('dlSquareBtn').addEventListener('click', ()=>downloadCard('square'));
+document.getElementById('dlStoryBtn').addEventListener('click', ()=>downloadCard('story'));
+document.getElementById('shareResultBtn').addEventListener('click', shareResult);
+document.getElementById('shareLinkBtn').addEventListener('click', shareDiagnosisLink);
+
+document.getElementById('restartBtn').addEventListener('click', ()=>{
+  document.getElementById('restartModal').classList.add('show');
+});
+
+document.getElementById('restartYes').addEventListener('click', ()=>{
+  document.getElementById('restartModal').classList.remove('show');
+  clearState();
+  document.getElementById('topCounter').style.display='none';
+  showScreen('screen-intro');
+});
+
+document.getElementById('restartNo').addEventListener('click', ()=>{
+  document.getElementById('restartModal').classList.remove('show');
+});
+
+document.getElementById('restartModal').addEventListener('click', (e)=>{
+  if (e.target.id === 'restartModal') {
+    document.getElementById('restartModal').classList.remove('show');
+  }
+});
+
+document.getElementById('resumeYes').addEventListener('click', ()=>{
+  document.getElementById('resumeModal').classList.remove('show');
+  if (state.branch === null) {
+    showScreen('screen-branch');
+  } else {
+    const firstUnanswered = state.answers.findIndex(a=>a===null);
+    if (firstUnanswered === -1) {
+      showLoadingThenResult();
+    } else {
+      state.currentIdx = firstUnanswered;
+      saveState();
+      renderQuestion();
+    }
+  }
+});
+
+document.getElementById('resumeNo').addEventListener('click', ()=>{
+  clearState();
+  document.getElementById('resumeModal').classList.remove('show');
+});
+
+function init(){
+  const saved = loadState();
+  if (saved && (saved.answers.some(a=>a!==null) || saved.branch)) {
+    state = Object.assign({branch:null, snsMinutes:null}, saved);
+    if (!state.answers || state.answers.length < 18) state.answers = new Array(18).fill(null);
+    const cnt = state.answers.filter(a=>a!==null).length;
+    document.getElementById('resumeProg').textContent = cnt+' / 18';
+    document.getElementById('resumeModal').classList.add('show');
+  }
+}
+
+init();
+</script>
+
+</body>
+</html>
