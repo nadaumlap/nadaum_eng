@@ -9,8 +9,8 @@
 <meta property="og:title" content="What Energy Is Driving You Right Now?">
 <meta property="og:description" content="5 Energy Patterns Assessment · Based on Big Five short form · About 5 min · Free — Prof. Sujung Kim, Nadaum Design Lab">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://nadaumlap.github.io/nadaumde_Eng/5characters/">
-<meta property="og:image" content="https://nadaumlap.github.io/nadaumde_Eng/5characters/og-image.png">
+<meta property="og:url" content="https://nadaumlap.github.io/nadaum_eng/5characters/">
+<meta property="og:image" content="https://nadaumlap.github.io/nadaum_eng/5characters/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What Energy Is Driving You Right Now?">
 <meta name="twitter:description" content="5 Energy Patterns Assessment · About 5 min · Free">
-<meta name="twitter:image" content="https://nadaumlap.github.io/nadaumde_Eng/5characters/og-image.png">
+<meta name="twitter:image" content="https://nadaumlap.github.io/nadaum_eng/5characters/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -824,19 +824,19 @@ function renderResult(r) {
 
   // 8. Next assessment links
   const nextHTML = r.caseType === 'low' ?
-    `<a href="https://nadaumlap.github.io/nadaumde_Eng/newnoise/" class="next-card gold">
+    `<a href="https://nadaumlap.github.io/nadaum_eng/newnoise/" class="next-card gold">
       <span class="step-tag">Highly recommended — Check noise first</span>
       <h3>Let's see what noise has been creeping in</h3>
       <p>Noise Assessment · About 5 min · First step toward recovery</p>
       <span class="arrow">Go now →</span>
     </a>` :
-    `<a href="https://nadaumlap.github.io/nadaumde_Eng/needscan/" class="next-card blue">
+    `<a href="https://nadaumlap.github.io/nadaum_eng/needscan/" class="next-card blue">
       <span class="step-tag">Great companion — Need Scan Axis 1</span>
       <h3>Where is your need actually starting from?</h3>
       <p>Need Origin Assessment · About 7 min · Read alongside your energy flow</p>
       <span class="arrow">Go now →</span>
     </a>
-    <a href="https://nadaumlap.github.io/nadaumde_Eng/newnoise/" class="next-card gold" style="margin-top:12px">
+    <a href="https://nadaumlap.github.io/nadaum_eng/newnoise/" class="next-card gold" style="margin-top:12px">
       <span class="step-tag">Next step — Eliminate Noise</span>
       <h3>Let's see what noise has been creeping in</h3>
       <p>Noise Assessment · About 5 min</p>
@@ -962,7 +962,7 @@ function renderDetailCard(char, isMain) {
 
 // ===== Share =====
 function shareLink() {
-  const url = "https://nadaumlap.github.io/nadaumde_Eng/5characters/";
+  const url = "https://nadaumlap.github.io/nadaum_eng/5characters/";
   const text = `"What Energy Is Driving You Right Now?" — I just took the 5 Energy Patterns Assessment. Takes about 5 min.\n\n${url}`;
   if (navigator.share) navigator.share({title:"5 Energy Patterns Assessment",text}).catch(()=>copyToClipboard(text));
   else copyToClipboard(text);
@@ -972,15 +972,15 @@ async function shareResult() {
   if (!_result) return;
   let text;
   if (_result.caseType === 'low') {
-    text = `My 5 Energy Patterns result\nRight now is a season for recovery.\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaumde_Eng/5characters/`;
+    text = `My 5 Energy Patterns result\nRight now is a season for recovery.\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaum_eng/5characters/`;
   } else if (_result.caseType === 'balance') {
     const p = CHARS[_result.primary];
     const s = CHARS[_result.secondary];
-    text = `My 5 Energy Patterns result\nMy energy is flowing through both ${p.flowKey} and ${s.flowKey} at similar intensity.\n(${p.name} · ${s.name} patterns)\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaumde_Eng/5characters/`;
+    text = `My 5 Energy Patterns result\nMy energy is flowing through both ${p.flowKey} and ${s.flowKey} at similar intensity.\n(${p.name} · ${s.name} patterns)\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaum_eng/5characters/`;
   } else {
     const p = CHARS[_result.primary];
     const s = CHARS[_result.secondary];
-    text = `My 5 Energy Patterns result\nMy current energy pattern: ${p.flowKey}.\n(Primary: ${p.name} / Secondary: ${s.name})\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaumde_Eng/5characters/`;
+    text = `My 5 Energy Patterns result\nMy current energy pattern: ${p.flowKey}.\n(Primary: ${p.name} / Secondary: ${s.name})\n\nNadaum Design Lab · https://nadaumlap.github.io/nadaum_eng/5characters/`;
   }
   try {
     if (navigator.share) { await navigator.share({text}); return; }
