@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="color-scheme" content="light only">
+<title>Where Does My Need Actually Start? — Need Origin Assessment | Nadaum Design Lab</title>
+<meta property="og:title" content="Where Does My Need Actually Start?">
+<meta property="og:description" content="16-item Need Origin Assessment based on SDT · About 5 min · Free — Nadaum Design Lab">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nadaumlap.github.io/nadaum_eng/needscan/">
+<meta property="og:image" content="https://nadaumlap.github.io/nadaum_eng/needscan/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Nadaum Design Lab">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Where Does My Need Actually Start?">
+<meta name="twitter:description" content="16-item Need Origin Assessment · About 5 min · Free">
+<meta name="twitter:image" content="https://nadaumlap.github.io/nadaum_eng/needscan/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#F8F9FB !important;color:#1E2761 !important;color-scheme:light only}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
+.container{max-width:540px;margin:0 auto;padding:0 20px}
+.logo-bar{padding:20px 0 12px;display:flex;align-items:center;gap:12px;transition:padding .25s ease}
+.logo-need{font-family:'Montserrat','Inter',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;display:flex;gap:2px;transition:font-size .25s ease,letter-spacing .25s ease}
+.logo-need .n{color:#2979C8}.logo-need .e1{color:#3DAA6B}.logo-need .e2{color:#C9983A}.logo-need .d{color:#8B5CF6}
+.logo-sep{width:1px;height:22px;background:#E8E8F0;margin:0 2px;transition:height .25s ease}
+.logo-right{display:flex;flex-direction:column;gap:1px}
+.logo-right .top{font-size:10px;font-weight:600;letter-spacing:1px;color:#6B7393;transition:font-size .25s ease}
+.logo-right .bot{font-size:12px;font-weight:500;color:#1E2761;transition:font-size .25s ease}
+/* === Compact question screen (question + scale + buttons on one screen — consistent with 5 Patterns / NEED assessments) === */
+body.mode-q .logo-bar{padding:10px 0 6px}
+body.mode-q .logo-need{font-size:15px;letter-spacing:1.5px}
+body.mode-q .logo-sep{height:16px}
+body.mode-q .logo-right .top{font-size:9px;letter-spacing:0.8px}
+body.mode-q .logo-right .bot{font-size:10.5px}
+body.mode-q .quiz-page{padding-top:4px}
+body.mode-q .progress-bar{margin:6px 0 12px}
+body.mode-q .q-counter{margin-bottom:4px}
+body.mode-q .q-text{margin-bottom:16px;min-height:48px}
+body.mode-q .q-nav{margin-top:16px}
+.intro{padding:10px 0 30px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:20px;background:#E8F4FD;font-size:12px;font-weight:700;color:#2979C8;margin-bottom:12px}
+.badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#2979C8}
+.intro h1{font-size:24px;font-weight:800;color:#1E2761;line-height:1.3;margin-bottom:12px}
+.intro .desc{font-size:15px;color:#4A5568;line-height:1.5;margin-bottom:20px;word-break:keep-all}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
+.info-box{padding:12px;border:1px solid #E8E8F0;border-radius:10px;background:#FFF;text-align:center}
+.info-box .label{font-size:11px;color:#6B7393;margin-bottom:2px}
+.info-box .value{font-size:16px;font-weight:700;color:#1E2761}
+.axes-box{padding:16px;border:1px solid #E8E8F0;border-radius:12px;background:#FFF;margin-bottom:20px}
+.axes-box h3{font-size:14px;font-weight:700;color:#1E2761;margin-bottom:12px}
+.axis-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.axis-num{width:20px;height:20px;border-radius:50%;color:#FFF;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.axis-item:nth-child(2) .axis-num{background:#2979C8}
+.axis-item:nth-child(3) .axis-num{background:#3DAA6B}
+.axis-item:nth-child(4) .axis-num{background:#C9983A}
+.axis-item:nth-child(5) .axis-num{background:#E53935}
+.axis-text{font-size:13px;color:#333;line-height:1.4}.axis-text b{color:#1E2761}
+.notice{padding:12px 16px;border-left:4px solid #2979C8;background:#F1F8FE;border-radius:0 8px 8px 0;margin-bottom:24px}
+.notice b{font-size:13px;color:#1E2761;display:block;margin-bottom:4px}
+.notice span{color:#6B7393;font-size:13px;line-height:1.4}
+.btn-start{display:block;width:100%;padding:16px;background:#1E2761;color:#FFF;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;text-align:center}
+.btn-start:active{transform:scale(0.98)}
+.quiz-page{display:none;padding:10px 0 40px}
+.quiz-page.active{display:block}
+.progress-bar{height:4px;background:#E8E8F0;border-radius:2px;margin:10px 0 16px}
+.progress-fill{height:100%;background:#2979C8;border-radius:2px;transition:width 0.4s ease}
+.q-counter{font-size:12px;color:#6B7393;margin-bottom:6px}
+.q-text{font-size:18px;font-weight:700;color:#1E2761 !important;line-height:1.45;margin-bottom:24px;min-height:60px;word-break:keep-all}
+.options{display:flex;flex-direction:column;gap:8px}
+.opt-btn{padding:14px 16px;border:2px solid #E8E8F0;border-radius:12px;background:#FFF;font-size:15px;color:#333 !important;cursor:pointer;text-align:left;transition:all 0.2s;font-weight:500}
+.opt-btn:hover{border-color:#2979C8;background:#E8F4FD}
+.opt-btn.selected{border-color:#2979C8;background:#2979C8;color:#FFF !important;font-weight:600}
+.q-nav{display:flex;gap:12px;margin-top:24px}
+.q-nav button{flex:1;padding:14px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;border:none}
+.btn-prev{background:#E8E8F0;color:#1E2761}
+.btn-next{background:#2979C8;color:#FFF}
+.btn-next:disabled{opacity:0.4;cursor:not-allowed}
+.result-page{display:none;padding-bottom:60px}
+.result-page.active{display:block}
+.score-circle{width:160px;height:160px;margin:20px auto;position:relative}
+.score-circle svg{width:100%;height:100%}
+.score-circle .score-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.score-num .num{font-size:42px;font-weight:800;color:#1E2761}
+.score-num .label{font-size:11px;color:#6B7393;display:block}
+.seg-badge{display:block;text-align:center;margin:8px 0 20px;font-size:14px;font-weight:600}
+.seg-badge span{padding:5px 14px;border-radius:20px}
+.seg-high span{background:#E8F5E9;color:#3DAA6B}
+.seg-mid span{background:#FFF8E1;color:#C9983A}
+.seg-low span{background:#FFEBEE;color:#E53935}
+.gauge-section{margin:20px 0}
+.gauge-section h3{font-size:14px;font-weight:700;color:#1E2761;margin-bottom:14px}
+.gauge-item{margin-bottom:14px}
+.gauge-label{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;font-size:12px;margin-bottom:5px}
+.gauge-label .name{font-weight:600;color:#1E2761;line-height:1.45;flex:1;min-width:0}
+.gauge-label .val{color:#2979C8;font-weight:700;flex-shrink:0;white-space:nowrap}
+.gauge-track{height:8px;background:#E8E8F0;border-radius:4px;overflow:hidden}
+.gauge-fill{height:100%;border-radius:4px;transition:width 1s ease}
+.gauge-fill.d1{background:#2979C8}.gauge-fill.d2{background:#3DAA6B}.gauge-fill.d3{background:#C9983A}.gauge-fill.d4{background:#E53935}
+.gauge-note{font-size:10px;color:#6B7393;margin-top:3px;font-style:italic}
+.result-card{padding:20px;border-radius:16px;margin-bottom:16px;border:1px solid #E8E8F0}
+.result-card.high-card{background:#F0FFF4;border-color:#3DAA6B}
+.result-card.mid-card{background:#FFFBEB;border-color:#C9983A}
+.result-card.low-card{background:#FFF5F5;border-color:#E53935}
+.result-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:#1E2761;line-height:1.4}
+.result-card p{font-size:14px;line-height:1.6;color:#4A5568}
+.structural-card{padding:20px;border-radius:16px;margin-bottom:16px;border:1px solid #E8E8F0;border-left:5px solid #8B5CF6;background:#F8F7FF}
+.structural-card h4{font-size:12px;color:#8B5CF6;text-transform:uppercase;margin-bottom:8px;letter-spacing:1px;font-weight:700}
+.structural-card .s-title{font-size:15px;font-weight:700;color:#1E2761;margin-bottom:8px;line-height:1.4}
+.structural-card .s-body{font-size:14px;color:#4A5568;line-height:1.6}
+.scene-card{padding:16px 20px;border-radius:16px;margin-bottom:16px;background:#FFF;border:1px solid #E8E8F0}
+.scene-card .scene-q{font-size:14px;color:#1E2761;font-weight:600;margin-bottom:10px;line-height:1.5}
+.scene-card .scene-accept{background:#FFF9F0;padding:12px;border-radius:10px;font-size:13px;color:#6B7393;line-height:1.6}
+.dist-card{padding:14px 20px;border-radius:12px;margin-bottom:16px;background:#FAFAFD;border:1px solid #E8E8F0;text-align:center}
+.dist-card p{font-size:13px;color:#6B7393;line-height:1.5}
+.dist-card b{color:#1E2761}
+.reflect-section{margin-bottom:16px}
+.reflect-section h3{font-size:14px;font-weight:700;color:#1E2761;margin-bottom:12px}
+.reflect-q{padding:12px 14px;background:#FFF;border:1px solid #E8E8F0;border-radius:10px;margin-bottom:8px;font-size:13px;color:#333;line-height:1.5}
+.practice-card{padding:20px;background:#F1F8FE;border-radius:16px;margin-bottom:16px;border-left:4px solid #2979C8}
+.practice-card h3{font-size:14px;font-weight:700;color:#1E2761;margin-bottom:6px}
+.practice-card p{font-size:14px;color:#4A5568;line-height:1.6}
+.slogan-card{background:#1E2761;color:#FFF;padding:28px 20px;border-radius:20px;text-align:center;margin-bottom:16px}
+.slogan-card .main{font-size:18px;font-weight:800;color:#C9983A;margin-bottom:8px}
+.slogan-card .sub{font-size:14px;color:#FFF;line-height:1.5}
+.share-section{display:flex;gap:10px;margin-bottom:16px}
+.share-btn{flex:1;padding:13px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;border:none;text-align:center}
+.share-card-btn{background:#C9983A;color:#FFF}
+.share-link-btn{background:#2979C8;color:#FFF}
+.next-diag{display:block;padding:16px;background:#1E2761;color:#FFF;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;text-align:center;width:100%;margin-bottom:10px;text-decoration:none}
+/* === Next assessment cards (Phase 2 v1.1 PART C.2 routing) === */
+.next-section{margin-top:20px;margin-bottom:16px}
+.next-section-title{font-size:13px;color:#6B7393;margin-bottom:10px;text-align:center}
+.next-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;text-decoration:none;margin-bottom:10px;border:1px solid;transition:transform .15s ease,box-shadow .15s ease}
+.next-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+.next-card-icon{width:42px;height:42px;border-radius:50%;color:#FFF;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.next-card-body{flex:1}
+.next-card-tag{font-size:11px;letter-spacing:1px;font-weight:700;margin-bottom:3px;text-transform:uppercase}
+.next-card-title{font-size:15px;font-weight:700;color:#1E2761;margin-bottom:4px;line-height:1.4}
+.next-card-desc{font-size:13px;color:#4A5568;line-height:1.5}
+.next-card-arrow{font-size:18px;color:#6B7393;flex-shrink:0}
+.next-5c{background:rgba(61,170,107,0.06);border-color:rgba(61,170,107,0.25)}
+.next-5c .next-card-icon{background:#3DAA6B}
+.next-5c .next-card-tag{color:#3DAA6B}
+.next-noise{background:rgba(201,152,58,0.06);border-color:rgba(201,152,58,0.25)}
+.next-noise .next-card-icon{background:#C9983A}
+.next-noise .next-card-tag{color:#C9983A}
+.next-need{background:rgba(139,92,246,0.06);border-color:rgba(139,92,246,0.25)}
+.next-need .next-card-icon{background:#8B5CF6}
+.next-need .next-card-tag{color:#8B5CF6}
+/* === Variability note (Phase 2 v1.1 B.7 tone) === */
+.variance-note{padding:14px 16px;border-radius:12px;background:#FAFAFD;border:1px dashed #D0D5E2;margin-bottom:16px;font-size:12.5px;color:#6B7393;line-height:1.6}
+.variance-note b{color:#1E2761;display:block;margin-bottom:4px;font-size:13px}
+/* === Boxed video card for tonal consistency === */
+.video-card{display:block;padding:18px 20px;background:#FFF;color:#1E2761;border:1px solid #FECACA;border-left:4px solid #FF0000;border-radius:14px;font-size:14px;font-weight:600;cursor:pointer;text-align:left;width:100%;margin-bottom:16px;text-decoration:none;line-height:1.5}
+.video-card .vc-icon{color:#FF0000;margin-right:8px;font-weight:800}
+.video-card .vc-desc{display:block;margin-top:4px;font-size:12.5px;color:#6B7393;font-weight:500}
+/* === Mid-stage guide card — healthy aspects + warning signals (Phase 2 v1.1 E.4) === */
+.mid-guide-card{padding:18px 20px;border-radius:16px;margin-bottom:16px;background:#FFFBEB;border:1px solid #FDE68A}
+.mid-guide-card h4{font-size:12px;color:#92400E;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;font-weight:700;line-height:1.5}
+.mid-guide-block{padding:12px 14px;border-radius:10px;background:#FFF;margin-bottom:8px;border-left:3px solid}
+.mid-guide-block:last-child{margin-bottom:0}
+.mid-guide-block.healthy{border-color:#3DAA6B}
+.mid-guide-block.warning{border-color:#C9983A}
+.mid-guide-label{font-size:11px;font-weight:700;letter-spacing:0.5px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.mid-guide-block.healthy .mid-guide-label{color:#3DAA6B}
+.mid-guide-block.warning .mid-guide-label{color:#C9983A}
+.mid-guide-text{font-size:13px;color:#4A5568;line-height:1.6}
+/* === Archie design — top stage label (block 1) === */
+.archie-stage{display:flex;align-items:center;gap:14px;padding:16px 18px;margin-bottom:20px;background:rgba(41,121,200,0.05);border:1px solid rgba(41,121,200,0.18);border-radius:14px}
+.archie-stage-img{width:72px;height:72px;flex-shrink:0;border-radius:50%;overflow:hidden;background:#FFF8EE}
+.archie-stage-img img{width:100%;height:100%;object-fit:cover;display:block}
+.archie-stage-body{flex:1;min-width:0}
+.archie-stage-tag{font-size:11px;letter-spacing:1.2px;color:#2979C8;font-weight:700;margin-bottom:3px;text-transform:uppercase}
+.archie-stage-title{font-size:15px;font-weight:700;color:#1E2761;margin-bottom:3px;line-height:1.4}
+.archie-stage-desc{font-size:12px;color:#6B7393;line-height:1.5}
+/* === Archie design — inside next assessment card (block 9, left placement) === */
+.next-card-archie{width:64px;height:64px;flex-shrink:0;border-radius:50%;overflow:hidden;background:#FFF8EE}
+.next-card-archie img{width:100%;height:100%;object-fit:cover;display:block}
+.restart-btn{display:block;width:100%;padding:13px;background:#E8E8F0;color:#1E2761;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;margin-bottom:16px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal-box{background:#FFF;border-radius:16px;padding:24px;max-width:300px;width:90%;text-align:center}
+.modal-box p{font-size:15px;color:#333;margin-bottom:16px;line-height:1.5}
+.modal-box button{padding:11px 22px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;margin:0 4px}
+.modal-ok{background:#2979C8;color:#FFF}
+.modal-cancel{background:#E8E8F0;color:#1E2761}
+
+.detail-toggle{text-align:center;padding:12px;color:#6B7393;font-size:13px;cursor:pointer;margin-top:8px}
+.detail-toggle:hover{color:#2979C8}
+.detail-section{display:none;margin-top:8px;padding-top:8px;border-top:1px solid #E8E8F0}
+.detail-section.open{display:block}
+@media(max-width:480px){.intro h1{font-size:22px}.q-text{font-size:17px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo-bar">
+  <div class="logo-need"><span class="n">N</span><span class="e1">E</span><span class="e2">E</span><span class="d">D</span></div>
+  <div class="logo-sep"></div>
+  <div class="logo-right"><span class="top">NEED SCAN · Nadaum Design Lab</span><span class="bot">Design Your Authentic Self</span></div>
+</div>
+<div id="introPage" class="intro">
+  <div class="badge">Need Origin Assessment</div>
+  <h1>Where Is What I Want<br>Actually Coming From?</h1>
+  <p class="desc">Check whether the desires that drive you arise naturally from within, or are false signals shaped by social monitoring and algorithms — across four dimensions.</p>
+  
+  
+  <div class="notice"><b>This isn't an evaluation of you.</b><span> The more honestly you answer, the more clearly you'll see your current state.</span></div>
+  <button class="btn-start" onclick="startQuiz()">Start Assessment →</button>
+  <div class="detail-toggle" onclick="toggleDetail()" id="detailToggle">Curious how it's structured? ▾</div>
+  <div class="detail-section" id="detailSection">
+    <div class="info-grid">
+    <div class="info-box"><div class="label">Time</div><div class="value">About 5 min</div></div>
+    <div class="info-box"><div class="label">Questions</div><div class="value">16 items</div></div>
+    <div class="info-box"><div class="label">Dimensions</div><div class="value">4 axes</div></div>
+  </div>
+    <div class="axes-box">
+    <h3>Four dimensions checked</h3>
+    <div class="axis-item"><div class="axis-num">1</div><div class="axis-text"><b>Awareness of where your desires originate</b> · Is it because I want to, or because I have to?</div></div>
+    <div class="axis-item"><div class="axis-num">2</div><div class="axis-text"><b>Awareness of what charges vs. drains you</b> · Does this recharge me, or deplete me?</div></div>
+    <div class="axis-item"><div class="axis-num">3</div><div class="axis-text"><b>Reading your body's signals when deciding</b> · Does my chest open up, or does it tense?</div></div>
+    <div class="axis-item"><div class="axis-num">4</div><div class="axis-text"><b>Distance from social media, algorithms, and others' gaze</b> · How far am I from these external interferences?</div></div>
+  </div>
+  </div>
+</div>
+<div id="quizPage" class="quiz-page">
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="q-counter" id="qCounter"></div>
+  <div class="q-text" id="qText"></div>
+  <div class="options" id="optionsArea"></div>
+  <div class="q-nav">
+    <button class="btn-prev" id="btnPrev" onclick="prevQ()">Previous</button>
+    <button class="btn-next" id="btnNext" onclick="nextQ()" disabled>Next →</button>
+  </div>
+</div>
+<div id="resultPage" class="result-page"></div>
+</div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box"><p id="modalMsg"></p>
+    <button class="modal-ok" id="modalOk">OK</button>
+    <button class="modal-cancel" id="modalCancel" style="display:none">Cancel</button>
+  </div>
+</div>
+<script>
+const questions=[
+{id:1,dim:'D1',dimLabel:'Awareness of where your desires originate',text:'When making decisions, I sometimes hesitate because others\' reactions come to mind before my own thoughts.',reverse:true},
+{id:2,dim:'D1',dimLabel:'Awareness of where your desires originate',text:'My important choices mostly start from my own values rather than others\' expectations.',reverse:false},
+{id:3,dim:'D1',dimLabel:'Awareness of where your desires originate',text:'Among my decisions in the past month, there\'s at least one I can confidently say "I did this because I truly wanted to."',reverse:false},
+{id:4,dim:'D1',dimLabel:'Awareness of where your desires originate',text:'When I feel like doing something, I tend to pause and ask whether the feeling came from me or from outside influences.',reverse:false},
+{id:5,dim:'D1',dimLabel:'Awareness of where your desires originate',text:'"I want to" and "I have to" often get mixed up, and I can\'t easily tell them apart.',reverse:true},
+{id:6,dim:'D2',dimLabel:'Awareness of what charges vs. drains you',text:'After finishing an activity, I can clearly tell whether it gave me energy or took it away.',reverse:false},
+{id:7,dim:'D2',dimLabel:'Awareness of what charges vs. drains you',text:'In the past week, there\'s been at least one moment after an activity when I felt "light and recharged."',reverse:false},
+{id:8,dim:'D2',dimLabel:'Awareness of what charges vs. drains you',text:'At the end of my day, "tired and empty" is the feeling that shows up more often than not.',reverse:true},
+{id:9,dim:'D3',dimLabel:'Reading your body\'s signals when deciding',text:'When making important decisions, my body\'s response (ease or tension) feels clearer than my thoughts.',reverse:false},
+{id:10,dim:'D3',dimLabel:'Reading your body\'s signals when deciding',text:'I tend to notice the subtle signal of "my head says yes, but my body resists."',reverse:false},
+{id:11,dim:'D3',dimLabel:'Reading your body\'s signals when deciding',text:'I tend to rely only on logical thinking, not body signals, when making decisions.',reverse:true},
+{id:12,dim:'D4',dimLabel:'Distance from social media, algorithms, and others\' gaze',text:'In meetings or gatherings, I often stay quiet after reading the room — even when I have something to say.',reverse:false},
+{id:13,dim:'D4',dimLabel:'Distance from social media, algorithms, and others\' gaze',text:'Even after achieving something, I\'ve suppressed my joy thinking "everyone else does at least this much."',reverse:false},
+{id:14,dim:'D4',dimLabel:'Distance from social media, algorithms, and others\' gaze',text:'After scrolling social media, I\'ve often suddenly wanted products or lifestyles I never wanted before.',reverse:false},
+{id:15,dim:'D4',dimLabel:'Distance from social media, algorithms, and others\' gaze',text:'When facing a hard decision, I trust algorithms or online recommendations before organizing my own thoughts.',reverse:false},
+{id:16,dim:'D4',dimLabel:'Distance from social media, algorithms, and others\' gaze',text:'I sometimes think that much of what feels like "my desire" may actually have been injected by society or media.',reverse:true},
+];
+const optionLabels=['Strongly disagree','Disagree','Neutral','Agree','Strongly agree'];
+const resultMessages={
+'high_D1':{title:'Your starting point is clear',msg:'Your value judgments are clearly your own. If you occasionally ask "is this really my true longing?" one more time, you\'ll become even more grounded.'},
+'high_D2':{title:'Energy-flow awareness needs sharpening',msg:'The starting point is clear, but you could practice noticing how energy flows after activities. Just for a week, log "charging vs. draining."'},
+'high_D3':{title:'The link to your body\'s signals',msg:'Your head is clear, but the link to your body\'s signals is weak. Try 30 seconds of breath and chest awareness right before deciding.'},
+'high_D4':{title:'You\'re filtering noise well',msg:'You\'re keeping your center even under social pressure. Give yourself credit for maintaining a rare sense of balance.'},
+'mid_D1':{title:'Your inner voice and outer noise are mixed',msg:'Your energy is scattered between "I want to" and "I have to." Practice tuning into your inner voice — starting with small choices.'},
+'mid_D2':{title:'Energy awareness has dulled',msg:'Your sense of where you\'re charged and where you\'re drained has dulled. A 7-day energy log is recommended.'},
+'mid_D3':{title:'Body signals have grown faint',msg:'Your ability to hear body signals has grown faint. A 30-second body scan before deciding is the start of recovery.'},
+'mid_D4':{title:'Noise is masking your signal',msg:'Social monitoring and comparison are interfering with your real desires. It\'s time to identify the noise and create distance.'},
+'low_D1':{title:'The starting point lies outside',msg:'Right now, many of your decisions start from others\' expectations. This isn\'t blame — it\'s a discovery. Try choosing just one thing today that you truly want.'},
+'low_D2':{title:'Energy awareness has gone offline',msg:'Awareness of your post-activity energy flow has nearly disconnected. Start by logging just one activity per day as "charging vs. draining."'},
+'low_D3':{title:'Body signals aren\'t reaching you',msg:'Your head is overworking and body signals aren\'t getting through. Start with body-awareness meditation.'},
+'low_D4':{title:'You\'re overwhelmed by noise',msg:'Social standards and algorithms have taken the driver\'s seat of your desires. It\'s urgent to redesign your environment and reclaim your own space and time.'},
+};
+const structuralCards={
+high:{title:'Balance between thoughtful harmony and a firm standard',body:'Many social cultures judge people as "rude" if they can\'t read the room. That you still hold onto your true self is evidence that you\'ve designed a highly healthy psychological boundary. This steadiness is a precious asset, consciously built.'},
+mid:{title:'Inner voice and outer noise are entangled — this is not a willpower problem',body:'Modern societies — especially competitive, hyperconnected ones — have unusually high social comparison frequency. You\'re not "weak-willed"; the social system and algorithms are designed to capture individual attention. What\'s needed is not self-blame, but the skill of filtering noise.'},
+low:{title:'You\'ve temporarily outsourced to external systems',body:'We\'ve been trained from childhood to read others\' signals. That you can\'t hear your own voice right now isn\'t your fault — it\'s the result of dense social structures and highly engineered digital design capturing your attention. The environment must change before the real signal can return.'},
+};
+const sceneCards={
+D1:{q:'When making decisions, have you ever hesitated because others\' reactions came to mind first?',accept:'That wasn\'t timidity — it was a sophisticated survival skill developed to navigate your society. Now it\'s time to use that energy for yourself.'},
+D2:{q:'After finishing something, does emptiness arrive before the feeling of being recharged?',accept:'The sense of where your energy flows can be fully recovered with practice.'},
+D3:{q:'Have you ever thought something was great in your head, only to feel heavy in your body afterward?',accept:'Your body knew the answer. The channel was just temporarily turned off.'},
+D4:{q:'Have you opened Shorts mindlessly and felt empty an hour later?',accept:'Algorithms are designed to reverse-engineer your neuroscience. Small environmental changes can be enough to take it back.'},
+};
+// Mid-stage guide cards — one per weak axis (Phase 2 v1.1 E.4 standard)
+// Captures the "ambivalent state" — affirming what works and flagging what to watch.
+const midGuideCards={
+D1:{
+  healthy:'The ability to read others\' reactions is itself part of social intelligence. If you\'re noticing right now that "I want to" and "I have to" are mixed, that very awareness is the beginning of recovery.',
+  warning:'But if "how others will see this" comes up first in every decision, it\'s a signal that your desires are slowly moving outward. You need to practice "starting from inside" — even with the smallest decisions.'
+},
+D2:{
+  healthy:'Faintly feeling your energy come and go means the awareness channel hasn\'t fully closed. If "some kind of feeling" arises after activities, you can use it as a clue.',
+  warning:'But if "I finished, but I feel empty" keeps recurring, the line between charging and draining has blurred. Start by logging just one activity per day with +/−.'
+},
+D3:{
+  healthy:'That you sometimes notice body signals means the link between head and body is still alive. Hold onto the moments you noticed even the slightest sensation.',
+  warning:'But if you\'re making most decisions with your head only, the body\'s language drifts further away. You need a habit of checking your breath, chest, and shoulders for at least 30 seconds before deciding.'
+},
+D4:{
+  healthy:'Being somewhat aware of social and media influence is a signal that you\'re maintaining critical distance even inside the algorithm. This awareness is a precious asset.',
+  warning:'But if you\'re increasingly wanting "things you didn\'t want before" after seeing social media or AI recommendations, it\'s a sign that exposure is taking over the place of desire. Environmental design is urgent.'
+}
+};
+const practices={
+D1:{title:'30-Second Origin Check',text:'Before deciding, write one line: "Is this because I want to, or because I feel I should?"',action:'For one week, before any decision, pause 30 seconds and write down the origin of that desire. After 7 days, the pattern becomes visible.'},
+D2:{title:'One-Line Energy Log',text:'Next to each activity you completed today, write "+" or "−". After a week, the pattern emerges.',action:'Log +/− next to 3 activities a day. After a week, you\'ll have a clear list of what charges vs. drains you.'},
+D3:{title:'30-Second Body Scan',text:'Before your next decision, take 30 seconds to breathe and check sensations in your chest, shoulders, and neck.',action:'After waking, before lunch, before sleep — 3 times a day, observe your body for 30 seconds. After a week, your body\'s language will start to be heard.'},
+D4:{title:'1 Hour of Noise Reduction',text:'Today, stay away from social media and AI recommendations for one hour, and write down the thoughts that arise.',action:'For 1 fixed hour daily, mute social media notifications and write down "what I actually want" that surfaces in that time.'},
+};
+const reflectQs=[
+'Among today\'s choices, which one can you say "this was definitely because I wanted to"?',
+'Before that choice, what signal did your body send you?',
+'Has "I want to" recently turned into "I have to" for something? Where did that shift come from?',
+'If social media and AI recommendations all disappeared, what desire would feel most urgent right now?',
+];
+
+
+function toggleDetail(){
+  const sec=document.getElementById('detailSection');
+  const btn=document.getElementById('detailToggle');
+  if(sec.classList.contains('open')){
+    sec.classList.remove('open');
+    btn.textContent='Curious how it\'s structured? ▾';
+  } else {
+    sec.classList.add('open');
+    btn.textContent='Collapse ▴';
+  }
+}
+let currentQ=0;const answers=new Array(16).fill(null);
+function startQuiz(){document.body.classList.add('mode-q');document.getElementById('introPage').style.display='none';document.getElementById('quizPage').classList.add('active');renderQ();}
+function renderQ(){
+const q=questions[currentQ];
+document.getElementById('progressFill').style.width=((currentQ+1)/16*100)+'%';
+document.getElementById('qCounter').textContent=`${currentQ+1} / 16`;
+document.getElementById('qText').textContent=q.text;
+const a=document.getElementById('optionsArea');a.innerHTML='';
+optionLabels.forEach((l,i)=>{const b=document.createElement('button');b.className='opt-btn'+(answers[currentQ]===i+1?' selected':'');b.textContent=l;b.onclick=()=>selectOpt(i+1);a.appendChild(b);});
+document.getElementById('btnPrev').style.display=currentQ===0?'none':'block';
+document.getElementById('btnNext').textContent=currentQ===15?'See Results →':'Next →';
+document.getElementById('btnNext').disabled=answers[currentQ]===null;
+}
+function selectOpt(v){answers[currentQ]=v;document.querySelectorAll('.opt-btn').forEach((b,i)=>b.classList.toggle('selected',i+1===v));document.getElementById('btnNext').disabled=false;}
+function prevQ(){if(currentQ>0){currentQ--;renderQ();}}
+function nextQ(){if(answers[currentQ]===null)return;if(currentQ<15){currentQ++;renderQ();window.scrollTo(0,0);}else showResult();}
+
+function calcScores(){
+const sc=(i,r)=>r?6-answers[i]:answers[i];
+const D1=(sc(0,1)+sc(1,0)+sc(2,0)+sc(3,0)+sc(4,1))/5;
+const D2=(sc(5,0)+sc(6,0)+sc(7,1))/3;
+const D3=(sc(8,0)+sc(9,0)+sc(10,1))/3;
+const D4=(sc(11,0)+sc(12,0)+sc(13,0)+sc(14,0)+sc(15,1))/5;
+let NCI=(((D1+D2+D3)/3)*0.7+(6-D4)*0.3-1)*25;
+NCI=Math.max(0,Math.min(100,Math.round(NCI)));
+const seg=NCI<=33?'low':NCI<=66?'mid':'high';
+const adj={D1,D2,D3,D4:6-D4};
+const weakest=Object.entries(adj).sort((a,b)=>a[1]-b[1])[0][0];
+return{D1,D2,D3,D4,NCI,seg,weakest};
+}
+
+function showResult(){
+document.body.classList.remove('mode-q');
+document.getElementById('quizPage').classList.remove('active');
+const rp=document.getElementById('resultPage');rp.classList.add('active');
+const s=calcScores();const mk=`${s.seg}_${s.weakest}`;
+const rm=resultMessages[mk]||resultMessages[`${s.seg}_D1`];
+const pr=practices[s.weakest]||practices.D1;
+const sc2=sceneCards[s.weakest]||sceneCards.D1;
+const stc=structuralCards[s.seg];
+const segLabel={high:'Clear',mid:'Mixed',low:'Overwhelmed'}[s.seg];
+const circ=2*Math.PI*70;const off=circ-(s.NCI/100)*circ;
+const arcC={high:'#3DAA6B',mid:'#C9983A',low:'#E53935'}[s.seg];
+const dn={D1:'Awareness of where your desires originate',D2:'Awareness of what charges vs. drains you',D3:'Reading your body\'s signals when deciding',D4:'Distance from social media, algorithms, and others\' gaze'};
+const dc={D1:'d1',D2:'d2',D3:'d3',D4:'d4'};
+let h=`<div class="archie-stage"><div class="archie-stage-img"><img src="archie_n_needscan.png" alt="Archie — N · Need Scan"></div><div class="archie-stage-body"><div class="archie-stage-tag">N · Need Scan</div><div class="archie-stage-title">Need Origin Assessment</div><div class="archie-stage-desc">With Archie, let's look at where your desires are actually starting from right now.</div></div></div>
+<div class="score-circle"><svg viewBox="0 0 160 160"><circle cx="80" cy="80" r="70" fill="none" stroke="#E8E8F0" stroke-width="10"/><circle cx="80" cy="80" r="70" fill="none" stroke="${arcC}" stroke-width="10" stroke-dasharray="${circ}" stroke-dashoffset="${off}" stroke-linecap="round" transform="rotate(-90 80 80)" style="transition:stroke-dashoffset 1.5s ease"/></svg><div class="score-num"><span class="num">${s.NCI}</span><span class="label">NCI · Need Clarity</span></div></div>
+<div class="seg-badge seg-${s.seg}"><span>${segLabel} stage</span></div>`;
+h+=`<div class="gauge-section"><h3>4-Axis Results</h3>`;
+for(const d of['D1','D2','D3','D4']){const v=s[d],p=(v/5*100).toFixed(0);const note=d==='D4'?'※ Higher = more social influence':'';
+h+=`<div class="gauge-item"><div class="gauge-label"><span class="name">${dn[d]}</span><span class="val">${v.toFixed(1)}</span></div><div class="gauge-track"><div class="gauge-fill ${dc[d]}" style="width:${p}%"></div></div>${note?`<div class="gauge-note">${note}</div>`:''}</div>`;}
+h+=`</div>`;
+h+=`<div class="result-card ${s.seg}-card"><h3>${rm.title}</h3><p>${rm.msg}</p></div>`;
+h+=`<div class="structural-card"><h4>Social-Structural Reading</h4><p class="s-title">${stc.title}</p><p class="s-body">${stc.body}</p></div>`;
+h+=`<div class="scene-card"><div class="scene-q">${sc2.q}</div><div class="scene-accept">✨ ${sc2.accept}</div></div>`;
+// Mid-stage guide card — affirms the healthy side and flags warning signals (Phase 2 v1.1 E.4)
+if(s.seg==='mid'){
+  const mg=midGuideCards[s.weakest]||midGuideCards.D1;
+  h+=`<div class="mid-guide-card"><h4>Mid-State Guide — ${dn[s.weakest]}</h4><div class="mid-guide-block healthy"><div class="mid-guide-label">✓ The healthy part already working in you</div><div class="mid-guide-text">${mg.healthy}</div></div><div class="mid-guide-block warning"><div class="mid-guide-label">⚠ Watch for these signals — noise is creeping in</div><div class="mid-guide-text">${mg.warning}</div></div></div>`;
+}
+h+=`<div class="dist-card"><p>Your score sits within a<br><b>completely natural distribution</b> for someone living in a competitive, hyperconnected society.</p></div>`;
+h+=`<div class="reflect-section"><h3>Self-reflection questions</h3>${reflectQs.map(q=>`<div class="reflect-q">${q}</div>`).join('')}</div>`;
+h+=`<div class="practice-card"><h3>Today's small practice — ${pr.title}</h3><p>${pr.text}</p>${pr.action?`<p style="margin-top:12px;padding-top:12px;border-top:1px solid #D0E4F0;color:#1E2761;font-weight:600">7-Day Practice Guide</p><p style="color:#4A5568">${pr.action}</p>`:''}</div>
+  <a href="https://youtube.com/playlist?list=PLwcKc-MRqyaUSReDLg72ESQ5-x249MlDQ&si=HNjkVfNF4P4EohBQ" target="_blank" class="video-card"><span class="vc-icon">▶</span>Video Series: Finding Your Real Desires<span class="vc-desc">The N.E.E.D Routine — from desire's origin to daily design</span></a>`;
+h+=`<div class="slogan-card"><div class="main">Authentic self isn't found — it's designed</div><div class="sub">Clear the noise, then design where your real energy flows.</div></div>`;
+// Variability note — this is not a fixed identity
+h+=`<div class="variance-note"><b>This result reflects "your current state"</b>Taking it again a month later, or after a major life change, may yield different results. Need origin isn't a "fixed score" — it's a "state that flows with your daily environment, relationships, and accumulated noise." Use this as a tool for reading the current flow.</div>`;
+// Next assessment cards — Phase 2 v1.1 PART C.2 routing (by NCI segment)
+h+=`<div class="next-section"><div class="next-section-title">— What to look at next —</div>`;
+if(s.seg==='high'){
+  // High → emphasize /5characters/ (next step = E2 Energy Flow / gold)
+  h+=`<a href="https://nadaumlap.github.io/nadaum_eng/5characters/" target="_blank" class="next-card next-5c"><div class="next-card-archie"><img src="archie_e2_energyflow.png" alt="Archie — Energy Flow"></div><div class="next-card-body"><div class="next-card-tag">E · Energy Flow</div><div class="next-card-title">What Energy Is Driving You Right Now?</div><div class="next-card-desc">Your desire's starting point is clear. Now it's time to look at where that energy is flowing.</div></div><div class="next-card-arrow">→</div></a>`;
+}else if(s.seg==='mid'){
+  // Mid → show both cards (noise = E1 green, 5 patterns = E2 gold)
+  h+=`<a href="https://nadaumlap.github.io/nadaum_eng/newnoise/" target="_blank" class="next-card next-noise"><div class="next-card-archie"><img src="archie_e1_noise.png" alt="Archie — Eliminate Noise"></div><div class="next-card-body"><div class="next-card-tag">E · Eliminate Noise</div><div class="next-card-title">What's Your Noise Pollution Level?</div><div class="next-card-desc">Your inner voice and outer noise are mixed. Start by seeing what's blurring the signal.</div></div><div class="next-card-arrow">→</div></a>`;
+  h+=`<a href="https://nadaumlap.github.io/nadaum_eng/5characters/" target="_blank" class="next-card next-5c"><div class="next-card-archie"><img src="archie_e2_energyflow.png" alt="Archie — Energy Flow"></div><div class="next-card-body"><div class="next-card-tag">E · Energy Flow</div><div class="next-card-title">What Energy Is Driving You Right Now?</div><div class="next-card-desc">Alongside checking noise, also see what pattern your energy is flowing through right now.</div></div><div class="next-card-arrow">→</div></a>`;
+}else{
+  // Low → /newnoise/ first (E1 green)
+  h+=`<a href="https://nadaumlap.github.io/nadaum_eng/newnoise/" target="_blank" class="next-card next-noise"><div class="next-card-archie"><img src="archie_e1_noise.png" alt="Archie — Eliminate Noise"></div><div class="next-card-body"><div class="next-card-tag">E · Eliminate Noise</div><div class="next-card-title">What's Your Noise Pollution Level?</div><div class="next-card-desc">This isn't blame — it's a check-up. The fastest path is starting with what's taken over the place of your desires.</div></div><div class="next-card-arrow">→</div></a>`;
+}
+h+=`</div>`;
+h+=`<div class="share-section"><button class="share-btn share-card-btn" onclick="shareResult()">🎴 Share Result</button><button class="share-btn share-link-btn" onclick="shareLink()">🔗 Share Link</button></div>`;
+
+
+h+=`<button class="restart-btn" onclick="restartQuiz()">Take It Again</button>`;
+rp.innerHTML=h;window.scrollTo(0,0);
+}
+function restartQuiz(){showModal('Start over from the beginning?',()=>{document.body.classList.remove('mode-q');answers.fill(null);currentQ=0;document.getElementById('resultPage').classList.remove('active');document.getElementById('resultPage').innerHTML='';document.getElementById('introPage').style.display='block';window.scrollTo(0,0);},true);}
+function shareResult(){const s=calcScores();const sl={high:'Clear',mid:'Mixed',low:'Overwhelmed'}[s.seg];const t=`"Where Does My Need Actually Start?"\n\nMy result: NCI ${s.NCI} · ${sl} stage\n\nA ~5-minute assessment for meeting your real desires beneath social pressure and social media comparison.\n\nhttps://nadaumlap.github.io/nadaum_eng/needscan/`;if(navigator.share)navigator.share({title:'Need Origin Assessment',text:t}).catch(()=>{});else navigator.clipboard.writeText(t).then(()=>showModal('Result copied to clipboard.')).catch(()=>{});}
+function shareLink(){const t=`"Where Does My Need Actually Start?"\nA ~5-minute assessment.\n\nhttps://nadaumlap.github.io/nadaum_eng/needscan/`;if(navigator.share)navigator.share({title:'Need Origin Assessment',text:t}).catch(()=>{});else navigator.clipboard.writeText(t).then(()=>showModal('Link copied to clipboard.')).catch(()=>{});}
+function showModal(msg,onOk,sc){const ov=document.getElementById('modalOverlay');document.getElementById('modalMsg').textContent=msg;document.getElementById('modalCancel').style.display=sc?'inline-block':'none';ov.classList.add('active');document.getElementById('modalOk').onclick=()=>{ov.classList.remove('active');if(onOk)onOk();};document.getElementById('modalCancel').onclick=()=>ov.classList.remove('active');}
+</script>
+</body>
+</html>
