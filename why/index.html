@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Why Does Some Work Energize Me, While Other Work Drains Me? — Nadaum Design Lab</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Why Does Some Work Energize Me, While Other Work Drains Me?">
+<meta property="og:description" content="You're working hard — why are you still tired? Let's read it structurally · Temperament × Motivation × Noise integrated assessment · 26 items · About 8 min · Prof. Sujung Kim, Nadaum Design Lab">
+<meta property="og:url" content="https://nadaumlap.github.io/nadaum_eng/why/">
+<meta property="og:image" content="https://nadaumlap.github.io/nadaum_eng/why/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Nadaum Design Lab">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Does Some Work Energize Me, While Other Work Drains Me?">
+<meta name="twitter:description" content="You're working hard — why are you still tired? Let's read it structurally · Temperament × Motivation × Noise · 26 items · About 8 min">
+<meta name="twitter:image" content="https://nadaumlap.github.io/nadaum_eng/why/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { color-scheme: light only !important; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  background: #F7F9FC !important;
+  color: #1F2630;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.55;
+}
+/* Heading — Apple SF Pro stack */
+.heading-font {
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Inter', sans-serif;
+}
+:root {
+  --archie-N:  #2979C8;
+  --archie-E1: #3DAA6B;
+  --archie-E2: #C9983A;
+  --archie-D:  #8B5CF6;
+  --stage:      #163057;
+  --stage-soft: #3a5683;
+  --stage-bg:   #F2F5FA;
+  --stage-line: #D8DEEB;
+  --gold:   #C9983A;
+  --gold-bg:#FFF8EE;
+  --green:  #3DAA6B;
+  --green-bg:#F0FAF4;
+  --purple: #8B5CF6;
+  --purple-bg:#FAF8FF;
+  --text-main: #1F2630;
+  --text-sub:  #5A6475;
+  --text-muted:#8A94A6;
+  --card-bg: #FFFFFF;
+  --card-radius: 16px;
+  --card-shadow: 0 2px 12px rgba(22,48,87,0.08);
+}
+.wrap { max-width: 540px; margin: 0 auto; padding: 0 20px 80px; }
+
+/* Header */
+.header {
+  display: flex; align-items: center;
+  padding: 20px 0 16px;
+  border-bottom: 1px solid var(--stage-line);
+  margin-bottom: 24px;
+}
+.logo-need { display:flex; align-items:baseline; font-family:'Montserrat',sans-serif; font-size:22px; font-weight:800; letter-spacing:0; }
+.logo-need .n  { color:#2979C8; }
+.logo-need .d1 { color:#2979C8; font-size:18px; margin:0 1px; }
+.logo-need .e1 { color:#3DAA6B; }
+.logo-need .d2 { color:#3DAA6B; font-size:18px; margin:0 1px; }
+.logo-need .e2 { color:#C9983A; }
+.logo-need .d3 { color:#C9983A; font-size:18px; margin:0 1px; }
+.logo-need .d  { color:#8B5CF6; }
+.logo-need .d4 { color:#8B5CF6; font-size:18px; margin:0 1px; }
+.logo-sep { width:1.5px; height:26px; background:#D0D8E4; margin:0 10px; }
+.logo-right { display:flex; flex-direction:column; gap:2px; }
+.logo-right .top { font-size:11px; font-weight:600; color:var(--text-sub); letter-spacing:1.5px; }
+.logo-right .bottom { font-size:13px; font-weight:500; color:var(--text-main); }
+
+/* Intro */
+.intro-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:32px 24px 28px; margin-bottom:20px; text-align:center; }
+.stage-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(139,92,246,0.08); border:1.5px solid rgba(139,92,246,0.2); border-radius:100px; padding:5px 16px; font-size:12px; font-weight:700; color:var(--purple); letter-spacing:0.5px; margin-bottom:20px; }
+.intro-card h1 { font-family:-apple-system,'SF Pro Display','SF Pro Text','Inter',sans-serif; font-size:26px; font-weight:700; color:var(--stage); line-height:1.28; margin-bottom:12px; letter-spacing:-0.5px; }
+.intro-card .sub { font-size:14px; color:var(--text-sub); margin-bottom:24px; line-height:1.6; }
+.meta-row { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:24px; }
+.meta-pill { display:inline-flex; align-items:center; gap:5px; background:var(--stage-bg); border:1px solid var(--stage-line); border-radius:100px; padding:5px 12px; font-size:12px; font-weight:600; color:var(--stage); }
+.intro-desc { background:var(--stage-bg); border-left:3px solid var(--stage); border-radius:0 8px 8px 0; padding:14px 16px; text-align:left; font-size:13.5px; color:var(--text-sub); line-height:1.7; margin-bottom:20px; }
+.intro-desc strong { color:var(--stage); font-weight:700; }
+
+/* 3-phase preview */
+.phase-row { display:flex; gap:8px; margin-bottom:24px; }
+.phase-item { flex:1; padding:12px 8px; border-radius:10px; text-align:center; }
+.phase-item.p1 { background:rgba(22,48,87,0.06); border:1px solid rgba(22,48,87,0.15); }
+.phase-item.p2 { background:rgba(201,152,58,0.08); border:1px solid rgba(201,152,58,0.2); }
+.phase-item.p3 { background:rgba(139,92,246,0.08); border:1px solid rgba(139,92,246,0.2); }
+.phase-item .pi-icon { font-size:16px; margin-bottom:6px; color:var(--text-muted); font-weight:300; }
+.phase-item .pi-label { font-size:10px; font-weight:700; letter-spacing:0.5px; }
+.phase-item.p1 .pi-label { color:var(--stage); }
+.phase-item.p2 .pi-label { color:var(--gold); }
+.phase-item.p3 .pi-label { color:var(--purple); }
+.phase-item .pi-desc { font-size:11px; color:var(--text-muted); margin-top:2px; }
+
+.btn-start { display:block; width:100%; background:#7C3AED; color:#fff; font-size:16px; font-weight:700; padding:16px; border-radius:12px; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; letter-spacing:0.3px; margin-bottom:20px; }
+.btn-start:hover { background:#6D28D9; transform:translateY(-1px); }
+
+/* Quiz section */
+#quiz-section { display:none; }
+.phase-indicator { display:flex; align-items:center; gap:8px; margin-bottom:16px; padding:10px 14px; border-radius:10px; }
+.phase-indicator.ph1 { background:rgba(22,48,87,0.06); }
+.phase-indicator.ph2 { background:rgba(201,152,58,0.08); }
+.phase-indicator.ph3 { background:rgba(139,92,246,0.08); }
+.phase-indicator .ph-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.ph1 .ph-dot { background:var(--stage); }
+.ph2 .ph-dot { background:var(--gold); }
+.ph3 .ph-dot { background:var(--purple); }
+.phase-indicator .ph-text { font-size:12px; font-weight:700; }
+.ph1 .ph-text { color:var(--stage); }
+.ph2 .ph-text { color:var(--gold); }
+.ph3 .ph-text { color:var(--purple); }
+.phase-indicator .ph-sub { font-size:11px; color:var(--text-muted); margin-left:auto; }
+
+.progress-bar-wrap { background:var(--stage-line); border-radius:100px; height:5px; margin-bottom:6px; overflow:hidden; }
+.progress-bar-fill { height:100%; background:var(--stage); border-radius:100px; transition:width 0.4s ease; }
+.progress-text { text-align:right; font-size:12px; color:var(--text-muted); margin-bottom:16px; }
+
+/* Bridge card */
+.bridge-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:28px 24px; margin-bottom:20px; text-align:center; }
+.bridge-card .br-icon { font-size:36px; margin-bottom:12px; }
+.bridge-card h3 { font-size:20px; font-weight:800; color:var(--stage); margin-bottom:10px; }
+.bridge-card p { font-size:14px; color:var(--text-sub); line-height:1.7; margin-bottom:8px; }
+.bridge-card .br-highlight { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:12px 14px; text-align:left; font-size:13.5px; color:var(--text-main); line-height:1.6; margin:16px 0; }
+.btn-bridge { display:block; width:100%; padding:14px; border-radius:12px; border:none; font-size:15px; font-weight:700; cursor:pointer; transition:all 0.15s; }
+.btn-bridge.gold { background:var(--gold); color:#fff; margin-bottom:8px; }
+.btn-bridge.gold:hover { background:#b38632; }
+
+/* Question card */
+.question-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:28px 24px 24px; margin-bottom:20px; }
+.q-axis { font-size:11px; font-weight:700; color:var(--stage); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+.q-axis::before { content:''; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--stage); }
+.q-axis.sdt { color:var(--gold); }
+.q-axis.sdt::before { background:var(--gold); }
+.q-axis.noise { color:var(--purple); }
+.q-axis.noise::before { background:var(--purple); }
+.q-text { font-size:16px; font-weight:700; color:var(--text-main); line-height:1.55; margin-bottom:24px; }
+.likert-wrap { display:flex; flex-direction:column; gap:8px; }
+.likert-btn { display:flex; align-items:center; gap:12px; padding:13px 16px; border-radius:10px; border:1.5px solid #E4E8EE; background:#fff; cursor:pointer; font-size:14px; color:var(--text-main); transition:all 0.15s ease; text-align:left; width:100%; }
+.likert-btn:hover { border-color:var(--stage-soft); background:var(--stage-bg); }
+.likert-btn.selected { border-color:var(--stage); background:var(--stage-bg); color:var(--stage); font-weight:700; }
+.likert-btn.sdt-sel { border-color:var(--gold); background:var(--gold-bg); color:#7a5c00; font-weight:700; }
+.likert-btn.noise-sel { border-color:var(--purple); background:var(--purple-bg); color:#5b21b6; font-weight:700; }
+.likert-btn .num { min-width:26px; height:26px; border-radius:50%; border:1.5px solid #D0D8E4; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--text-muted); flex-shrink:0; transition:all 0.15s; }
+.likert-btn.selected .num { background:var(--stage); border-color:var(--stage); color:#fff; }
+.likert-btn.sdt-sel .num { background:var(--gold); border-color:var(--gold); color:#fff; }
+.likert-btn.noise-sel .num { background:var(--purple); border-color:var(--purple); color:#fff; }
+.nav-row { display:flex; gap:10px; margin-top:20px; }
+.btn-prev { flex:0 0 80px; padding:13px; border-radius:10px; border:1.5px solid var(--stage-line); background:#fff; color:var(--stage-soft); font-size:14px; font-weight:600; cursor:pointer; transition:all 0.15s; }
+.btn-prev:hover { background:var(--stage-bg); }
+.btn-next { flex:1; padding:13px; border-radius:10px; border:none; background:var(--stage); color:#fff; font-size:15px; font-weight:700; cursor:pointer; transition:all 0.15s; opacity:0.5; pointer-events:none; }
+.btn-next.active { opacity:1; pointer-events:auto; }
+.btn-next.active:hover { background:#0f2545; }
+
+/* Result area */
+#result-section { display:none; }
+
+/* Result header */
+.result-hero { background:linear-gradient(135deg, var(--stage) 0%, #0f2545 100%); border-radius:var(--card-radius); padding:32px 24px; text-align:center; margin-bottom:20px; color:#fff; }
+.result-hero .rh-badge { font-size:11px; font-weight:700; letter-spacing:1.5px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:12px; }
+.result-hero h2 { font-size:24px; font-weight:800; margin-bottom:8px; line-height:1.3; }
+.result-hero .rh-sub { font-size:13px; color:rgba(255,255,255,0.75); line-height:1.6; }
+.result-hero .rh-tag { display:inline-block; margin-top:14px; padding:6px 16px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); border-radius:100px; font-size:12px; font-weight:700; color:var(--gold); }
+
+/* Section header */
+.section-header { display:flex; align-items:center; gap:10px; margin:28px 0 14px; }
+.section-header .sh-bar { width:4px; height:22px; border-radius:2px; }
+.sh-bar.navy { background:var(--stage); }
+.sh-bar.gold { background:var(--gold); }
+.sh-bar.purple { background:var(--purple); }
+.sh-bar.green { background:var(--green); }
+.section-header h3 { font-size:16px; font-weight:800; color:var(--text-main); }
+.section-header .sh-tag { font-size:11px; font-weight:700; letter-spacing:0.8px; padding:3px 10px; border-radius:100px; margin-left:auto; }
+.sh-tag.navy { background:rgba(22,48,87,0.08); color:var(--stage); }
+.sh-tag.gold { background:rgba(201,152,58,0.1); color:var(--gold); }
+.sh-tag.purple { background:rgba(139,92,246,0.1); color:var(--purple); }
+.sh-tag.green { background:rgba(61,170,107,0.1); color:var(--green); }
+
+/* Chart card */
+.chart-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:22px 20px; margin-bottom:14px; }
+.chart-card .cc-title { font-size:13px; font-weight:700; color:var(--text-sub); margin-bottom:16px; }
+.chart-item { margin-bottom:14px; }
+.chart-item:last-child { margin-bottom:0; }
+.chart-label-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
+.chart-label { font-size:13px; font-weight:700; color:var(--text-main); }
+.chart-score-text { font-size:12px; font-weight:600; color:var(--text-muted); }
+.chart-track { height:9px; background:#EEF2F8; border-radius:100px; overflow:hidden; }
+.chart-fill { height:100%; border-radius:100px; transition:width 1s cubic-bezier(0.4,0,0.2,1); }
+.chart-fill.navy-fill { background:linear-gradient(90deg, var(--stage), var(--stage-soft)); }
+.chart-fill.gold-fill { background:linear-gradient(90deg, var(--gold), #e8b84b); }
+.chart-fill.purple-fill { background:linear-gradient(90deg, var(--purple), #a78bfa); }
+.chart-note { font-size:11px; color:var(--text-muted); margin-top:3px; line-height:1.4; }
+.chart-item.highest .chart-label { color:var(--stage); }
+.chart-item.highest .chart-fill.navy-fill { box-shadow:0 2px 6px rgba(22,48,87,0.3); }
+.chart-item.sdt-highest .chart-label { color:var(--gold); }
+.chart-item.noise-highest .chart-label { color:var(--purple); }
+
+/* Detail card */
+.detail-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:20px; margin-bottom:14px; }
+.detail-card .dc-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.detail-card .dc-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.dc-icon.navy-bg { background:rgba(22,48,87,0.08); }
+.dc-icon.gold-bg { background:rgba(201,152,58,0.1); }
+.dc-icon.purple-bg { background:rgba(139,92,246,0.1); }
+.dc-icon.green-bg { background:rgba(61,170,107,0.1); }
+.detail-card .dc-label { font-size:12px; color:var(--text-muted); font-weight:600; }
+.detail-card .dc-title { font-size:15px; font-weight:800; color:var(--text-main); }
+.charge-box { border-left:3px solid var(--green); padding:11px 13px; border-radius:0 7px 7px 0; background:rgba(61,170,107,0.06); font-size:13px; color:var(--text-main); line-height:1.6; margin-bottom:8px; }
+.drain-box { border-left:3px solid var(--gold); padding:11px 13px; border-radius:0 7px 7px 0; background:rgba(201,152,58,0.06); font-size:13px; color:var(--text-main); line-height:1.6; }
+.charge-box strong { color:var(--green); } .drain-box strong { color:var(--gold); }
+
+/* Integration card — core */
+.integration-card { border-radius:var(--card-radius); padding:24px 20px; margin-bottom:14px; }
+.integration-card.match { background:linear-gradient(135deg, #F0FAF4, #E8F5EE); border:1.5px solid rgba(61,170,107,0.3); }
+.integration-card.mismatch { background:linear-gradient(135deg, var(--gold-bg), #FFF3E0); border:1.5px solid rgba(201,152,58,0.35); }
+.integration-card .ic-tag { display:inline-flex; align-items:center; gap:6px; padding:4px 12px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px; margin-bottom:12px; }
+.ic-tag.match { background:var(--green); color:#fff; }
+.ic-tag.mismatch { background:var(--gold); color:#fff; }
+.integration-card h4 { font-size:17px; font-weight:800; color:var(--text-main); margin-bottom:10px; line-height:1.35; }
+.integration-card p { font-size:13.5px; color:var(--text-sub); line-height:1.7; }
+.integration-card .ic-note { margin-top:12px; padding:10px 13px; border-radius:8px; font-size:13px; font-weight:600; line-height:1.5; }
+.ic-note.match { background:rgba(61,170,107,0.12); color:#1a5c36; }
+.ic-note.mismatch { background:rgba(201,152,58,0.12); color:#7a5c00; }
+
+/* SDT regulation stage card */
+.sdt-stage-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:20px; margin-bottom:14px; }
+.sdt-stage-card .sdt-level { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.sdt-level-bar { flex:1; height:8px; background:#EEF2F8; border-radius:100px; overflow:hidden; }
+.sdt-level-fill { height:100%; border-radius:100px; background:linear-gradient(90deg, var(--gold), #e8b84b); transition:width 1s ease; }
+.sdt-stage-card .sdt-tag { font-size:11px; font-weight:700; letter-spacing:1px; padding:4px 12px; border-radius:100px; background:rgba(201,152,58,0.1); color:var(--gold); margin-bottom:8px; display:inline-block; }
+.sdt-stage-card h4 { font-size:16px; font-weight:800; color:var(--text-main); margin-bottom:8px; }
+.sdt-stage-card p { font-size:13.5px; color:var(--text-sub); line-height:1.7; }
+.sdt-steps { margin-top:14px; }
+.sdt-step { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:8px; margin-bottom:6px; }
+.sdt-step:last-child { margin-bottom:0; }
+.sdt-step.current { background:rgba(201,152,58,0.1); border:1px solid rgba(201,152,58,0.3); }
+.sdt-step.past { background:#F8F9FA; opacity:0.6; }
+.sdt-step.future { background:#F8F9FA; opacity:0.7; }
+.sdt-step .ss-num { min-width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; }
+.ss-num.current { background:var(--gold); color:#fff; }
+.ss-num.past { background:#CCC; color:#fff; }
+.ss-num.future { background:#DDD; color:#888; }
+.sdt-step .ss-text { font-size:13px; color:var(--text-main); line-height:1.5; }
+.sdt-step.current .ss-text { font-weight:700; color:#7a5c00; }
+
+/* Noise pattern card */
+.noise-card { background:var(--purple-bg); border:1.5px solid rgba(139,92,246,0.2); border-radius:var(--card-radius); padding:20px; margin-bottom:14px; }
+.noise-card .nc-tag { display:inline-flex; align-items:center; gap:6px; background:var(--purple); color:#fff; font-size:11px; font-weight:700; border-radius:100px; padding:4px 12px; margin-bottom:12px; }
+.noise-card h4 { font-size:15px; font-weight:800; color:var(--text-main); margin-bottom:10px; }
+.noise-card p { font-size:13.5px; color:var(--text-sub); line-height:1.7; }
+.noise-item { display:flex; gap:8px; align-items:flex-start; padding:8px 12px; border-radius:8px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.12); margin-bottom:7px; }
+.noise-item:last-child { margin-bottom:0; }
+.noise-item .ni-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.noise-item p { font-size:13px; color:var(--text-main); line-height:1.5; }
+.noise-level-row { display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:12px; border-top:1px solid rgba(139,92,246,0.15); }
+.noise-level-label { font-size:12px; font-weight:700; color:var(--purple); white-space:nowrap; }
+.noise-level-bar { flex:1; height:7px; background:rgba(139,92,246,0.1); border-radius:100px; overflow:hidden; }
+.noise-level-fill { height:100%; border-radius:100px; background:linear-gradient(90deg,var(--purple),#a78bfa); transition:width 1s ease; }
+.noise-level-text { font-size:12px; font-weight:700; color:var(--purple); white-space:nowrap; }
+
+/* Social-structure card */
+.social-card { background:#FAF8FF; border:1.5px solid rgba(139,92,246,0.2); border-radius:var(--card-radius); padding:20px; margin-bottom:14px; }
+.social-card .s-tag { display:inline-flex; align-items:center; gap:6px; background:var(--purple); color:#fff; font-size:11px; font-weight:700; border-radius:100px; padding:4px 12px; margin-bottom:12px; }
+.social-card h4 { font-size:15px; font-weight:800; color:var(--text-main); margin-bottom:8px; }
+.social-card p { font-size:13.5px; color:var(--text-sub); line-height:1.7; }
+.social-card .social-note { margin-top:10px; padding-top:10px; border-top:1px solid rgba(139,92,246,0.15); font-size:12.5px; color:var(--purple); font-weight:600; }
+
+/* Self-reflection questions */
+.reflect-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:20px; margin-bottom:14px; }
+.reflect-card h3 { font-size:15px; font-weight:700; color:var(--text-main); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.reflect-card h3::before { content:'💭'; font-size:18px; }
+.q-item { padding:11px 13px; border-radius:9px; background:var(--stage-bg); border:1px solid var(--stage-line); margin-bottom:8px; display:flex; gap:10px; align-items:flex-start; }
+.q-item:last-child { margin-bottom:0; }
+.q-badge { min-width:22px; height:22px; background:var(--stage); color:#fff; border-radius:50%; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.q-item p { font-size:13px; color:var(--text-main); line-height:1.65; }
+
+/* Small practice */
+.practice-card { background:var(--gold-bg); border-left:4px solid var(--gold); border-radius:0 var(--card-radius) var(--card-radius) 0; padding:18px 20px; margin-bottom:14px; }
+.practice-card .p-tag { display:inline-flex; align-items:center; gap:6px; background:var(--gold); color:#fff; font-size:11px; font-weight:700; border-radius:100px; padding:4px 12px; margin-bottom:10px; }
+.practice-card p { font-size:14px; color:var(--text-main); line-height:1.7; }
+.practice-card strong { color:var(--gold); }
+
+/* Stability note */
+.stability-card { background:var(--stage-bg); border:1px solid var(--stage-line); border-radius:var(--card-radius); padding:16px 18px; margin-bottom:14px; font-size:13px; color:var(--stage); line-height:1.7; }
+
+/* Slogan */
+.slogan-card { background:var(--stage); border-radius:var(--card-radius); padding:28px 24px; text-align:center; margin-bottom:20px; color:#fff; }
+.slogan-card p { font-size:14px; font-weight:600; line-height:1.7; color:rgba(255,255,255,0.85); margin-bottom:8px; }
+.slogan-card .slogan-main { font-size:18px; font-weight:800; color:var(--gold); }
+
+/* Share / button */
+.share-row { display:flex; gap:10px; margin-bottom:20px; }
+.btn-share-card { flex:1; padding:13px; border-radius:10px; border:none; background:var(--gold); color:#fff; font-size:14px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; transition:background 0.15s; }
+.btn-share-card:hover { background:#b38632; }
+.btn-share-link { flex:1; padding:13px; border-radius:10px; border:1.5px solid var(--stage-line); background:#fff; color:var(--stage); font-size:14px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; transition:background 0.15s; }
+.btn-share-link:hover { background:var(--stage-bg); }
+.btn-retry { display:block; width:100%; padding:14px; border-radius:10px; border:1.5px solid var(--stage-line); background:#fff; color:var(--text-sub); font-size:14px; font-weight:600; cursor:pointer; margin-bottom:32px; transition:background 0.15s; }
+.btn-retry:hover { background:var(--stage-bg); }
+
+/* Disclaimer */
+.disclaimer { border-top:1px solid var(--stage-line); padding-top:18px; margin-bottom:22px; }
+.disclaimer p { font-size:11.5px; color:var(--text-muted); line-height:1.7; margin-bottom:6px; }
+
+/* Footer */
+.footer { text-align:center; padding-bottom:16px; }
+.footer p { font-size:12px; color:var(--text-muted); }
+.footer .slogan { font-weight:700; color:var(--stage); margin-bottom:4px; }
+
+/* Modal */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:100; align-items:center; justify-content:center; padding:20px; }
+.modal-overlay.show { display:flex; }
+.modal-box { background:#fff; border-radius:16px; padding:28px 24px; max-width:360px; width:100%; text-align:center; }
+.modal-box h4 { font-size:17px; font-weight:800; color:var(--text-main); margin-bottom:10px; }
+.modal-box p { font-size:14px; color:var(--text-sub); line-height:1.6; margin-bottom:20px; }
+.modal-btn-row { display:flex; gap:10px; }
+.modal-btn { flex:1; padding:12px; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer; border:none; }
+.modal-btn.cancel { background:var(--stage-bg); color:var(--text-sub); }
+.modal-btn.confirm { background:var(--stage); color:#fff; }
+
+/* Energy engine state card */
+.engine-card { border-radius:var(--card-radius); padding:26px 22px; margin-bottom:20px; }
+.engine-card.cruise  { background:linear-gradient(135deg,#F0FAF4,#E4F5EC); border:2px solid rgba(61,170,107,0.4); }
+.engine-card.overheat{ background:linear-gradient(135deg,var(--gold-bg),#FFF3E0); border:2px solid rgba(201,152,58,0.45); }
+.engine-card.suppress{ background:linear-gradient(135deg,#FAF8FF,#F3EFFF); border:2px solid rgba(139,92,246,0.35); }
+.engine-card.explore { background:linear-gradient(135deg,var(--stage-bg),#EBF0FA); border:2px solid rgba(22,48,87,0.2); }
+.engine-card .ec-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
+.cruise  .ec-eyebrow { color:var(--green); }
+.overheat .ec-eyebrow { color:var(--gold); }
+.suppress .ec-eyebrow { color:var(--purple); }
+.explore .ec-eyebrow { color:var(--stage); }
+.engine-card .ec-state { font-size:22px; font-weight:800; color:var(--text-main); margin-bottom:6px; line-height:1.3; }
+.engine-card .ec-metaphor { font-size:13.5px; font-weight:600; font-style:italic; margin-bottom:12px; }
+.cruise   .ec-metaphor { color:#1a5c36; }
+.overheat .ec-metaphor { color:#7a5c00; }
+.suppress .ec-metaphor { color:#5b21b6; }
+.explore  .ec-metaphor { color:var(--stage-soft); }
+.engine-card .ec-desc { font-size:13.5px; color:var(--text-sub); line-height:1.75; margin-bottom:14px; }
+.engine-dots { display:flex; gap:8px; margin-bottom:14px; }
+.engine-dot { flex:1; height:6px; border-radius:100px; background:#E5E8EF; }
+.engine-dot.on.green  { background:var(--green); }
+.engine-dot.on.gold   { background:var(--gold); }
+.engine-dot.on.purple { background:var(--purple); }
+.engine-dot.on.navy   { background:var(--stage); }
+.engine-card .ec-note { font-size:12.5px; font-weight:600; padding:10px 13px; border-radius:8px; line-height:1.55; }
+.cruise   .ec-note { background:rgba(61,170,107,0.1);  color:#1a5c36; }
+.overheat .ec-note { background:rgba(201,152,58,0.1);  color:#7a5c00; }
+.suppress .ec-note { background:rgba(139,92,246,0.1);  color:#5b21b6; }
+.explore  .ec-note { background:rgba(22,48,87,0.07);   color:var(--stage); }
+/* Energy recovery card */
+.recovery-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:20px; margin-bottom:14px; }
+.recovery-card .rc-tag { display:inline-flex; align-items:center; gap:6px; background:var(--green); color:#fff; font-size:11px; font-weight:700; border-radius:100px; padding:4px 12px; margin-bottom:12px; }
+.recovery-card h4 { font-size:15px; font-weight:800; color:var(--text-main); margin-bottom:10px; }
+.recovery-item { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:8px; background:var(--green-bg); border:1px solid rgba(61,170,107,0.2); margin-bottom:7px; }
+.recovery-item:last-child { margin-bottom:0; }
+.recovery-item .ri-icon { font-size:16px; flex-shrink:0; }
+.recovery-item p { font-size:13px; color:var(--text-main); line-height:1.55; }
+.recovery-item strong { color:var(--green); }
+
+/* Hybrid engine card */
+.hybrid-card { background:linear-gradient(135deg,#163057 0%,#1e3f6b 100%); border-radius:var(--card-radius); padding:24px 22px; margin-bottom:14px; color:#fff; }
+.hybrid-card .hc-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.5px; color:rgba(255,255,255,0.55); text-transform:uppercase; margin-bottom:8px; }
+.hybrid-card .hc-combo { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:100px; padding:5px 14px; font-size:12px; font-weight:700; color:var(--gold); margin-bottom:14px; letter-spacing:0.5px; }
+.hybrid-card h4 { font-size:17px; font-weight:800; color:#fff; line-height:1.4; margin-bottom:10px; }
+.hybrid-card .hc-insight { font-size:13.5px; color:rgba(255,255,255,0.85); line-height:1.75; margin-bottom:14px; font-style:italic; padding:12px 14px; background:rgba(255,255,255,0.07); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; }
+.hybrid-card .hc-detail { font-size:13px; color:rgba(255,255,255,0.72); line-height:1.75; }
+.hybrid-card .hc-detail strong { color:rgba(255,255,255,0.95); }
+
+/* Insight card */
+.insight-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:24px 22px; margin-bottom:14px; }
+.insight-card .ins-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--text-muted); text-transform:uppercase; margin-bottom:12px; }
+.insight-card .ins-main { font-size:18px; font-weight:800; color:var(--stage); line-height:1.45; margin-bottom:14px; }
+.insight-card .ins-body { font-size:13.5px; color:var(--text-sub); line-height:1.8; margin-bottom:16px; }
+/* QnA item */
+.qna-item { margin-bottom:12px; border-radius:10px; overflow:hidden; border:1px solid var(--stage-line); }
+.qna-item:last-child { margin-bottom:0; }
+.qna-q { display:flex; gap:8px; align-items:flex-start; padding:11px 14px; background:var(--stage-bg); }
+.qna-q .qi-x { font-size:12px; color:#BFC8D6; flex-shrink:0; margin-top:2px; font-weight:700; }
+.qna-q p { font-size:13px; color:var(--text-sub); line-height:1.5; }
+.qna-a { padding:11px 14px 12px; background:#fff; border-top:1px solid var(--stage-line); }
+.qna-a p { font-size:13px; color:var(--text-main); line-height:1.65; }
+.qna-a strong { color:var(--stage); }
+/* Result heading SF Pro font */
+.result-hero h2, .engine-card h3, .engine-card .ec-state,
+.section-header h3, .detail-card .dc-title, .sdt-stage-card h4,
+.hybrid-card h4, .insight-card .ins-main, .noise-card h4,
+.reflect-card h3, .next-explore-card h4, .recovery-card h4 {
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Inter', sans-serif;
+  letter-spacing: -0.3px;
+}
+.misconception-box { background:var(--stage-bg); border:1px solid var(--stage-line); border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.misconception-box .mb-label { font-size:11px; font-weight:700; color:var(--text-muted); letter-spacing:1px; margin-bottom:10px; }
+.misconception-item { display:flex; gap:8px; align-items:flex-start; margin-bottom:7px; }
+.misconception-item:last-child { margin-bottom:0; }
+.misconception-item .mi-x { font-size:13px; color:#CCC; flex-shrink:0; margin-top:1px; }
+.misconception-item p { font-size:13px; color:var(--text-muted); line-height:1.5; }
+.reframe-box { background:linear-gradient(135deg,var(--gold-bg),#FFF3E0); border:1.5px solid rgba(201,152,58,0.35); border-radius:10px; padding:14px 16px; }
+.reframe-box .rb-label { font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; margin-bottom:8px; }
+.reframe-box p { font-size:13.5px; color:#7a5c00; line-height:1.75; font-weight:500; }
+
+/* Self-narrative connection card */
+.next-explore-card { background:var(--card-bg); border-radius:var(--card-radius); box-shadow:var(--card-shadow); padding:26px 22px; margin-bottom:20px; }
+.next-explore-card .ne-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--text-muted); text-transform:uppercase; margin-bottom:12px; }
+.next-explore-card h4 { font-size:17px; font-weight:800; color:var(--text-main); line-height:1.4; margin-bottom:14px; }
+.next-explore-card .ne-body { font-size:13.5px; color:var(--text-sub); line-height:1.8; margin-bottom:16px; }
+.ne-expressions { display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.ne-expr-item { display:flex; align-items:flex-start; gap:10px; padding:10px 13px; border-radius:9px; background:var(--stage-bg); border:1px solid var(--stage-line); }
+.ne-expr-item .ne-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.ne-expr-item p { font-size:13px; color:var(--text-main); line-height:1.55; }
+.ne-expr-item strong { color:var(--stage); }
+.next-explore-card .ne-bridge { font-size:13.5px; color:var(--text-sub); line-height:1.75; padding:14px 16px; background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; margin-bottom:16px; }
+.next-explore-card .ne-bridge strong { color:#7a5c00; }
+.btn-next-explore { display:block; width:100%; padding:14px; border-radius:12px; background:var(--stage); color:#fff; font-size:15px; font-weight:700; border:none; cursor:pointer; text-align:center; transition:background 0.15s, transform 0.15s; text-decoration:none; }
+.btn-next-explore:hover { background:#0f2545; transform:translateY(-1px); }
+
+:focus-visible { outline:2px solid var(--stage); outline-offset:2px; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+.fade-up { animation:fadeUp 0.4s ease forwards; }
+@media(max-width:380px){.intro-card h1{font-size:21px;}.q-text{font-size:15px;}.share-row{flex-direction:column;}.phase-row{gap:5px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="header">
+  <div style="display:flex;align-items:center">
+    <div class="logo-need"><span class="n">N</span><span class="d1">.</span><span class="e1">E</span><span class="d2">.</span><span class="e2">E</span><span class="d3">.</span><span class="d">D</span><span class="d4">.</span></div>
+    <div class="logo-sep"></div>
+    <div class="logo-right">
+      <span class="top">NEED SCAN · Nadaum Design Lab</span>
+      <span class="bottom">Design Your Authentic Self</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══ Intro ══ -->
+<section id="intro-section">
+  <div class="intro-card fade-up">
+    <div class="stage-badge">N.E.E.D · Integrated Assessment</div>
+    <h1>Why Does Some Work<br>Energize Me,<br>While Other Work<br>Drains Me?</h1>
+    <p class="sub">You're working hard — why are you still tired?<br>Let's read it structurally.</p>
+    <div class="meta-row">
+      <span class="meta-pill">⏱ About 8~10 min</span>
+      <span class="meta-pill">📝 26 items</span>
+      <span class="meta-pill">🔓 Free</span>
+      <span class="meta-pill">🙈 Anonymous</span>
+    </div>
+    <button class="btn-start" onclick="startQuiz()">Start Assessment →</button>
+
+    <div class="phase-row">
+      <div class="phase-item p1">
+        <div class="pi-icon">○</div>
+        <div class="pi-label">Temperament</div>
+        <div class="pi-desc">Inborn response patterns<br>12 items</div>
+      </div>
+      <div class="phase-item p2">
+        <div class="pi-icon">→</div>
+        <div class="pi-label">Motivation</div>
+        <div class="pi-desc">Where your action starts<br>8 items</div>
+      </div>
+      <div class="phase-item p3">
+        <div class="pi-icon">◎</div>
+        <div class="pi-label">Noise Pattern</div>
+        <div class="pi-desc">Pressure that steals autonomy<br>6 items</div>
+      </div>
+    </div>
+    <div class="intro-desc">
+      <strong>Temperament</strong> is a relatively stable lifelong foundation of response patterns.<br>
+      <strong>Motivation</strong> shows where your current actions actually start from.<br>
+      <strong>Noise</strong> is the psychological pressure pattern that steals your autonomy.<br><br>
+      When you see how these three layers connect,<br>
+      the structural reason "why working hard still drains you" becomes visible.
+    </div>
+  </div>
+</section>
+
+<!-- ══ Quiz ══ -->
+<section id="quiz-section">
+  <div id="phase-indicator-wrap"></div>
+  <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
+  <div class="progress-text" id="progress-text">1 / 26</div>
+  <div class="question-card fade-up" id="question-card">
+    <div class="q-axis" id="q-axis"></div>
+    <p class="q-text" id="q-text"></p>
+    <div class="likert-wrap" id="likert-wrap"></div>
+  </div>
+  <div class="nav-row">
+    <button class="btn-prev" id="btn-prev" onclick="prevQ()">← Previous</button>
+    <button class="btn-next" id="btn-next" onclick="nextQ()">Next →</button>
+  </div>
+</section>
+
+<!-- ══ Bridge (Phase1→2) ══ -->
+<section id="bridge-section" style="display:none">
+  <div class="bridge-card fade-up">
+    <div class="br-icon">⚡</div>
+    <h3>Temperament foundation — checked</h3>
+    <p>We've read your inborn response patterns.<br>Now we move to questions about your current season.</p>
+    <div class="br-highlight">
+      <strong>Why am I doing this action right now?</strong><br>
+      The next 8 questions look at <strong>where your action originates</strong>.<br>
+      Does it start from autonomy, or from anxiety?
+    </div>
+    <button class="btn-bridge gold" onclick="continueToPh2()">Check Motivation Source →</button>
+  </div>
+</section>
+
+<!-- ══ Bridge (Phase2→3) ══ -->
+<section id="bridge2-section" style="display:none">
+  <div class="bridge-card fade-up">
+    <div class="br-icon">🔇</div>
+    <h3>Motivation pattern — checked</h3>
+    <p>We've read where your action starts.<br>One last stage to go.</p>
+    <div class="br-highlight">
+      <strong>What noise is stealing my autonomy?</strong><br>
+      The next 6 questions look concretely at the <strong>psychological pressure patterns</strong> that drain your energy.
+    </div>
+    <button class="btn-bridge gold" onclick="continueToPh3()">Check Noise Pattern →</button>
+  </div>
+</section>
+
+<!-- ══ Result ══ -->
+<section id="result-section"></section>
+
+<footer class="footer">
+  <p class="slogan">Authentic self isn't found — it's designed</p>
+  <p>© 2026 Nadaum Design Lab · Prof. Sujung Kim</p>
+</footer>
+</div>
+
+<div class="modal-overlay" id="retry-modal">
+  <div class="modal-box">
+    <h4>Start the assessment over?</h4>
+    <p>Your current result will be cleared.</p>
+    <div class="modal-btn-row">
+      <button class="modal-btn cancel" onclick="closeModal()">Cancel</button>
+      <button class="modal-btn confirm" onclick="doRetry()">Start over</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// Question data
+// ═══════════════════════════════════════════
+
+// PHASE 1: Temperament (12 items) — Cloninger 4 dimensions
+const Q_TEMP = [
+  {phase:1, axis:"NS", axisLabel:"Novelty Seeking", axisClass:"", text:"When placed in unfamiliar environments or situations I haven't tried before, curiosity instinctively kicks in before fear.", R:false},
+  {phase:1, axis:"NS", axisLabel:"Novelty Seeking", axisClass:"", text:"Since childhood, I've naturally been drawn to first-time environments and untried things — the process itself energizes me.", R:false},
+  {phase:1, axis:"NS", axisLabel:"Novelty Seeking", axisClass:"", text:"Familiar, predictable situations feel comfortable to me, and I focus better in steady routines than during sudden changes.", R:true},
+  {phase:1, axis:"HA", axisLabel:"Harm Avoidance", axisClass:"", text:"In new decisions or situations, a \"is this okay?\" check response kicks in automatically before anything else.", R:false},
+  {phase:1, axis:"HA", axisLabel:"Harm Avoidance", axisClass:"", text:"It feels natural to me to tap a stone bridge several times before crossing — I think about how I might make mistakes.", R:false},
+  {phase:1, axis:"HA", axisLabel:"Harm Avoidance", axisClass:"", text:"I'm relatively less sensitive to risk signals — diving in and learning by doing feels natural to me.", R:true},
+  {phase:1, axis:"RD", axisLabel:"Reward Dependence", axisClass:"", text:"I notice subtle changes in expressions or mood around me, and those changes affect my energy too.", R:false},
+  {phase:1, axis:"RD", axisLabel:"Reward Dependence", axisClass:"", text:"When the people I'm with feel good or struggling, those emotions naturally transfer to me.", R:false},
+  {phase:1, axis:"RD", axisLabel:"Reward Dependence", axisClass:"", text:"I tend to keep my energy relatively independent of others' reactions, and focus on problem-solving rather than emotional exchange.", R:true},
+  {phase:1, axis:"PS", axisLabel:"Persistence", axisClass:"", text:"I tend to hold on to things I start longer than expected, and others often describe me as someone who goes deep on one thing.", R:false},
+  {phase:1, axis:"PS", axisLabel:"Persistence", axisClass:"", text:"I get energy from going deep on one field — this feels more natural than skimming across many things.", R:false},
+  {phase:1, axis:"PS", axisLabel:"Persistence", axisClass:"", text:"Changing direction or moving to something new feels natural — staying on one path too long makes me feel stuck.", R:true},
+];
+
+// PHASE 2: SDT Motivation (8 items) — autonomous regulation level
+const Q_SDT = [
+  {phase:2, axis:"SDT", axisLabel:"Motivation Source", axisClass:"sdt", text:"What I'm working hard at right now starts more often from \"I feel this is meaningful\" than from \"I have to.\"", R:false},
+  {phase:2, axis:"SDT", axisLabel:"Motivation Source", axisClass:"sdt", text:"There's something I keep returning to even without reward or recognition.", R:false},
+  {phase:2, axis:"SDT_INT", axisLabel:"Introjected Regulation", axisClass:"sdt", text:"Even when I'm resting, pressure that \"I should be doing something productive\" creeps in — rest doesn't feel fully comfortable.", R:false},
+  {phase:2, axis:"SDT_INT", axisLabel:"Introjected Regulation", axisClass:"sdt", text:"When I hear about peers' successes or see social media, my heart wavers — like my pace is wrong.", R:false},
+  {phase:2, axis:"SDT_INT", axisLabel:"Introjected Regulation", axisClass:"sdt", text:"I worry that if I don't do this well, I'll look small in front of others.", R:false},
+  {phase:2, axis:"SDT", axisLabel:"Motivation Source", axisClass:"sdt", text:"Even when it's hard or exhausting, I don't want to fully let go of this direction.", R:false},
+  {phase:2, axis:"SDT", axisLabel:"Motivation Source", axisClass:"sdt", text:"Even when tired, the sense of \"this matters to me\" is what holds my action together.", R:false},
+  {phase:2, axis:"SDT_INT", axisLabel:"Introjected Regulation", axisClass:"sdt", text:"I feel relief only when I'm recognized or told I did well by others.", R:false},
+];
+
+// PHASE 3: Noise (6 items) — Eliminate Noise
+const Q_NOISE = [
+  {phase:3, axis:"NOISE_CMP", axisLabel:"Comparison Noise", axisClass:"noise", text:"When I see peers' successes or social media, I suddenly feel empty or anxious — like my pace or position is wrong.", R:false},
+  {phase:3, axis:"NOISE_APPR", axisLabel:"Approval Noise", axisClass:"noise", text:"Trying to meet society's definition of \"success,\" I often forget what actually makes me happy.", R:false},
+  {phase:3, axis:"NOISE_ANX", axisLabel:"Anxiety-driven Noise", axisClass:"noise", text:"I often feel anxious about whether what I'm doing now is the right direction — and that anxiety drives my actions.", R:false},
+  {phase:3, axis:"NOISE_REST", axisLabel:"Rest Pressure", axisClass:"noise", text:"Before I've actually felt rested, the pressure of \"I have to move again\" arrives first.", R:false},
+  {phase:3, axis:"NOISE_BODY", axisLabel:"Ignoring Body Signals", axisClass:"noise", text:"Even when tired or sick, stopping makes me anxious — so I ignore my body's signals and keep moving.", R:false},
+  {phase:3, axis:"NOISE_EXT", axisLabel:"External Standards Noise", axisClass:"noise", text:"I respond more strongly to others' standards and expectations than to standards I set for myself.", R:false},
+];
+
+const ALL_Q = [...Q_TEMP, ...Q_SDT, ...Q_NOISE];
+const TOTAL = ALL_Q.length; // 26
+
+const LIKERT = ["Strongly disagree","Disagree","Neutral","Agree","Strongly agree"];
+
+// ═══════════════════════════════════════════
+// Result data
+// ═══════════════════════════════════════════
+
+const DIM_INFO = {
+  NS:{name:"Novelty Seeking",en:"Novelty Seeking",
+    high:{title:"New stimulation and change turn on your energy",charge:"New projects, unfamiliar environments, directions never tried before",drain:"Repetitive routines, work without change, only predictable daily life",social:"In cultures where \"stability\" is praised as a virtue, people with strong novelty-seeking patterns often blame themselves with \"why can't I settle down?\" This is a trait of temperament, not a problem."},
+    low:{title:"You focus deeply in familiar, stable environments",charge:"Predictable rhythm, well-organized environment, the process of deepening in familiar ways",drain:"Frequent change, uncertain situations, sudden direction shifts",social:"In change-driven environments you might feel \"why am I slow to adapt?\" — but this foundation is a strength that creates depth and steadiness."}},
+  HA:{name:"Harm Avoidance",en:"Harm Avoidance",
+    high:{title:"You move after carefully checking and preparing",charge:"Enough preparation time, room to assess risks, step-by-step verification",drain:"Situations requiring impulsive action without preparation, decisions with too much uncertainty",social:"Studies of young adults in competitive societies show this dimension trends high on average. It's not that you're \"more fearful\" — you've repeatedly learned \"I can't be wrong\" in cultures of social monitoring and comparison."},
+    low:{title:"Diving in and figuring it out as you go feels natural",charge:"Quick execution, starting even when imperfect, flexible direction adjustment",drain:"Overly cautious atmospheres, processes that require eliminating every risk before moving",social:"Your risk-taking foundation becomes a strength in environments that need lots of new experiments."}},
+  RD:{name:"Reward Dependence",en:"Reward Dependence",
+    high:{title:"Your energy connects through relationships and finds meaning there",charge:"Positive responses from those around you, environments with collaboration, connection, and empathy",drain:"Cold and disconnected atmospheres, situations where emotions are dismissed, prolonged isolation",social:"In environments where high sensitivity is read as \"weakness,\" suppressing this foundation drains a lot of energy. This is a strength."},
+    low:{title:"You maintain independent energy and focus alone",charge:"Time absorbed alone, environments with little emotional stimulation, task-focused clear work",drain:"Situations with high emotional demands and lots of energy spent managing relationships",social:"Your foundation of drawing energy from tasks over relationships works in your favor for building independent expertise."}},
+  PS:{name:"Persistence",en:"Persistence",
+    high:{title:"You naturally stay deep in meaningful work",charge:"Fields you find valuable, processes of going deep, long-term projects",drain:"Repetition without meaning, situations of \"holding on because I have to,\" not knowing why to persist",social:"This is different from the duty of \"having to finish.\" This foundation is a pattern that naturally activates in work you find meaningful."},
+    low:{title:"Changing direction and exploring feels natural",charge:"Exploring various domains, fresh starts, movement between multiple projects",drain:"Situations requiring long focus on one direction, stuck roles with limited options",social:"In environments where multi-area exploration is read as \"lacking focus,\" self-blame is easy — but this foundation is the basis for broad insight and connection-making."}}
+};
+
+// SDT regulation stages
+const SDT_STAGES = [
+  {id:0, name:"Driven by external commands",en:"",range:[0,25],
+   desc:"Much of your current action is running on external pressure or rewards. When \"I have to\" is everything, fatigue comes fast and meaning is hard to feel."},
+  {id:1, name:"Anxiety as the engine",en:"",range:[25,55],
+   desc:"Outwardly you're diligent and hardworking, but the inner motion mostly starts from anxiety, comparison, and need for approval. Rest doesn't feel comfortable, and without results you feel shaken."},
+  {id:2, name:"Meaning as the driving force",en:"",range:[55,78],
+   desc:"You move with the sense \"this matters to me.\" Even when it's hard, meaning becomes the engine. This is where the quality of your energy starts to change."},
+  {id:3, name:"Connected to your being",en:"",range:[78,101],
+   desc:"Your actions are linked to the direction of your existence. It feels less like \"things I have to do\" and more like \"life that's mine.\" A quiet but lasting energy flows — not forced momentum."}
+];
+
+// Noise type info
+const NOISE_INFO = {
+  NOISE_CMP:{name:"Comparison Noise",icon:"👁",desc:"Comparison with others is the main pattern stealing your autonomy."},
+  NOISE_APPR:{name:"Approval Noise",icon:"🎙",desc:"Others' evaluations dictate the meaning of your actions."},
+  NOISE_ANX:{name:"Anxiety-driven Noise",icon:"🌀",desc:"Anxiety replaces motivation, running as survival-mode energy."},
+  NOISE_REST:{name:"Rest Pressure",icon:"🔋",desc:"Pressure that prevents you from resting even when you need to."},
+  NOISE_BODY:{name:"Ignoring Body Signals",icon:"🫀",desc:"Prioritizing external tasks over your body's signals."},
+  NOISE_EXT:{name:"External Standards Dependence",icon:"🧭",desc:"Responding more strongly to external standards than to your own."}
+};
+
+// ═══════════════════════════════════════════
+// State
+// ═══════════════════════════════════════════
+let current = 0;
+let answers = new Array(TOTAL).fill(null);
+let currentPhase = 1;
+
+// ═══════════════════════════════════════════
+// Flow functions
+// ═══════════════════════════════════════════
+function startQuiz() {
+  document.getElementById('intro-section').style.display = 'none';
+  document.getElementById('quiz-section').style.display = 'block';
+  currentPhase = 1;
+  renderQuestion();
+}
+
+function continueToPh2() {
+  document.getElementById('bridge-section').style.display = 'none';
+  document.getElementById('quiz-section').style.display = 'block';
+  currentPhase = 2;
+  renderQuestion();
+}
+
+function continueToPh3() {
+  document.getElementById('bridge2-section').style.display = 'none';
+  document.getElementById('quiz-section').style.display = 'block';
+  currentPhase = 3;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = ALL_Q[current];
+  const pct = Math.round((current / TOTAL) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = (current + 1) + ' / ' + TOTAL;
+
+  // Phase indicator
+  const ph = q.phase;
+  const phLabels = {1:'Temperament', 2:'Motivation Source', 3:'Noise Pattern'};
+  const phSubs = {1:`${current + 1}/12 items`, 2:`${current - 11}/8 items`, 3:`${current - 19}/6 items`};
+  document.getElementById('phase-indicator-wrap').innerHTML =
+    `<div class="phase-indicator ph${ph}"><span class="ph-dot"></span><span class="ph-text">${phLabels[ph]}</span><span class="ph-sub">${phSubs[ph]}</span></div>`;
+
+  // Axis label
+  const axisEl = document.getElementById('q-axis');
+  axisEl.className = 'q-axis' + (q.axisClass ? ' ' + q.axisClass : '');
+  axisEl.textContent = q.axisLabel;
+
+  document.getElementById('q-text').textContent = q.text;
+
+  // Likert
+  const wrap = document.getElementById('likert-wrap');
+  wrap.innerHTML = '';
+  LIKERT.forEach((label, i) => {
+    const score = i + 1;
+    const isSelected = answers[current] === score;
+    const selClass = isSelected ? (ph === 1 ? ' selected' : ph === 2 ? ' sdt-sel' : ' noise-sel') : '';
+    const btn = document.createElement('button');
+    btn.className = 'likert-btn' + selClass;
+    btn.innerHTML = `<span class="num">${score}</span><span>${label}</span>`;
+    btn.onclick = () => selectAnswer(score);
+    wrap.appendChild(btn);
+  });
+
+  document.getElementById('btn-prev').style.display = current === 0 ? 'none' : '';
+  const btnNext = document.getElementById('btn-next');
+  btnNext.classList.toggle('active', answers[current] !== null);
+  const isLast = current === TOTAL - 1;
+  const isBridge1 = current === 11;
+  const isBridge2 = current === 19;
+  btnNext.textContent = isLast ? 'See Results →' : 'Next →';
+
+  const card = document.getElementById('question-card');
+  card.classList.remove('fade-up'); void card.offsetWidth; card.classList.add('fade-up');
+}
+
+function selectAnswer(score) {
+  answers[current] = score;
+  const q = ALL_Q[current];
+  const ph = q.phase;
+  document.querySelectorAll('.likert-btn').forEach((btn, i) => {
+    btn.classList.remove('selected','sdt-sel','noise-sel');
+    if (i + 1 === score) {
+      btn.classList.add(ph === 1 ? 'selected' : ph === 2 ? 'sdt-sel' : 'noise-sel');
+    }
+    btn.querySelector('.num').style.background = '';
+    btn.querySelector('.num').style.borderColor = '';
+    btn.querySelector('.num').style.color = '';
+  });
+  document.getElementById('btn-next').classList.add('active');
+
+  // Auto-advance (except last and pre-bridge)
+  const isBridge1End = current === 11;
+  const isBridge2End = current === 19;
+  const isLast = current === TOTAL - 1;
+  if (!isBridge1End && !isBridge2End && !isLast) {
+    setTimeout(() => { if (answers[current] !== null) nextQ(); }, 420);
+  }
+}
+
+function nextQ() {
+  if (answers[current] === null) return;
+
+  if (current === 11) {
+    // Phase 1 → Bridge 1
+    document.getElementById('quiz-section').style.display = 'none';
+    document.getElementById('bridge-section').style.display = 'block';
+    window.scrollTo(0, 0);
+    current++;
+    return;
+  }
+  if (current === 19) {
+    // Phase 2 → Bridge 2
+    document.getElementById('quiz-section').style.display = 'none';
+    document.getElementById('bridge2-section').style.display = 'block';
+    window.scrollTo(0, 0);
+    current++;
+    return;
+  }
+  if (current < TOTAL - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function prevQ() {
+  if (current > 0) {
+    // Skip bridge
+    if (current === 12) {
+      document.getElementById('bridge-section').style.display = 'none';
+      document.getElementById('quiz-section').style.display = 'block';
+      currentPhase = 1;
+    }
+    if (current === 20) {
+      document.getElementById('bridge2-section').style.display = 'none';
+      document.getElementById('quiz-section').style.display = 'block';
+      currentPhase = 2;
+    }
+    current--;
+    renderQuestion();
+  }
+}
+
+// ═══════════════════════════════════════════
+// Scoring
+// ═══════════════════════════════════════════
+function calcScores() {
+  function avg(indices) {
+    let sum = 0;
+    indices.forEach(i => { sum += ALL_Q[i].R ? (6 - answers[i]) : answers[i]; });
+    return sum / indices.length;
+  }
+
+  // Temperament (0~11)
+  const temp = {
+    NS: avg([0,1,2]),
+    HA: avg([3,4,5]),
+    RD: avg([6,7,8]),
+    PS: avg([9,10,11])
+  };
+
+  // SDT: autonomy score (higher = more autonomous) = avg of Q12,Q13,Q17,Q18; introjection = avg of Q14,Q15,Q16,Q19
+  const sdtAuto  = avg([12,13,17,18]);  // Autonomy direction
+  const sdtIntr  = avg([14,15,16,19]);  // Introjection direction (higher = more introjected)
+  // Integrated SDT autonomy score (0~100): autonomy↑ introjection↓
+  const sdtScore = Math.round(((sdtAuto - 1) / 4 * 70) + ((5 - sdtIntr - 1) / 4 * 30));
+
+  // Noise (20~25): item scores, higher = stronger noise
+  const noiseRaw = {
+    NOISE_CMP:  answers[20],
+    NOISE_APPR: answers[21],
+    NOISE_ANX:  answers[22],
+    NOISE_REST: answers[23],
+    NOISE_BODY: answers[24],
+    NOISE_EXT:  answers[25]
+  };
+  const noiseTotal = (answers[20]+answers[21]+answers[22]+answers[23]+answers[24]+answers[25]);
+  const noisePct = Math.round((noiseTotal - 6) / 24 * 100);
+
+  return {temp, sdtScore, noiseRaw, noisePct};
+}
+
+// ═══════════════════════════════════════════
+// Result rendering
+// ═══════════════════════════════════════════
+function showResult() {
+  document.getElementById('quiz-section').style.display = 'none';
+  const sec = document.getElementById('result-section');
+  sec.style.display = 'block';
+
+  const {temp, sdtScore, noiseRaw, noisePct} = calcScores();
+
+  // Temperament analysis
+  const tempDims = Object.entries(temp).sort((a,b) => b[1]-a[1]);
+  const strongest = tempDims[0][0];
+  const second    = tempDims[1][0];
+  function lv(s) { return s >= 3.0 ? 'high' : 'low'; }
+  function pct(s) { return Math.round((s-1)/4*100); }
+  const dimName = {NS:'Novelty Seeking', HA:'Harm Avoidance', RD:'Reward Dependence', PS:'Persistence'};
+  const mainInfo = DIM_INFO[strongest][lv(temp[strongest])];
+  const subInfo  = DIM_INFO[second][lv(temp[second])];
+
+  // SDT stage
+  const sdtStage = SDT_STAGES.find(s => sdtScore >= s.range[0] && sdtScore < s.range[1]) || SDT_STAGES[3];
+
+  // Top 2 noises
+  const noiseEntries = Object.entries(noiseRaw).sort((a,b)=>b[1]-a[1]);
+  const topNoise = noiseEntries.filter(([,v])=>v>=3).slice(0,3);
+
+  // Noise level text
+  const noiseLevelText = noisePct >= 70 ? 'High — Your autonomy is under significant pressure'
+    : noisePct >= 45 ? 'Mid — Noise activates strongly in certain situations'
+    : 'Low — Relatively autonomous state';
+
+  // ── Integrated reading (v2 engine state) ──
+  const engineState = calcIntegration(strongest, lv(temp[strongest]), sdtScore, noisePct);
+  const integrationMsg = getIntegrationMsg(strongest, lv(temp[strongest]), engineState);
+
+  // Noise level color
+  const noiseColor = noisePct >= 70 ? '#8B5CF6' : noisePct >= 45 ? '#C9983A' : '#3DAA6B';
+
+  const ENGINE_DATA = {
+    cruise: {
+      cssClass:'cruise', eyebrow:'Aligned · Cruising state',
+      state:'Playing your own score in your own voice',
+      metaphor:'"A powerful engine running on real fuel."',
+      desc:'Your temperament foundation and the source of your motivation point in the same direction. What you\'re doing is connected to meaning, and noise is interfering relatively little. A quiet but lasting energy flows in this zone.',
+      dotStates:['on green','on green','on green',''],
+      note:'Maintaining this state is itself the design. Catching noise quickly when it tries to break this connection is the next task.'
+    },
+    overheat: {
+      cssClass:'overheat', eyebrow:'Misaligned · Overheating state',
+      state:'A powerful engine running on fake fuel',
+      metaphor:'"Working hard, but burning out fast."',
+      desc:'Your temperament foundation is activated, but the source of your action comes mostly from anxiety, comparison, and need for approval. Results may come, but this energy is survival mode, not recovery mode. Sustained long-term, it leads to burnout.',
+      dotStates:['on gold','on gold','',''],
+      note:'The mismatch between your temperament foundation and motivation source is the structural cause of your current exhaustion. The starting point is reducing one strongest noise first.'
+    },
+    suppress: {
+      cssClass:'suppress', eyebrow:'Suppressed · Encroached state',
+      state:'Noise covers the engine — the ignition is off',
+      metaphor:'"The foundation is there, but its voice can\'t be heard right now."',
+      desc:'Autonomous motivation is low and noise is high. Helplessness or emptiness arises easily. Social-structural pressure or repeated internalization of external standards is likely suppressing the expression of your temperament foundation.',
+      dotStates:['on purple','on purple','on purple','on purple'],
+      note:'This is not your problem. It\'s the result of long-term internalization of external standards. Instead of immediate change, recognizing one noise is the first design action.'
+    },
+    explore: {
+      cssClass:'explore', eyebrow:'Exploring · Preparing state',
+      state:'Preparing to write a new score',
+      metaphor:'"Searching for direction. This is a process."',
+      desc:'Autonomous motivation is forming and noise is low, but you haven\'t yet found an environment or direction where your temperament foundation can fully express itself. The exploration itself is meaningful.',
+      dotStates:['on navy','on navy','',''],
+      note:'The current exploration may feel like waste, but this is the process of designing direction. With low noise right now, you can listen to your temperament foundation.'
+    }
+  };
+  const eng = ENGINE_DATA[engineState];
+
+  // ── Hybrid engine combinations (top 2 temperament combos) ──
+  const HYBRID_MAP = {
+    'NS+PS': {
+      combo:'Drawn to the new, yet deepening in meaningful directions',
+      title:'The Explorer Who Goes Deep',
+      insight:'"You move toward new possibilities, but in directions where you feel real meaning, you stay longer than expected."',
+      detail:'The pull toward novelty and the power to deeply persist in one direction work together. Energy burns out quickly in meaningless repetition, but <strong>once a meaningful direction is found, you root yourself deeply</strong> — this is the signature of your structure.',
+      qna:[
+        {q:'Am I scattered and lacking grit?', a:'This isn\'t inconsistency. Energy fading in meaningless repetition is a structural response. If you\'ve lost interest, ask first whether that direction was meaningful enough.'},
+        {q:'Why do I keep looking for new things?', a:'Exploration itself is the fuel of this structure. It\'s not a problem — it\'s a pattern. Allowing exploration without guilt actually helps you find meaningful directions faster.'},
+        {q:'Can I not stick with one thing?', a:'In front of meaningful work, you stay longer than anyone. If you couldn\'t sustain something, it likely wasn\'t meaningful enough.'}
+      ]
+    },
+    'NS+HA': {
+      combo:'Drawn to new directions, but moving only after careful checking',
+      title:'The Prepared Explorer',
+      insight:'"You\'re drawn to new possibilities, but you don\'t leap in until you\'ve checked thoroughly."',
+      detail:'The drive toward something new and the impulse to check safety first work together. <strong>Prepared exploration</strong> is the core of this structure.',
+      qna:[
+        {q:'Why are my decisions so slow?', a:'You\'re not slow — you\'re preparing. Not moving until you receive the internal signal of "I\'ve checked enough" is care, not indecision.'},
+        {q:'Am I lacking courage?', a:'This isn\'t fear. It\'s a structure that checks risk factors first to raise the quality of exploration. Once prepared, your drive to move is plenty strong.'},
+        {q:'I want change but why can\'t I move easily?', a:'You\'re waiting for the moment when desired direction meets prepared timing. When that moment comes, you\'ll find yourself moving faster than expected.'}
+      ]
+    },
+    'NS+RD': {
+      combo:'Drawing energy from new people and experiences',
+      title:'The One Who Enters New Worlds Through People',
+      insight:'"New connections and encounters become channels for your exploration. Your energy comes alive among people."',
+      detail:'The pull toward the new operates mainly through people. Vitality rises in <strong>new projects, new relationships, new conversations</strong>.',
+      qna:[
+        {q:'Why do my relationships cool quickly?', a:'Relationships aren\'t cooling — your direction of exploration has moved. Seeking new connections is a natural pattern. Existing relationships can re-activate around new topics.'},
+        {q:'Am I inconsistent?', a:'This is a structure that expands direction through people and experience. Not inconsistency — continuous growth through connection.'},
+        {q:'Why am I out of energy when alone?', a:'Connection is the source of your energy. Alone time is needed too, but intentionally creating new connections is more effective for recovery.'}
+      ]
+    },
+    'HA+RD': {
+      combo:'Reading the atmosphere of relationships and keeping them safe',
+      title:'The Guardian of Relational Balance',
+      insight:'"You precisely sense emotions and atmosphere around you, and tune relationships to stay safe."',
+      detail:'The power to check for risk first and the power to respond sensitively to others\' emotions work together. <strong>Pre-tuning conflicts and protecting the sense of safety in relationships</strong> operates naturally.',
+      qna:[
+        {q:'Why do I read the room so much?', a:'It\'s not "reading the room" — it\'s relational sensing. This ability to read the atmosphere before problems arise operates as a strength that builds trust.'},
+        {q:'Are others\' feelings more important than mine?', a:'Balance is needed. Putting others first is a strength, but practicing recognition of your own needs before your energy is depleted is also necessary.'},
+        {q:'Am I timid?', a:'This isn\'t timidity. It\'s a precise sensing system that operates to protect the peace of relationships. This ability especially shines in collaborative environments.'}
+      ]
+    },
+    'HA+PS': {
+      combo:'Starting after careful checking, then deeply persisting once begun',
+      title:'The Deep Persister in Prepared Directions',
+      insight:'"You don\'t start fast, but once direction is set, you stay much longer than expected."',
+      detail:'The power to check carefully first and the power to deeply persist in one direction work together. <strong>Even when the start seems slow, once conviction takes hold, you don\'t waver</strong>.',
+      qna:[
+        {q:'Why are my decisions so slow?', a:'Preparation hasn\'t finished. Moving when the internal signal of "I\'ve checked enough" arrives is this structure\'s way. Direction\'s certainty comes before speed.'},
+        {q:'Am I a perfectionist?', a:'You don\'t want perfection — moving without conviction is uncomfortable to your structure. Setting your own standard for "prepared enough" reduces excessive checking.'},
+        {q:'Am I inflexible?', a:'Not easily changing direction once set is trustworthy persistence. It\'s not lack of flexibility — it\'s a structure that creates deep results.'}
+      ]
+    },
+    'RD+PS': {
+      combo:'Deeply absorbing and long-persisting in connected environments',
+      title:'The Long Deepener Through Relationships',
+      insight:'"Your focus deepens more in connected environments than alone, and that depth lasts long."',
+      detail:'Emotional connection with others and the power to long-persist work together. <strong>Inside trusted relationships, surprising focus and persistence</strong> emerge.',
+      qna:[
+        {q:'Why do I have no energy when alone?', a:'Relationships enable focus in your structure. Alone time is needed too, but recharging in environments with trusted people is the natural pattern.'},
+        {q:'Am I dependent?', a:'Not dependence — fuel. Drawing energy from relationships isn\'t weakness; it\'s this structure\'s unique recharging method.'},
+        {q:'Why do I spend so much energy on relationships?', a:'Relationships are investment, not depletion. The energy spent building trusted relationships becomes the foundation of deep absorption and persistence.'}
+      ]
+    }
+  };
+
+  // Top-2 combo key
+  const dimOrder = ['NS','HA','RD','PS'];
+  const top2 = tempDims.slice(0,2).map(d=>d[0]).sort((a,b)=>dimOrder.indexOf(a)-dimOrder.indexOf(b));
+  const hybridKey = top2.join('+');
+  const hybrid = HYBRID_MAP[hybridKey] || null;
+
+  // ── Energy recovery patterns (by temperament foundation) ──
+  const RECOVERY_MAP = {
+    NS:{high:['🌱 Stepping off familiar paths and trying one new route','✦ Starting one small thing you haven\'t tried yet'],
+        low: ['🌿 Time to focus deeply in environments you know well','✦ Routines that restore your own rhythm, free from change stimuli']},
+    HA:{high:['🌱 Checking time until you feel sufficiently prepared','✦ A structure of removing risk factors and moving one step at a time'],
+        low: ['🌿 One small action of "just starting"','✦ The experience of moving even when imperfect']},
+    RD:{high:['🌱 Deep conversation or connection time with someone you trust','✦ Time spent in environments alive with empathy and response'],
+        low: ['🌿 Quiet time when you can fully focus alone','✦ Routines of blocking external stimuli and going inward']},
+    PS:{high:['🌱 Time to deeply absorb without interruption in work you find meaningful','✦ Experience of slowly going to the end of one topic'],
+        low: ['🌿 Time that allows exploration into new directions or topics','✦ Permission to not be locked into one direction']}
+  };
+  const recItems = RECOVERY_MAP[strongest]?.[lv(temp[strongest])] || [];
+
+  sec.innerHTML = `
+
+  <!-- Result header -->
+  <div class="result-hero fade-up">
+    <p class="rh-badge">N.E.E.D · Integrated Assessment Result</p>
+    <h2>Temperament · Motivation · Noise<br>Reading three layers together</h2>
+    <p class="rh-sub">How these three layers connect<br>reveals your current energy structure.</p>
+    <span class="rh-tag">Temperament is foundation, motivation is starting point, noise is interference</span>
+  </div>
+
+  <!-- ══ Energy engine state — top of result ══ -->
+  <div class="section-header">
+    <div class="sh-bar green"></div>
+    <h3>Your current energy state</h3>
+    <span class="sh-tag green">Integrated reading</span>
+  </div>
+
+  <div class="engine-card ${eng.cssClass} fade-up">
+    <p class="ec-eyebrow">${eng.eyebrow}</p>
+    <h3 class="ec-state">${eng.state}</h3>
+    <p class="ec-metaphor">${eng.metaphor}</p>
+    <div class="engine-dots">
+      ${eng.dotStates.map(s=>`<div class="engine-dot ${s}"></div>`).join('')}
+    </div>
+    <p class="ec-desc">${eng.desc}</p>
+    <div class="ec-note">${eng.note}</div>
+  </div>
+
+  <!-- ══ SECTION 1: Temperament ══ -->
+  <div class="section-header">
+    <div class="sh-bar navy"></div>
+    <h3>Temperament Foundation</h3>
+    <span class="sh-tag navy">Lifelong stable</span>
+  </div>
+
+  <div class="chart-card fade-up">
+    <p class="cc-title">Temperament 4-dimension distribution — see the pattern</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;line-height:1.5">This is a <strong>relative pattern</strong>, not absolute scores. High and low aren't strength and weakness.</p>
+    ${Object.entries(temp).map(([k,v])=>`
+      <div class="chart-item ${k===strongest?'highest':''}">
+        <div class="chart-label-row">
+          <span class="chart-label">${dimName[k]}${k===strongest?' ✦':''}</span>
+          <span class="chart-score-text">${pct(v)}%</span>
+        </div>
+        <div class="chart-track"><div class="chart-fill navy-fill" data-w="${pct(v)}" style="width:0%"></div></div>
+        ${k==='HA'&&temp.HA>=3.5?'<p class="chart-note">※ Possible cultural influence — see social-structural reading below</p>':''}
+      </div>
+    `).join('')}
+  </div>
+
+  <!-- Primary foundation -->
+  <div class="detail-card fade-up">
+    <div class="dc-header">
+      <div class="dc-icon navy-bg">🏔</div>
+      <div>
+        <p class="dc-label">Primary foundation · ${DIM_INFO[strongest].en}</p>
+        <p class="dc-title">${mainInfo.title}</p>
+      </div>
+    </div>
+    <div class="charge-box"><strong>⚡ Environments that turn on energy</strong><br>${mainInfo.charge}</div>
+    <div class="drain-box"><strong>🔋 Environments that drain energy</strong><br>${mainInfo.drain}</div>
+  </div>
+
+  <!-- Secondary foundation -->
+  <div class="detail-card fade-up">
+    <div class="dc-header">
+      <div class="dc-icon navy-bg">🌿</div>
+      <div>
+        <p class="dc-label">Secondary foundation · ${DIM_INFO[second].en}</p>
+        <p class="dc-title">${subInfo.title}</p>
+      </div>
+    </div>
+    <div class="charge-box"><strong>⚡ Environments that turn on energy</strong><br>${subInfo.charge}</div>
+    <div class="drain-box"><strong>🔋 Environments that drain energy</strong><br>${subInfo.drain}</div>
+  </div>
+
+  <!-- Hybrid engine card -->
+  ${hybrid ? `
+  <div class="hybrid-card fade-up">
+    <p class="hc-eyebrow">How two temperaments meet</p>
+    <div class="hc-combo">✦ ${hybrid.combo}</div>
+    <h4>${hybrid.title}</h4>
+    <div class="hc-insight">${hybrid.insight}</div>
+    <p class="hc-detail">${hybrid.detail}</p>
+  </div>
+  ` : ''}
+
+  <!-- ══ SECTION 2: Motivation ══ -->
+  <div class="section-header">
+    <div class="sh-bar gold"></div>
+    <h3>Motivation Source</h3>
+    <span class="sh-tag gold">Changeable now</span>
+  </div>
+
+  <div class="sdt-stage-card fade-up">
+    <div class="sdt-level">
+      <div class="sdt-level-bar"><div class="sdt-level-fill" data-w="${sdtScore}" style="width:0%"></div></div>
+      <span style="font-size:12px;font-weight:700;color:var(--gold);white-space:nowrap">${sdtScore}%</span>
+    </div>
+    <div class="sdt-tag">Current stage · ${sdtStage.name}</div>
+    <h4>${sdtStage.name}</h4>
+    <p>${sdtStage.desc}</p>
+    <div class="sdt-steps">
+      ${SDT_STAGES.map(s=>`
+        <div class="sdt-step ${s.id===sdtStage.id?'current':s.id<sdtStage.id?'past':'future'}">
+          <div class="ss-num ${s.id===sdtStage.id?'current':s.id<sdtStage.id?'past':'future'}">${s.id+1}</div>
+          <div class="ss-text"><strong>${s.name}</strong>${s.id===sdtStage.id?' ← Current':''}<br><span style="font-size:12px;font-weight:400">${s.range[0]}~${s.range[1]}% range</span></div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+
+  <!-- ══ SECTION 3: Noise ══ -->
+  <div class="section-header">
+    <div class="sh-bar purple"></div>
+    <h3>Noise Pattern</h3>
+    <span class="sh-tag purple">Eliminate Noise</span>
+  </div>
+
+  <div class="chart-card fade-up">
+    <p class="cc-title">Intensity by noise type</p>
+    ${Object.entries(noiseRaw).map(([k,v])=>`
+      <div class="chart-item ${k===noiseEntries[0][0]?'noise-highest':''}">
+        <div class="chart-label-row">
+          <span class="chart-label">${NOISE_INFO[k].icon} ${NOISE_INFO[k].name}${k===noiseEntries[0][0]?' ✦':''}</span>
+          <span class="chart-score-text">${Math.round((v-1)/4*100)}%</span>
+        </div>
+        <div class="chart-track"><div class="chart-fill purple-fill" data-w="${Math.round((v-1)/4*100)}" style="width:0%"></div></div>
+      </div>
+    `).join('')}
+  </div>
+
+  <div class="noise-card fade-up">
+    <div class="nc-tag">🔇 Primary noise pattern</div>
+    <h4>The noise operating most strongly right now</h4>
+    ${topNoise.length > 0
+      ? topNoise.map(([k,v])=>`<div class="noise-item"><span class="ni-icon">${NOISE_INFO[k].icon}</span><p><strong>${NOISE_INFO[k].name}</strong> — ${NOISE_INFO[k].desc}</p></div>`).join('')
+      : '<div class="noise-item"><span class="ni-icon">✅</span><p>Your current noise level is low. Relatively autonomous state.</p></div>'
+    }
+    <div class="noise-level-row">
+      <span class="noise-level-label">Total noise</span>
+      <div class="noise-level-bar"><div class="noise-level-fill" data-w="${noisePct}" style="width:0%"></div></div>
+      <span class="noise-level-text">${noiseLevelText.split('—')[0].trim()}</span>
+    </div>
+    <p style="font-size:12.5px;color:var(--purple);margin-top:8px;line-height:1.5">${noiseLevelText}</p>
+  </div>
+
+  <!-- ══ SECTION 4: Integrated reading — core ══ -->
+  <div class="section-header">
+    <div class="sh-bar green"></div>
+    <h3>Integrated Reading · Temperament × Motivation × Noise</h3>
+    <span class="sh-tag green">Core</span>
+  </div>
+
+  <div class="integration-card ${engineState==='cruise'?'match':engineState==='explore'?'match':'mismatch'} fade-up">
+    <div class="ic-tag ${engineState==='cruise'?'match':engineState==='explore'?'match':'mismatch'}">${engineState==='cruise'?'✅ Aligned · Cruising':engineState==='explore'?'🔍 Exploring · Preparing':engineState==='overheat'?'⚡ Overheating · Misaligned':'🔇 Encroached · Suppressed'}</div>
+    <h4>${integrationMsg.title}</h4>
+    <p>${integrationMsg.body}</p>
+    <div class="ic-note ${engineState==='cruise'||engineState==='explore'?'match':'mismatch'}">${integrationMsg.note}</div>
+  </div>
+
+  <!-- Self-misunderstanding insight card -->
+  ${hybrid ? `
+  <div class="insight-card fade-up">
+    <p class="ins-eyebrow">Have you misunderstood yourself like this?</p>
+    <p class="ins-main">You are<br>"${hybrid.title}".<br>If you haven't felt that way,<br>here are the misunderstandings that may be in the way.</p>
+    <div style="margin-top:14px">
+      ${hybrid.qna.map(item=>`
+        <div class="qna-item">
+          <div class="qna-q">
+            <span class="qi-x">✗</span>
+            <p>${item.q}</p>
+          </div>
+          <div class="qna-a">
+            <p>${item.a}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+  ` : ''}
+
+  <!-- Noise vs. temperament -->
+  <div class="social-card fade-up">
+    <div class="s-tag">📌 When noise feels like temperament</div>
+    <h4>"Isn't this just my personality?"</h4>
+    <p>When noise persists long enough, it starts to feel like temperament. But temperament is relatively stable lifelong — noise is shaped by environment and experience.<br><br>
+    Distinguishing whether your current anxiety, comparison, and approval-seeking are <strong>inborn or learned</strong> is the first question of self-design.</p>
+    <p class="social-note">→ The bigger the mismatch between temperament and noise, the bigger the structural cause of energy depletion.</p>
+  </div>
+
+  <!-- Energy recovery patterns -->
+  <div class="recovery-card fade-up">
+    <div class="rc-tag">🌱 Energy recovery patterns</div>
+    <h4>What truly recharges you right now</h4>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;line-height:1.5">Recovery patterns based on your temperament foundation. Not someone else's method — the direction in which your own foundation charges.</p>
+    ${recItems.map(item=>`
+      <div class="recovery-item">
+        <span class="ri-icon">${item.startsWith('🌱')?'🌱':'✦'}</span>
+        <p>${item.replace(/^[🌱✦]\s*/,'')}</p>
+      </div>
+    `).join('')}
+  </div>
+
+  <!-- ══ Self-reflection questions ══ -->
+  <div class="section-header">
+    <div class="sh-bar navy"></div>
+    <h3>Self-reflection questions</h3>
+  </div>
+
+  <div class="reflect-card fade-up">
+    <h3>Ask yourself right now</h3>
+    <div class="q-item"><span class="q-badge">1</span>
+      <p>Where do most of your current actions start from? Fear and anxiety? Or directions you find meaningful?</p></div>
+    <div class="q-item"><span class="q-badge">2</span>
+      <p>If the noise operating most strongly right now disappeared, what would change in your life?</p></div>
+    <div class="q-item"><span class="q-badge">3</span>
+      <p>Today, was there even one action that came from your temperament rather than from noise?</p></div>
+  </div>
+
+  <!-- Today's small practice -->
+  <div class="practice-card fade-up">
+    <div class="p-tag">✦ Today's small practice</div>
+    <p>${getDailyPractice(strongest, lv(temp[strongest]), sdtStage.id, noisePct)}</p>
+  </div>
+
+  <!-- Stability note -->
+  <div class="stability-card fade-up">
+    <strong>Stability note</strong> — Temperament results are relatively stable lifelong. Motivation and noise results can change over time.
+    Re-taking the motivation and noise parts a month later lets you track change.
+  </div>
+
+  <!-- Next exploration card -->
+  <div class="next-explore-card fade-up">
+    <p class="ne-eyebrow">Where this exploration can lead next</p>
+    <h4>Temperament is the foundation.<br>Life changes by how it's expressed on top of it.</h4>
+    <p class="ne-body">Even with the same temperament foundation, the way that energy comes to life in someone's life differs.</p>
+    <div class="ne-expressions">
+      <div class="ne-expr-item"><span class="ne-icon">🔭</span><p>Some people come alive through <strong>deep absorption</strong>.</p></div>
+      <div class="ne-expr-item"><span class="ne-icon">🌱</span><p>Some people draw energy from <strong>new attempts and exploration</strong>.</p></div>
+      <div class="ne-expr-item"><span class="ne-icon">🤝</span><p>Some people come alive only <strong>through relationships and collaboration</strong>.</p></div>
+    </div>
+    <div class="ne-bridge">
+      What concretely explores this difference is the <strong>'5 Energy Patterns'</strong>.<br>
+      In what way does flow come alive in you — we'll read this together in the next assessment.
+    </div>
+    <a class="btn-next-explore" href="https://nadaumlap.github.io/nadaum_eng/5characters/" target="_blank">Take the 5 Energy Patterns Assessment →</a>
+  </div>
+
+  <!-- Slogan -->
+  <div class="slogan-card fade-up">
+    <p>Temperament is the score you carry through life.<br>Motivation shows which song you're playing right now,<br>and noise interferes with that performance.</p>
+    <p class="slogan-main">Authentic self isn't found — it's designed</p>
+  </div>
+
+  <!-- Share -->
+  <div class="share-row fade-up">
+    <button class="btn-share-card" onclick="shareCard()">🎴 Share Result</button>
+    <button class="btn-share-link" onclick="shareLink()">🔗 Share Assessment Link</button>
+  </div>
+
+  <!-- Retry -->
+  <button class="btn-retry fade-up" onclick="openRetryModal()">↺ Take It Again</button>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer fade-up">
+    <p><strong>Disclaimer.</strong> This assessment is a self-check independently developed by Nadaum Design Lab, based on Cloninger's (1993) four temperament dimensions, Deci &amp; Ryan's (1985/2000) Self-Determination Theory (SDT), and the Nadaum Design Lab N.E.E.D Framework™. Not intended for clinical diagnosis.</p>
+    <p><strong>Sources.</strong> Cloninger et al. (1993). <em>Archives of General Psychiatry, 50</em>(12), 975–990. · Deci &amp; Ryan (2000). <em>Psychological Inquiry, 11</em>(4), 227–268. · Ryan &amp; Deci (2017). <em>Self-Determination Theory</em>. Guilford Press.</p>
+  </div>
+  `;
+
+  // Bar animation
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.chart-fill, .sdt-level-fill, .noise-level-fill').forEach(el=>{
+      el.style.width = el.dataset.w + '%';
+    });
+  });
+
+  window.scrollTo(0, 0);
+}
+
+// ═══════════════════════════════════════════
+// Integrated reading logic (v2)
+// ═══════════════════════════════════════════
+function calcIntegration(topDim, topLv, sdtScore, noisePct) {
+  // 4-quadrant determination by engine state
+  if (sdtScore >= 70 && noisePct < 50)  return 'cruise';
+  if (sdtScore <  50 && noisePct >= 50) return 'suppress';
+  if (sdtScore <  70 && noisePct >= 50) return 'overheat';
+  return 'explore';
+}
+
+function getIntegrationMsg(topDim, topLv, engineState) {
+  const dimLabel = {
+    NS: topLv==='high' ? 'drawn to new stimulation' : 'preferring stable environments',
+    HA: topLv==='high' ? 'carefully checking first' : 'quickly executing',
+    RD: topLv==='high' ? 'drawing energy from relationships' : 'focusing independently',
+    PS: topLv==='high' ? 'deeply staying with meaningful work' : 'exploring directions'
+  };
+  const dl = dimLabel[topDim];
+
+  const msgs = {
+    cruise: {
+      title:'Temperament and motivation point in the same direction',
+      body:`Your ${dl} temperament and the source of your current actions are connected to inner meaning. In this state, a quiet but lasting energy flows — not forced momentum. This is closest to the Energy Flow zone in N.E.E.D.`,
+      note:'Maintaining this connection is itself design. Catching noise quickly when it tries to break this connection is the next task.'
+    },
+    overheat: {
+      title:'Temperament is activated, but motivation source is misaligned',
+      body:`You have a ${dl} temperament, but much of your current action starts from anxiety, comparison, and approval-seeking. Results may come, but this is survival-mode energy, not recovery-mode. Temperament-motivation mismatch is the structural cause of your exhaustion.`,
+      note:'This isn\'t weakness. It can be the result of long-term internalization of external standards. Recognizing one strongest noise now is the first design action.'
+    },
+    suppress: {
+      title:'Noise is covering your temperament foundation',
+      body:`You have a ${dl} temperament, but right now high noise and low autonomous motivation prevent that foundation from fully expressing itself. If you feel helpless or empty, it may be due to this structure.`,
+      note:'Your temperament hasn\'t disappeared. Its voice is just covered by noise right now. Removing noise one piece at a time is the start of self-design.'
+    },
+    explore: {
+      title:'You\'re in a state of searching for direction',
+      body:`You have a ${dl} temperament and autonomous motivation is forming, but you haven\'t yet found an environment or direction where your temperament can fully express itself. The exploration itself is the design process.`,
+      note:'The current uncertainty may feel like waste, but with low noise right now, this is actually a chance to listen to your temperament foundation.'
+    }
+  };
+  return msgs[engineState];
+}
+
+// ═══════════════════════════════════════════
+// Today's practice
+// ═══════════════════════════════════════════
+function getDailyPractice(topDim, topLv, sdtId, noisePct) {
+  if (noisePct >= 70) {
+    return `Today, when anxiety rises, pause briefly and ask yourself: <strong>"Right now, is this my real signal, or is it noise?"</strong> You don\'t need to answer. Just noticing is enough.`;
+  }
+  const map = {
+    NS:{high:'Today, do one thing you usually repeat in a slightly different way. Small is fine.',
+        low:'Today, focus fully on one task for 30 minutes. Turn off notifications, just that one thing.'},
+    HA:{high:'On your next decision, ask yourself: <strong>"Have I already checked enough?"</strong> If yes, it\'s okay to move.',
+        low:'Today, slow down one decision by one beat. Speed is your strength, but occasional pause shifts direction.'},
+    RD:{high:'Today, listen sincerely to one person you\'re with for just 5 minutes.',
+        low:'Today, intentionally secure time you can focus alone. That time is your recharge.'},
+    PS:{high:'Today, do one thing you\'re working on for 10 minutes with the sense of <strong>"because I want to" — not "because I have to"</strong>.',
+        low:'Today, take out one thing you wanted to explore but kept postponing — just for 5 minutes.'}
+  };
+  return map[topDim]?.[topLv] || 'Today, take a look at where your energy turns on.';
+}
+
+// ═══════════════════════════════════════════
+// Share / Modal
+// ═══════════════════════════════════════════
+function shareLink() {
+  const url = 'https://nadaumlap.github.io/nadaum_eng/why/';
+  const text = `"Why am I doing this?"\nTemperament × Motivation × Noise integrated assessment\n— Nadaum Design Lab\n${url}`;
+  if (navigator.share) navigator.share({text}).catch(()=>fallbackCopy(url));
+  else fallbackCopy(text);
+}
+
+function shareCard() {
+  const {temp, sdtScore, noisePct} = calcScores();
+  const dims = Object.entries(temp).sort((a,b)=>b[1]-a[1]);
+  const strongest = dims[0][0];
+  const dimName = {NS:'Novelty Seeking', HA:'Harm Avoidance', RD:'Reward Dependence', PS:'Persistence'};
+  const stage = SDT_STAGES.find(s=>sdtScore>=s.range[0]&&sdtScore<s.range[1])||SDT_STAGES[3];
+  const eStateLabel = {cruise:'Aligned · Cruising', overheat:'Overheating · Misaligned', suppress:'Suppressed · Encroached', explore:'Exploring · Preparing'};
+  const eState = (sdtScore>=70&&noisePct<50)?'cruise':(sdtScore<50&&noisePct>=50)?'suppress':(sdtScore<70&&noisePct>=50)?'overheat':'explore';
+  const url = 'https://nadaumlap.github.io/nadaum_eng/why/';
+  const text = `[My N.E.E.D Integrated Assessment Result]\nPrimary temperament: ${dimName[strongest]}\nMotivation stage: ${stage.name}\nEnergy state: ${eStateLabel[eState]}\nNoise level: ${noisePct}%\n\nTemperament is the foundation, motivation is the starting point.\n— Nadaum Design Lab\n${url}`;
+  if (navigator.share) navigator.share({text}).catch(()=>fallbackCopy(text));
+  else fallbackCopy(text);
+}
+
+function fallbackCopy(text) {
+  navigator.clipboard?.writeText(text)
+    .then(()=>showToast('Copied'))
+    .catch(()=>showToast('Please copy the link manually'));
+}
+
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#163057;color:#fff;padding:12px 20px;border-radius:100px;font-size:14px;font-weight:600;z-index:200;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.2)';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(), 2500);
+}
+
+function openRetryModal() { document.getElementById('retry-modal').classList.add('show'); }
+function closeModal() { document.getElementById('retry-modal').classList.remove('show'); }
+function doRetry() {
+  closeModal();
+  current = 0; currentPhase = 1;
+  answers = new Array(TOTAL).fill(null);
+  ['result-section','quiz-section','bridge-section','bridge2-section'].forEach(id=>{
+    const el = document.getElementById(id);
+    el.style.display = 'none';
+    if (id==='result-section') el.innerHTML = '';
+  });
+  document.getElementById('intro-section').style.display = 'block';
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
